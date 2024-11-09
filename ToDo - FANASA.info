@@ -1,0 +1,2705 @@
+
+
+
+
+      October               November              December        
+Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  
+       1  2  3  4  5                  1  2   1  2  3  4  5  6  7  
+ 6  7  8  9 10 11 12   3  4  5  6  7  8  9   8  9 10 11 12 13 14  
+13 14 15 16 17 18 19  10 11 12 13 14 15 16  15 16 17 18 19 20 21  
+20 21 22 23 24 25 26  17 18 19 20 21 22 23  22 23 24 25 26 27 28  
+27 28 29 30 31        24 25 26 27 28 29 30  29 30 31              
+    
+    
+==============================================================================================================================
+==============================================================================================================================
+
+
+2.3 	Configurar Rutas
+•	Hora Teórica de Precierre.
+
+2.5 	Configurar Tipo de Transporte
+•	Capacidad Volumétrica. (cm3)
+•	Capacidad Máximo de Peso. (kg)
+
+
+
+
+==============================================================================================================================
+==============================================================================================================================
+
+
+Separar en el Plan de Trabajo la parte de la Integración con el ERP de Oracle.
+
+
+Junta de Diseño, para cerrar el Diseño
+Junta de Integración, para cerrar la Integración con Oracle.
+	En las S7 / S10 se debe de hacer con el ambiente integral del ERP del Oracle.
+	Considerar para las pruebas preparar el ambiente de pruebas en Oracle.
+	Considerar para las pruebas (S7 - S8 - S9 - S10) rutas del turno nocturno.
+
+*** Primeras dos Semanas ***
+
+
+Infraestructura 
+
+DRP
+Matriz de Fallas
+	- Disco Lleno, CPU full, Memoria 
+Servidor de Backup
+	- Todas las noches
+	
+VPN
+	Nombre Completo, Correo Electronico, Telefono Movil
+	
+
+
+==============================================================================================================================
+==============================================================================================================================
+
+
+JOSE RAMON GONZALEZ SEGRESTE <ramon.gonzalez@fanafesa.com>
+ALEJANDRO FLORES PONCE <alejandro.flores@fanafesa.com>
+GONZALO NUÑEZ ESTRADA <gonzalo.nunez@fanafesa.com>
+Angel Orozco <angel.orozco@i-condor.com>, 
+sara.peralta <sara.peralta@i-condor.com>
+
+
+joseluis.diaz@atcloud.com.mx
+veronica.yurrita@atcloud.com.mx
+
+marco.mojica@fanasa.com
+sietze.terpstra@ld360.mx
+s.espinosa@ld360.mx
+
+ramon.gonzalez@fanafesa.com
+
+
+==============================================================================================================================
+==============================================================================================================================
+
+
+[10/31, 09:49] Meta AI: The Design stage!
+
+In software development, the Design stage is a crucial phase where the project's architecture, user experience, and visual aspects are planned and defined. It bridges the gap between requirements gathering and implementation.
+
+Design Stage Objectives:
+
+1. Create a clear, detailed blueprint for development.
+2. Ensure the system meets functional and non-functional requirements.
+3. Define user interface (UI) and user experience (UX).
+4. Plan system architecture and infrastructure.
+5. Identify potential technical risks and mitigation strategies.
+
+Design Stage Activities:
+
+1. User Experience (UX) Design:
+
+- User research and analysis
+- Wireframing and prototyping
+- Usability testing
+
+2. User Interface (UI) Design:
+
+- Visual design and styling
+- Branding and graphics
+- Accessibility considerations
+
+3. Architectural Design:
+
+- System architecture definition
+- Technology stack selection
+- Infrastructure planning
+
+4. Technical Design:
+
+- Database design
+- API design
+- Security planning
+
+5. Documentation:
+
+- Creation of detailed design documents (DDDs)
+- Technical specifications
+- Diagrams (e.g., UML, ERD)
+
+Design Stage Deliverables:
+
+1. Design documents (e.g., DDD, Technical Specification)
+2. Wireframes and prototypes
+3. UI style guides
+4. Architecture diagrams
+5. Technical specifications
+
+[10/31, 09:49] Meta AI: The Design stage!
+
+In software development, the Design stage is a crucial phase where the project's architecture, user experience, and visual aspects are planned and defined. It bridges the gap between requirements gathering and implementation.
+
+Design Stage Objectives:
+
+1. Create a clear, detailed blueprint for development.
+2. Ensure the system meets functional and non-functional requirements.
+3. Define user interface (UI) and user experience (UX).
+4. Plan system architecture and infrastructure.
+5. Identify potential technical risks and mitigation strategies.
+
+Design Stage Activities:
+
+1. User Experience (UX) Design:
+
+- User research and analysis
+- Wireframing and prototyping
+- Usability testing
+
+2. User Interface (UI) Design:
+
+- Visual design and styling
+- Branding and graphics
+- Accessibility considerations
+
+3. Architectural Design:
+
+- System architecture definition
+- Technology stack selection
+- Infrastructure planning
+
+4. Technical Design:
+
+- Database design
+- API design
+- Security planning
+
+5. Documentation:
+
+- Creation of detailed design documents (DDDs)
+- Technical specifications
+- Diagrams (e.g., UML, ERD)
+
+Design Stage Deliverables:
+
+1. Design documents (e.g., DDD, Technical Specification)
+2. Wireframes and prototypes
+3. UI style guides
+4. Architecture diagrams
+5. Technical specifications
+
+Tools and Techniques:
+
+1. Design thinking methodologies
+2. Agile design principles
+3. UML, BPMN, or other modeling languages
+4. Design tools (e.g., Sketch, Figma, Adobe XD)
+5. Prototyping tools (e.g., InVision, Axure)
+
+Best Practices:
+
+1. Involve stakeholders and end-users in design decisions.
+2. Conduct usability testing and feedback sessions.
+3. Ensure design consistency and standards.
+4. Document design decisions and rationales.
+5. Continuously refine and iterate on design.
+
+The Design stage sets the foundation for a successful software project. A well-planned design ensures the system meets requirements, is scalable, maintainable, and provides a great user experience.
+
+Would you like me to elaborate on any specific aspect of the Design stage?
+Design Documentation!
+
+Design documentation is a critical aspect of the Design stage, providing a clear, detailed record of the design decisions, architecture, and requirements. It serves as a communication tool for stakeholders, developers, and future maintenance teams.
+
+Types of Design Documents:
+
+1. Detailed Design Document (DDD): Comprehensive document outlining system architecture, components, and technical specifications.
+2. Technical Specification Document (TSD): Focuses on technical details, including algorithms, data structures, and interfaces.
+3. User Interface (UI) Style Guide: Defines visual design standards, typography, color schemes, and layout principles.
+4. Architecture Document: Describes system architecture, infrastructure, and technology stack.
+5. Use Case Diagrams: Visualize system interactions and user workflows.
+6. Wireframe and Prototype Documentation: Records design evolution and iterations.
+
+Benefits of Design Documentation:
+
+1. Ensures consistency across development teams.
+2. Facilitates communication among stakeholders.
+3. Provides a reference for future maintenance and updates.
+4. Helps identify potential design flaws or technical debt.
+5. Supports testing and quality assurance.
+6. Enhances knowledge sharing and collaboration.
+
+Best Practices for Design Documentation:
+
+1. Keep documents concise, clear, and up-to-date.
+2. Use visual aids (diagrams, flowcharts) to illustrate complex concepts.
+3. Establish a standard documentation template.
+4. Involve stakeholders in document review and feedback.
+5. Store documents in a centralized, accessible location.
+6. Regularly review and update documents.
+
+Tools for Design Documentation:
+
+1. Google Docs or Microsoft Word for collaborative editing.
+2. Confluence, Notion, or Wiki for centralized documentation.
+3. Diagramming tools like Lucidchart, (link unavailable), or Visio.
+4. Version control systems (e.g., Git) for tracking changes.
+
+Do you have specific questions about design documentation or would you like me to elaborate on any of these points?
+Use Case Diagrams!
+
+Use Case Diagrams (UCDs) are a fundamental tool in software engineering, systems analysis, and design. They visualize the interactions between actors (users or external systems) and the system, highlighting functional requirements.
+
+What is a Use Case Diagram?
+
+A Use Case Diagram is a graphical representation of:
+
+1. Actors (users, external systems, or devices)
+2. Use cases (system functions or services)
+3. Relationships between actors and use cases
+
+Components of a Use Case Diagram:
+
+1. Actors: Represented by stick figures or rectangles, actors are entities interacting with the system.
+2. Use Cases: Oval shapes representing system functions or services.
+3. Relationships:
+    - Association (solid line): Actor-use case interaction.
+    - Generalization (dashed arrow): Inheritance or extension.
+    - Include (dotted arrow): Use case inclusion.
+    - Extend (dotted arrow): Use case extension.
+4. System Boundary: A box enclosing use cases, distinguishing system functionality.
+
+Benefits of Use Case Diagrams:
+
+1. Identify functional requirements.
+2. Clarify system scope and boundaries.
+3. Visualize complex interactions.
+4. Facilitate communication among stakeholders.
+5. Support requirements gathering and analysis.
+6. Help identify potential errors or omissions.
+
+Best Practices for Creating Use Case Diagrams:
+
+1. Keep diagrams simple and focused.
+2. Use clear, concise names for actors and use cases.
+3. Ensure consistency in notation.
+4. Validate diagrams with stakeholders.
+5. Iterate and refine diagrams.
+
+Tools for Creating Use Case Diagrams:
+
+1. UML tools (e.g., Enterprise Architect, Visual Paradigm).
+2. Diagramming software (e.g., Lucidchart, (link unavailable)).
+3. Graphic editors (e.g., Microsoft Visio).
+4. Online collaboration platforms (e.g., Google Drawings).
+
+Example of a Simple Use Case Diagram:
+
+Imagine an e-commerce system:
+
+Actors:
+
+- Customer
+- Administrator
+
+Use Cases:
+
+- Browse Products
+- Make Payment
+- Manage Orders
+
+Relationships:
+
+- Customer - Browse Products (association)
+- Customer - Make Payment (association)
+- Administrator - Manage Orders (association)
+
+System Boundary:
+
+- E-commerce System (enclosing use cases)
+
+Would you like me to elaborate on:
+
+1. Use case diagram notation?
+2. Creating use case diagrams?
+3. Best practices?
+4. Tools?
+
+Or do you have specific questions?
+
+
+==============================================================================================================================
+==============================================================================================================================
+
+1. Factura 30% pago inmediato (1 - 2 semanas máximo)
+2. Ingresamos la siguiente factura (20%) luego luego, pago a 30 días. 
+Tiene que ser pagada antes del 9 de diciembre.
+3. Ingresamos la factura del tercer pago (30%) para que se page a 30 días. 
+Lo cual nos lleva el pago al mes de Enero (2 o 3ra semana de enero).
+4. Ultima factura (20%) al finalizar.
+
+
+==============================================================================================================================
+==============================================================================================================================
+
+
+Alta de Proveedor, siguiente semana.
+30 noviembre.
+
+Generar la Carta (como GNEW).
+
+Después se genera la Orden de Compra.
+
+Se genera la Orden de Compra,
+y se ingresa la Factura.
+7 - 8 de noviembre.
+
+Plazo de Pago normal. 30 dias.
+8 - 9 diciembre.
+
+Por lo que el pago se realiza en la segunda semana de Diciembre.
+
+                                                              
+
+==============================================================================================================================
+==============================================================================================================================
+
+
+Siguientes Pasos:
+- Concluir los trámites administrativos.
+- Obtener la Orden de Compra.
+- Facturar el 50%
+- Que nos paguen.
+
+Ahí arrancamos la S1 (semana uno).
+
+10 diciembre.
+
+
+==============================================================================================================================
+==============================================================================================================================
+
+
+Objetivo del proyecto.
+
+Corrida Financiera
+	72 MDP costo total del proyecto.
+
+Software / AtCloud
+	'Y' de proceso tradicional, proceso nuevo.
+	Pruebas de Volumen.
+	
+	Caja Colectiva, se asigna el surtido por caja o pieza.
+	
+
+Compras / Adquisiciones
+
+Adecuaciones Físicas al almacén (Lay out)
+
+Convivencia ERP / AtCloud 
+
+
+--
+--
+--
+
+Crear un ambiente de alta disponibilidad, HA.
+	Nodos activos, redundancia.
+
+
+--
+--
+--
+
+
+¿Porque FINSA si?
+	- El 2do reparto es una sucursal pequeña, si funciona aqui, es el equivalente a una sucursal pequeña.
+	- No se abrirán rutas de 1er turno hasta que el surtido completo del 2do turno este perfectamente afinado.
+	- Al llegar al 100% del 2do turno, los indicadores de productividad darán el 'GO' para iniciar el proceso de 1er turno.
+		+ No se inicia nada del 1er turno hasta que el punto anterior sea verdad.
+	- De cualquier forma, cuando quieras implementar en FINSA estarás en el mismo reto. 
+		Si primero haces una sucursal pequeña, luego tendrás que implementar FINSA de la misma manera como se plantea hoy;
+		casi no ganas nada haciendo una sucursal pequeña primero y luego FINSA.
+	
+
+==============================================================================================================================
+==============================================================================================================================
+
+Implicaciones
+	* El proyecto arranca hasta el pago del anticipo, 10 diciembre.
+	* El proyecto coincide con la temporada alta del surtido lo que implica mayores impactos a cualquier movimiento del almacén.
+	* La fase de pruebas se detiene si no estan todos los suministros del almacén disponible.
+	* La fase de pre-producción se puede detener si la velocidad del surtido no es la adecuada para la almacén.
+
+==============================================================================================================================
+==============================================================================================================================
+
+Alejandra Miranda Arroyo
+Adquisiciones
+
+
+Area de Bienes y Servicios.
+	Adjudicación Directa.
+
+Carta de Adjudicación.
+
+Alta de Proveedor.
+	Documentos por llenar.
+	Proceso de Alta dura entre 2 - 3 semanas.
+	
+Parte Legal
+	Contrato.
+	Revision de Contrato entre 2 - 3 semanas.
+	
+Compras
+	En paralelo se estará generando la Orden de Compra.
+	La idea es que la Orden de Compra este lista cuando este listo el contrato.
+	Para no tener que sumar 2 - 3 semanas mas en que se genera la Orden de Compra.
+	
+9 de diciembre cierre de año de fiscal.
+
+
+*** Se tratara que la Orden de Compra quede lista la primera/segunda semana de noviembre.
+*** Se planea que el 10 de noviembre este la Orden de Compra.
+*** A partir de ese momento se puede ingresar la primera factura.
+	- La factura sale con 30 dias de plazo.
+*** El pago sale el 10 de diciembre.
+
+
+==============================================================================================================================
+==============================================================================================================================
+
+ANEXO "A"
+Contrato
+	- Fecha de Inicio/Fin del Contrato.
+	- Plazos de pago.
+		Primera Factura sale con 0 dias de plazo.
+
+==============================================================================================================================
+==============================================================================================================================
+
+Anexar la explicación de lo que se va reusar.
+Anexar la explicación del 15% de cambios ya considerados.
+Anexar los porques las propuestas no son equivalentes. (GNEW/atClod)
+
+Anexar la tabla de desglose de costos.
+Anexar la explicación del porque de las fechas de pego.
+	Los tres hitos (fechas en amarillo).
+
+==============================================================================================================================
+==============================================================================================================================
+
+1.- No hay pago de licencias. 
+2.- Complejidad más alta.
+3.- Tiempo de desarrollo menor y requiere más recursos.
+4.- La empresa no vende equipos y por tanto vivimos del desarrollo e implementación.
+5.- Y la implementación en el turno de medio día.
+6.- El desarrollo es como un 5 o 7 % del proyecto.
+7.- Los rubros de equipos y demás es dónde puedes tener ahorros mayores no en el 5%.
+
+
+==============================================================================================================================
+==============================================================================================================================
+
+Mesa de Control
+      Configurar Rutas.
+      Configurar Bloque de Surtido.
+      Configurar Tipo de Surtido.
+            - 1 Pedido a la vez/Mas de un Pedido a la vez.
+      Programar Certificación por Ruta, Cliente, Producto.
+      Asignar Surtidores a Bloque de Surtido.
+            - Definir algoritmo de Certificación aleatoriamente. ****
+      Liberar Rutas (Abrirlas) por olas de acuerdo con horarios de apertura/cierre.
+ 
+ 
+App de Surtido
+      Agrupar Pedidos por Bloque de Surtido.
+      Ordenar Pedidos por Prioridad de Ruta.
+      Calcular cuantos pedidos se pueden asignar al Surtidor. (1)
+            - # de piezas.
+            - Peso y volumen de producto vs capacidad de charola.
+            - Carro y /o tarima.
+      Asignar Pedido por prioridad a surtidor.
+            - Puede ser de 1 a 6 Clientes de acuerdo con configuración de tipo de surtido y capacidad calculada.
+ 
+ 
+Surtidor
+      Escanea Localizador de Bloque de Surtido.
+      Obtener Pedido(s) de la Bloque de la misma Ruta.
+      Asignar Transporte. (2)
+            - De acuerdo con volumen de Pedido calculado:
+            - Carro
+            - Patín
+            - Delantal (Hielera, etc.) (2.1)
+      Indicar tipo de contenedor que debe de asignar de acuerdo con el volumen de cada Pedido. (3)
+            - Chico, mediano, grande, caja colectiva y / o tarima.
+            - Dependiendo de la volumetría faltante tomar caja colectiva.
+      Asignar Contenedor, Tarima o Delantal escaneando su código.
+            - Por cada uno de los Pedidos.
+            - Colocar bolsa en contenedor y / o delantal.
+      Iniciar surtido simultaneo.
+      Indicar localizador de producto a surtir.
+      Escanear cantidad de producto solicitado.
+            - Escanear pieza por pieza.
+            - Hacer fajilla arriba de 10 Piezas.
+      ¿Revisión de Lote? (2.2)
+      Indicar Contenedor asignado a pedido del producto y donde depositar.
+      Indicar a sistema que se dejó producto en Contenedor.
+      Mostrar localizador de siguiente producto continuando con este ciclo por cada producto de cada Pedido.
+     
+      ¿Requiere otro Contenedor? o ¿Contenedor lleno?
+      No
+            Continuar con el Surtido.
+      Si
+            Cerrar contenedor, delantal o tarima en sistema e imprimir etiqueta y pegar en contenedor. (4).    
+            Sellar (Cerrar) bulto (amarra con cinta o cierre térmico).
+            Sellar (Cerrar) contenedor con cinchos de seguridad y escanear cincho.
+     
+      ¿Requiere otro Transporte?
+      No
+            Continuar con el Surtido.
+      Si
+            Cerrar Transporte.
+                  Llevar transporte a zona de estacionamiento.
+                  Dejar transporte en estacionamiento.
+                        - Escanear la ubicación donde se quedó estacionado el transporte.
+           
+           
+Sorter
+      Indicar toma de Transporte de acuerdo con la prioridad de ruta para llevar a embarque. (5)
+      Escanear etiqueta de ubicación y código de transporte.
+     
+      ¿Requiere Auditoria?
+      Si
+            Indicar llevar a Mesa de Auditoria.
+      No
+            Indicar llevar a número de cortina de embarque correspondiente.
+            Escanear código de etiqueta de contenedor, caja o tarima y etiqueta de estacionamiento en embarque.
+            Depositar en estacionamiento de embarque. (5.1)
+            Liberar transporte.
+            Acomodar transporte en estacionamiento de carros liberados.
+ 
+ 
+Auditoria
+      Escanear contenedor y rompe cincho. (6)
+      Auditar contenedor escaneado productos.
+      ¿Pedido completo?
+            Si
+                  Cierra contenedor en sistema.
+                  Sellar contenedor con cincho y escanear cincho.
+                  Depositar contenedor en transporte escaneado.
+                  Dejar transporte en estacionamiento de auditoría. (7)
+                  Escanear localizador de estacionamiento.
+            No
+                  Informar desviación a supervisor.
+                  Escanear contenedor como recibido.
+                  Corregir desviación.
+                  Regresar contenedor a auditoria.
+ 
+ 
+Jauler
+      Mostrar ruta completa o avance de ruta.
+            - Color verde: rutas que están completas. (8)
+      Seleccionar ruta para carga de camioneta.
+            - ¿Solo las que están completas? o ¿se vale cargar camioneta con rutas incompletas?
+      Escanear código de cortina.
+      Mostrar cantidad, tipo de contenedores, cajas, tarimas, delantales, termos y hieleras de ruta seleccionada.
+      Acomodar contenedores, cajas tarimas, termos y hieleras de acuerdo con la parada.
+      Confirmar en sistema acomodo por parada.
+      Escanear camioneta.
+      Confirma carga.
+            - Ordenar de acuerdo con las paradas.
+     
+      ¿Ruta completa?
+            - No
+                  Notificar a supervisor de Embarque.
+                  Localizar contenedores faltantes.
+                        ¿Localizados los Contenedores Faltantes?
+                              No
+                                    Indicar cierre de ruta con contenedores faltantes y generar reporte.
+                              Si
+                                    Entregar a jauler contenedores faltantes.
+            - Si
+                  Cerrar ruta (9)
+ 
+ 
+(1) Primer Cálculo Volumétrico. Creo que calcular el volumen para elegir el transporte está de más, aparte de que esta la observación el punto (2), parece que es preferible elegir el transporte primero y luego asignar el pedido (o pedidos) (2) que se pueden surtir en este transporte.
+Aunque puede tener cierta justificación, si el siguiente pedido a surtir es grande (mayoreo/transfer) el App de Surtido debe de indicar que se requiere patín porque lo que se usa son tarimas. Hay que revisar más a detalle este punto.
+(2) Hay Bloques que solo pueden usar un tipo de Transporte (p.ej. solo Mandil); entonces depende de la Bloque el tipo de Transporte a usar. También hay Pedidos en donde es evidente el tipo de Transporte a usar, p.ej. los de Mayoreo/Transfer siempre se surten con patín para poder usar tarimas debido a las cantidades solicitadas.
+(2.1) ¿Las hieleras se comparten entre pedidos? o se ¿asigna una hilera por cada pedido?
+
+describir flujo de traspaleo para armar los contendores consolidados.
+
+(2.2) Hay algunos productos que requieren confirmación(revisión) de lote, hay que incluir los pasos del procedimiento de revisión de lote.
+
+
+
+(3) Segundo Cálculo Volumétrico.
+(4) La etiqueta que se imprime se pega en el bulto (bolsa de plástico), no va en el contenedor porque este regresa al almacén. Las hieleras y los mandiles tienen bolsas de plástico también, es decir también arman bultos de surtido.
+(5) Puede ser que aun falten Pedidos por llegar que tengan una prioridad mayor a la que se está llevando al área de embarque.
+(5.1) Si el Transporte tiene Contenedores se dejan los Contenedores, pero ¿qué pasa si son Tarimas? ¿Qué pasa si son mandiles? ¿Se deja el mandil? ¿qué pasa si son hieleras?
+Los mandiles en el área de estacionamiento se tienen que traspalear a contenedores de plástico, las tarimas se dejan en el área de estacionamiento y lo mismo ocurre con las hieleras.
+(6) No solo van a llegar contenedores, pueden llegar tarimas, mandiles, hieleras, etc.
+(7) ¿Existe un segundo estacionamiento de auditoria?
+(8) Puede ser que la Ruta este completa porque ya no hay Ordenes de Surtido pendientes ... pero ¿qué pasa si faltan por llegar Pedidos de esta Ruta? o ¿qué pasa con los Pedidos que llegaron después del Cierre de Ruta?
+(9) ¿El Chofer recibe algún manifiesto de los contenedores/cajas/mandiles/hieleras cargadas en la camioneta?
+ 
+ 
+(A) ¿Confirmar en donde se asigna el surtido por empaque original? Caja cerrada. Nosotros entendemos que ORACLE ya separa las Ordenes de Surtido que se surten de las diferentes bodegas de almacenamiento. Las piezas individuales son generadas en Ordenes de Surtido para los demás SubInventarios.
+(B) Los pedidos de mayoreo son cantidades grandes (50, 100, 200 piezas), ¿se surten por el mismo proceso de surtido?
+(C) Los pedidos de transfer aún son más grandes (200, 300,  ...., 1,000 piezas), por eso se usan tarimas y no contenedores.
+También se abre el surtido durante varios días, porque se tardan en surtir estas Rutas. ¿se va a usar el mismo proceso de surtido?
+(D) Hasta el momento solo hay un indicador (KPI), el Jauler ve las Rutas que están completas en color verde.
+¿Cuáles son los otros KPIs que debe de mostrar el sistema?
+(E) De acuerdo con los KPIs, hay varias métricas(mediciones) del surtido que se deberán exportar a un DataWareHouse para su posterior DataMining.
+Las métricas que se me ocurren son: tiempo total de surtido, líneas/piezas totales de surtido, cuenta de errores de localizador/producto incorrecto, cuenta de errores de lote incorrecto. ¿Qué otras métricas deberán de registrarse el sistema?
+ 
+ 
+* Revisar si en la integración con ORACLE si mandamos el nombre del surtidor que hizo el surtido.
+
+
+
+==============================================================================================================================
+==============================================================================================================================
+
+--
+--
+--
+Surtido Transfer.
+
+Normalmente son Pedidos grandes (200, 300, ...., 1,000 piezas), por eso se usan pallets y no contenedores.
+
+
+1. Se comenta que el sistema GNEW debe de determinar volumetria de la Orden de Surtido para determinar capacidad de carros/tarima.
+Ummm, creo que es mejor que inicies el surtido en el primer carros/tarima, no importa la capacidad del Carro/Tarima, en cuanto lo llenes ... continuas el surtido en un nuevo Carro/Tarima que abriste para continuar surtiendo. Y asi sucesivamente hasta que termines de surtir.
+
+2. Se indica que primero se deben de surtir los empaques originales y luego las piezas de picking. En la Orden de Surtido de ORACLE solo se manda la cantidad de piezas solicitadas, para descomponerlo en empaques originales necesitamos el numero de piezas de empaque original; pero para saber si hay en existencia empaques originales necesitamos conocer el detalle del inventario de ORACLE y ese no lo tenemos.
+Creo que ademas es redundante este punto, porque ya existen Celdas del Almacen que representan estos empaques originales, según yo BODALM, BODVOL, BODPER, BODDIN son el surtido de voluminoso. Si la Orden de Surtido de ORACLE indica surtir en CELDA1, CELDA2 es porque es picking, pero si indica BODALM, BODPER es porque son empaques originales.
+Hay que validar este comportamiento de ORACLE.
+*** Si no es así, el sistema de GNEW deberá de asignar el surtido de empaques originales, ojo con esto ***
+
+3. Se supone que estos surtidos de Transfer se surtiran por medio de un grupo de Surtidores, asi que todos los Surtidores que se firmen en esta Ruta podrán surtir las Ordenes de Surtido.
+
+4. Si agrupamos las Ordenes de Surtido por Zonas (p.ej. GENERALES = CELDA5/CELDA6/CELDA7) quedarán Ordenes de Surtido aun mas grandes, de por si ya tienen cantidades grandes, después de la agrupación por Zona, quedarán aun mas grandes (mayor numero de piezas por Orden de Surtido).
+
+5. Se habla que se surtiran Ordenes de Surtido en simultaneo de varios Clientes, pero las Rutas que yo he revisado (TNS-GPE, TNS-HER, TNS-CLN) estan asignadas a un solo Cliente, por lo cual es incorrecto hablar de varios Clientes en una Ruta de Transfer.
+
+
+
+--
+--
+--
+Surtido Mayoreo
+
+Se indica que es igual al Surtido Transfer, son pedidos grandes.
+
+Pero para que sea igual los Pedidos de Transfer deben de venir en Rutas separadas, porque de otra forma se mezclan con el Surtido Normal.
+¿Esto es correcto? ¿Si estan separados los Pedidos de Mayoreo en Rutas de Mayoreo?
+*** Ojo con esto ***
+
+
+--
+--
+--
+Surtido Normal
+
+1. No hay asignación de Surtidor a Ruta, no esta especificado en el proceso que el Surtidos debe de asignarse a una Ruta en particular.
+
+2. Lo ideal es que al asignar los Clientes que se estan surtiendo (1 a la vez o varios si es simultaneo), el sistema determine el volumen ideal del Contenedor que se debe de usar; se supone que hay tres tamaños (grande/mediano/chico) y el sistema GNEW debe de determinar el adecuado para la Orden de Surtido que esta atendiendo.
+
+3. Los inners packs armados en el Surtido son: Carro - Contenedor (caja de plastico) - Bulto (bolsa) - Piezas. El Bulto es el que lleva la etiqueta impresa pegada en el exterior de la bolsa. El Bulto tiene el mismo volumen que el Contenedor, por lo que solo habra un Bulto por Contenedor, lo que si es que habrá varios Contenedores por cada Orden de Surtido Agrupada.
+
+4. Le siguen llamando Zonas, ayer quedamos Bloques.
+¿Si se va a escanear el localizador de Zona? ¿Donde va a estar ese código de barras?
+
+5. Aqui no hay tarimas solo carros.
+¿Que pasa si los cinchos no tienen código?
+
+6. Al Cerrar el Contenedor se cierra automaticamente el Bulto, se imprime la etiqueta y se pega en el Bulto. Se habla de sellar el Contenedor con un cincho de seguridad, pero no se habla de cerrar el Bulto con una selladora (se habla de hacerle un 'nudo' simple en la bolsa) ¿todos estan de acuerdo en esto?
+
+7. Entiendo que en este diagrama esta el detalle del proceso de Surtido, aunque también habla del proceso de Auditoria, Sorter, Jauler y Embarque; yo creo que cada uno de estos procesos merecen su diagrama de proceso por separado, para documentar el detalle; pero si todos los procesos caben en un solo diagrama, esta bien.
+
+8. El riesgo de surtir Simultaneo es que puedes colocar el Producto en diferente Contenedor. Para eso se va a escanear el Contenedor despues de colocar las Piezas.
+
+9. Faltan las reglas de Apertura/Cierre de Rutas.
+
+Prueba del Acido.
+
+
+
+
+==============================================================================================================================
+==============================================================================================================================
+
+
+
+Cliente por Contenedor.
+Un Surtidor esta asignado a una Zona de Surtido.
+En total hay 7 Zonas de Surtido en todo el Almacen.
+Al iniciar el Surtidor se firma en una Ruta de Distribución y en una Zona de Surtido.
+Continua ...
+
+Al Abrir el Carrito de Surtido asigna los Contenedores de Surtido.
+El Carrito puede llevar hasta 6 Contenedores por lo que podra asignar hasta esos 6.
+Se asigna un Contenedor a un Cliente en particular.
+Inicia el Surtido de los productos de su Zona.
+Continua ...
+
+Va tomando los productos que el App le indica y los coloca en el Contenedor que el App le Indica.
+ESTO ES SURTIDO SIMULTANEO DE PEDIDOS DE CLIENTES.
+Continua surtiendo hasta que termina de surtir todos los productos de su Zona de Surtido de todos sus Clientes asignados.
+Continua ...
+
+Al terminar de Surtir, lleva el Carrito a la Zona de Embarque y Sella todos los Contenedores.
+Deposita cada Contenedor en el area del Cliente.
+Los Contenedores estan separados por Pedido de Cliente.
+En la Zona de Embarque se juntan todos los Contenedores de Surtido del mismo Cliente (recordar que hay 7 Zonas).
+Continua ...
+
+El Surtidor vuelve a Abrir Carrito de Surtido y repite la Operacion hasa que no haya mas productos que surtir de su Ruta y Zona correspondiente.
+Fin del Surtido.
+
+***Hay que diagramar todo esto y que lo autoricen; después ya podemos estimar el tiempo para construir el software.***
+
+
+HAY QUE MODIFICAR EL SOFTWARE.
+
+
+==============================================================================================================================
+==============================================================================================================================
+
+
+
+MariaDB [fanasa]> set @r = 'MXF01 0034 AN';
+Query OK, 0 rows affected (0.000 sec)
+
+MariaDB [fanasa]> set @z = 'ZONA_A,ZONA_B';
+Query OK, 0 rows affected (0.000 sec)
+
+MariaDB [fanasa]> select compania, sucursal, headerid, orden, subinventario, cliente, nombrecliente from OrdenSurtido where compania = '1000' and sucursal = '2205' and ruta = @r and FIND_IN_SET(subinventario, @z) order by headerid, orden;
+select count(orden) as ordenes, sum(lineas) as lineas, avg(lineas) as promediolineas, sum(cantidad) as cantidad, avg(promediocantidad) as promediocantidad from (select os.compania, os.sucursal, os.headerid, os.orden, count(osd.clave) as lineas, sum(osd.cantidad) as cantidad, avg(osd.cantidad) as promediocantidad from OrdenSurtido os inner join OrdenSurtidoDetalle osd on os.compania = osd.compania and os.sucursal = osd.sucursal and os.orden = osd.orden where os.compania = '1000' and os.sucursal = '2205' and os.ruta = @r and FIND_IN_SET(subinventario, @z) group by os.compania, os.sucursal, os.headerid, os.orden) as datos;
++----------+----------+-----------+------------+---------------+---------+-----------------------------------------------------+
+| compania | sucursal | headerid  | orden      | subinventario | cliente | nombrecliente                                       |
++----------+----------+-----------+------------+---------------+---------+-----------------------------------------------------+
+| 1000     | 2205     | 113317041 | 44305177.B | ZONA_B        |   34731 | AICM P7 L1                                          |
+| 1000     | 2205     | 113317069 | 44305205.A | ZONA_A        |   50105 | FARMACIAS BENAVIDES AEROPUERTO MX ALL 03            |
+| 1000     | 2205     | 113317069 | 44305205.B | ZONA_B        |   50105 | FARMACIAS BENAVIDES AEROPUERTO MX ALL 03            |
+| 1000     | 2205     | 113317248 | 44305375.B | ZONA_B        |   37388 | FARMACIAS BENAVIDES SAB DE CV SUCURSAL AICM L1/2    |
+| 1000     | 2205     | 113317260 | 44305380.A | ZONA_A        |   37390 | FARMACIAS BENAVIDES SAB DE CV SUCURSAL AICM SALA 21 |
+| 1000     | 2205     | 113317260 | 44305380.B | ZONA_B        |   37390 | FARMACIAS BENAVIDES SAB DE CV SUCURSAL AICM SALA 21 |
+| 1000     | 2205     | 113317850 | 44305451.A | ZONA_A        |   50071 | FARMACIAS BENAVIDES FARMACIA T2 AS 41               |
+| 1000     | 2205     | 113317850 | 44305451.B | ZONA_B        |   50071 | FARMACIAS BENAVIDES FARMACIA T2 AS 41               |
+| 1000     | 2205     | 113317852 | 44305453.A | ZONA_A        |   50106 | FARMACIAS BENAVIDES FARMACIA T2 SUES N 03           |
+| 1000     | 2205     | 113317852 | 44305453.B | ZONA_B        |   50106 | FARMACIAS BENAVIDES FARMACIA T2 SUES N 03           |
+| 1000     | 2205     | 113317859 | 44305460.A | ZONA_A        |   50104 | FARMACIAS BENAVIDES AEROPUERTO MX ALL 31            |
+| 1000     | 2205     | 113317870 | 44305471.A | ZONA_A        |   50071 | FARMACIAS BENAVIDES FARMACIA T2 AS 41               |
+| 1000     | 2205     | 113317875 | 44305476.A | ZONA_A        |   50274 | FARMACIAS BENAVIDES AEROPUERTO T1 D 4               |
+| 1000     | 2205     | 113317875 | 44305476.B | ZONA_B        |   50274 | FARMACIAS BENAVIDES AEROPUERTO T1 D 4               |
+| 1000     | 2205     | 113317878 | 44305479.A | ZONA_A        |   37390 | FARMACIAS BENAVIDES SAB DE CV SUCURSAL AICM SALA 21 |
+| 1000     | 2205     | 113317955 | 44305556.A | ZONA_A        |   50104 | FARMACIAS BENAVIDES AEROPUERTO MX ALL 31            |
+| 1000     | 2205     | 113318011 | 44305612.A | ZONA_A        |   50105 | FARMACIAS BENAVIDES AEROPUERTO MX ALL 03            |
+| 1000     | 2205     | 113342840 | 44312732.A | ZONA_A        |   50106 | FARMACIAS BENAVIDES FARMACIA T2 SUES N 03           |
+| 1000     | 2205     | 113342840 | 44312732.B | ZONA_B        |   50106 | FARMACIAS BENAVIDES FARMACIA T2 SUES N 03           |
+| 1000     | 2205     | 113342852 | 44312742.A | ZONA_A        |   50274 | FARMACIAS BENAVIDES AEROPUERTO T1 D 4               |
+| 1000     | 2205     | 113342864 | 44312751.A | ZONA_A        |   50104 | FARMACIAS BENAVIDES AEROPUERTO MX ALL 31            |
+| 1000     | 2205     | 113343182 | 44313029.A | ZONA_A        |   37388 | FARMACIAS BENAVIDES SAB DE CV SUCURSAL AICM L1/2    |
+| 1000     | 2205     | 113343834 | 44313143.A | ZONA_A        |   50105 | FARMACIAS BENAVIDES AEROPUERTO MX ALL 03            |
+| 1000     | 2205     | 113343857 | 44313160.A | ZONA_A        |   37390 | FARMACIAS BENAVIDES SAB DE CV SUCURSAL AICM SALA 21 |
+| 1000     | 2205     | 113343923 | 44313186.A | ZONA_A        |   50071 | FARMACIAS BENAVIDES FARMACIA T2 AS 41               |
++----------+----------+-----------+------------+---------------+---------+-----------------------------------------------------+
+25 rows in set (0.017 sec)
+
+MariaDB [fanasa]> select count(orden) as ordenes, sum(lineas) as lineas, avg(lineas) as promediolineas, sum(cantidad) as cantidad, avg(promediocantidad) as promediocantidad from (select os.compania, os.sucursal, os.headerid, os.orden, count(osd.clave) as lineas, sum(osd.cantidad) as cantidad, avg(osd.cantidad) as promediocantidad from OrdenSurtido os inner join OrdenSurtidoDetalle osd on os.compania = osd.compania and os.sucursal = osd.sucursal and os.orden = osd.orden where os.compania = '1000' and os.sucursal = '2205' and os.ruta = @r and FIND_IN_SET(subinventario, @z) group by os.compania, os.sucursal, os.headerid, os.orden) as datos;
++---------+--------+----------------+----------+------------------+
+| ordenes | lineas | promediolineas | cantidad | promediocantidad |
++---------+--------+----------------+----------+------------------+
+|      25 |     59 |         2.3600 |      126 |       2.54333200 |
++---------+--------+----------------+----------+------------------+
+1 row in set (0.014 sec)
+
+MariaDB [fanasa]>
+
+
+MariaDB [fanasa]> set @r = 'MXF01 0250 AN';
+Query OK, 0 rows affected (0.000 sec)
+
+MariaDB [fanasa]> ^Mselect compania, sucursal, headerid, orden, subinventario, cliente, nombrecliente from OrdenSurtido where compania = '1000' and sucursal = '2205' and ruta = @r and FIND_IN_SET(subinventario, @z) order by headerid, orden;
+select count(orden) as ordenes, sum(lineas) as lineas, avg(lineas) as promediolineas, sum(cantidad) as cantidad, avg(promediocantidad) as promediocantidad from (select os.compania, os.sucursal, os.headerid, os.orden, count(osd.clave) as lineas, sum(osd.cantidad) as cantidad, avg(osd.cantidad) as promediocantidad from OrdenSurtido os inner join OrdenSurtidoDetalle osd on os.compania = osd.compania and os.sucursal = osd.sucursal and os.orden = osd.orden where os.compania = '1000' and os.sucursal = '2205' and os.ruta = @r and FIND_IN_SET(subinventario, @z) group by os.compania, os.sucursal, os.headerid, os.orden) as datos;
+
++----------+----------+-----------+------------+---------------+---------+----------------------------------------+
+| compania | sucursal | headerid  | orden      | subinventario | cliente | nombrecliente                          |
++----------+----------+-----------+------------+---------------+---------+----------------------------------------+
+| 1000     | 2205     | 113323193 | 44307678.B | ZONA_B        |  112760 | FARMACIAS DEL AHORRO SUCURSAL PACIFICO |
+| 1000     | 2205     | 113325221 | 44307987.A | ZONA_A        |   44394 | FARMACIAS DEL AHORRO                   |
+| 1000     | 2205     | 113326176 | 44308623.A | ZONA_A        |   44394 | FARMACIAS DEL AHORRO                   |
+| 1000     | 2205     | 113327561 | 44309081.B | ZONA_B        |  112760 | FARMACIAS DEL AHORRO SUCURSAL PACIFICO |
+| 1000     | 2205     | 113330522 | 44309487.A | ZONA_A        |   44394 | FARMACIAS DEL AHORRO                   |
+| 1000     | 2205     | 113330522 | 44309487.B | ZONA_B        |   44394 | FARMACIAS DEL AHORRO                   |
+| 1000     | 2205     | 113336220 | 44310427.A | ZONA_A        |  112760 | FARMACIAS DEL AHORRO SUCURSAL PACIFICO |
+| 1000     | 2205     | 113336220 | 44310427.B | ZONA_B        |  112760 | FARMACIAS DEL AHORRO SUCURSAL PACIFICO |
+| 1000     | 2205     | 113341153 | 44312369.A | ZONA_A        |  154738 | IMPULSO FARMACEUTICO                   |
+| 1000     | 2205     | 113341168 | 44312384.A | ZONA_A        |   20148 | FARMACIAS GAZHER CENTRO                |
+| 1000     | 2205     | 113341168 | 44312384.B | ZONA_B        |   20148 | FARMACIAS GAZHER CENTRO                |
+| 1000     | 2205     | 113342889 | 44312773.A | ZONA_A        |  112760 | FARMACIAS DEL AHORRO SUCURSAL PACIFICO |
+| 1000     | 2205     | 113342940 | 44312824.A | ZONA_A        |   44394 | FARMACIAS DEL AHORRO                   |
+| 1000     | 2205     | 113342940 | 44312824.B | ZONA_B        |   44394 | FARMACIAS DEL AHORRO                   |
+| 1000     | 2205     | 113351298 | 44315245.A | ZONA_A        |   53474 | CHR FARMACIA                           |
+| 1000     | 2205     | 113351298 | 44315245.B | ZONA_B        |   53474 | CHR FARMACIA                           |
+| 1000     | 2205     | 113358211 | 44318248.A | ZONA_A        |   62007 | FARMACIAS LIVE                         |
++----------+----------+-----------+------------+---------------+---------+----------------------------------------+
+17 rows in set (0.017 sec)
+
+MariaDB [fanasa]> select count(orden) as ordenes, sum(lineas) as lineas, avg(lineas) as promediolineas, sum(cantidad) as cantidad, avg(promediocantidad) as promediocantidad from (select os.compania, os.sucursal, os.headerid, os.orden, count(osd.clave) as lineas, sum(osd.cantidad) as cantidad, avg(osd.cantidad) as promediocantidad from OrdenSurtido os inner join OrdenSurtidoDetalle osd on os.compania = osd.compania and os.sucursal = osd.sucursal and os.orden = osd.orden where os.compania = '1000' and os.sucursal = '2205' and os.ruta = @r and FIND_IN_SET(subinventario, @z) group by os.compania, os.sucursal, os.headerid, os.orden) as datos;
++---------+--------+----------------+----------+------------------+
+| ordenes | lineas | promediolineas | cantidad | promediocantidad |
++---------+--------+----------------+----------+------------------+
+|      17 |     94 |         5.5294 |      130 |       1.54143529 |
++---------+--------+----------------+----------+------------------+
+1 row in set (0.014 sec)
+
+MariaDB [fanasa]>
+
+
+
+==============================================================================================================================
+==============================================================================================================================
+
+
+export RUTA="MXF01 0034 AN"
+./test.sh --compania 1000 --sucursal 2205 --integracion --zonas "${RUTA}"
+
+export RUTA="MXF01 0250 AN"
+./test.sh --compania 1000 --sucursal 2205 --integracion --zonas "${RUTA}"
+
+
+
+==============================================================================================================================
+==============================================================================================================================
+
+
+
+ZonaA - Celdas 5, 6, y 7
+ZonaB - Celdas 9 y 10
+
+insert into SubInventario values ('1000','2205','ZONA_A','0','1','0','0');
+insert into SubInventario values ('1000','2205','ZONA_B','0','1','0','0');
+
+
+
+./limpia-surtido.sh
+
+--
+--
+
+set @r = 'MXF01 0250 AN';
+
+select compania, sucursal, headerid, orden, subinventario, cliente, nombrecliente from OrdenSurtido where compania = '1000' and sucursal = '2205' and ruta = @r and subinventario in ('CELDA5','CELDA6','CELDA7','CELDA9','CELDA10') order by headerid, orden;
+
+export RUTA="MXF01 5600 AN"
+./test.sh --compania 1000 --sucursal 2205 --integracion --zonas "${RUTA}"
+./test.sh --compania 1000 --sucursal 2205 --command abre-ruta "${RUTA}"
+
+set @z = 'CELDA5,CELDA6,CELDA7,CELDA9,CELDA10';
+set @z = 'ZONA_A,ZONA_B';
+
+select compania, sucursal, headerid, orden, subinventario, cliente, nombrecliente, status from OrdenSurtido where compania = '1000' and sucursal = '2205' and ruta = @r and FIND_IN_SET(subinventario, @z) order by headerid, orden;
+select count(orden) as ordenes, sum(lineas) as lineas, avg(lineas) as promediolineas, sum(cantidad) as cantidad, avg(promediocantidad) as promediocantidad from (select os.compania, os.sucursal, os.headerid, os.orden, count(osd.clave) as lineas, sum(osd.cantidad) as cantidad, avg(osd.cantidad) as promediocantidad from OrdenSurtido os inner join OrdenSurtidoDetalle osd on os.compania = osd.compania and os.sucursal = osd.sucursal and os.orden = osd.orden where os.compania = '1000' and os.sucursal = '2205' and os.ruta = @r and FIND_IN_SET(subinventario, @z) group by os.compania, os.sucursal, os.headerid, os.orden) as datos;
+
+
+
+select compania, sucursal, headerid, orden, subinventario, cliente, nombrecliente from OrdenSurtido where compania = '1000' and sucursal = '2205' and ruta = 'MXF01 0034 AN';
+
+
+
+
+
+--
+--
+
+set @c = '44310050.7,44310050.8,44310050.9';
+set @d = '44310050.8,44310050.9';
+set @e = '44310050';
+
+select compania, sucursal, ruta, headerid, orden, subinventario, cliente, nombrecliente from OrdenSurtido where compania = '1000' and sucursal = '2205' and ruta = 'MXF01 0003 AN' and FIND_IN_SET(orden, @c);
+select compania, sucursal, orden, linea, localizador, clave, descripcion, cantidad, lote, caducidad from OrdenSurtidoDetalle where compania = '1000' and sucursal = '2205' and FIND_IN_SET(orden, @c);
+
+update OrdenSurtidoDetalle set orden = @e where compania = '1000' and sucursal = '2205' and FIND_IN_SET(orden, @c);
+delete from OrdenSurtido where FIND_IN_SET(orden, @d);
+update OrdenSurtido set orden = @e, subinventario = 'ZONA_A' where compania = '1000' and sucursal = '2205' and FIND_IN_SET(orden, @c);
+
+delete from OrdenSurtidoBitacora where FIND_IN_SET(orden, @d);
+update OrdenSurtidoBitacora set orden = @e where compania = '1000' and sucursal = '2205' and FIND_IN_SET(orden, @c);
+
+CALL InformacionOrdenSurtido('1000', '2205', @e); 
+
+
+--
+--
+
+export RUTA="MXF01 0003 AN"
+./test.sh --compania 1000 --sucursal 2205 --command abre-ruta "${RUTA}"
+
+d() { /usr/local/mysql/bin/mysql -u ecommerce -pEC\$89yeR fanasa; }
+
+--
+
+
+==============================================================================================================================
+==============================================================================================================================
+
+
+PickPackAndDispacht
+
+Desde la creación del pedido hasta la carga de unidad.
+Proceso de transferencias. *** Este no estaba ***
+
+
+Volumetria de productos.
+Carritos de Surtido y Sorter.
+Contenedores de Almacén y Distribución.
+Etiquetado de Almacén.
+
+
+Surtido por Zonas de Inventario.
+Una Zona de Inventario es un conjunto de Celdas (SubInventarios) de Almacén.
+Los Bultos de Surtido se colocan en un Contenedor de Surtido.
+Se imprime etiqueta de Bulto de Surtido.
+El Contenedor de Surtido se cierra con un cincho de Seguridad.
+Se imprime etiqueta de Contenedor de Surtido.
+
+
+Sorter, lleva el Carrito Estacionado lo lleva a las Cortinas de Embarque.
+El Equipo de Embarque recibe el Carrito.
+El Sorter acomoda por Parada en el Riel de la Ruta.
+El Riel de la Ruta esta dibujado en el Piso.
+
+
+Embarque carga los Contenedores y los Sube a la Camioneta.
+
+
+
+==============================================================================================================================
+==============================================================================================================================
+
+
+
+Nuevo Proceso de Surtido
+
+1. El Surtidor surte Pedidos por Ruta.
+2. El WMS asigna mas de un Pedido para surtir al mismo tiempo.
+	¿Como se determina cuantos Pedidos se pueden surtir de forma simultánea? ¿por número? ¿por volumen?
+2.1. Como son varios Pedidos simultáneos se agrupan las Ordenes de Surtido por Grupos de SubInventario.
+2.2. Los Grupos de SubInventario son definidos por el Almacén, se separan Refrigerados y Controlados.
+2.2.1. Los Grupos de SubInventarios los define el Almacén, siempre separando Refrigerados y Controlados.
+2.2.2. Pueden haber varios Grupos de SubInventarios, lo que le convenga al Almacén.
+3. Al abrir el Carrito de Surtido se asignan las Charolas y los Bultos al Pedido que se esta surtiendo.
+	¿Cuantas Charolas hay por cada Carrito de Surtido? ¿el carrito tiene varios niveles y cada nivel puede tener varias Charolas?
+3.1. Las Charolas/Bultos estan asignados a un Pedido de Cliente.
+3.2. El punto anterior implica que varias Ordenes de Surtido pueden tener el mismo Bulto Asignado.
+3.3. Es innecesario escanear la Celda donde esta surtiendo el Surtidor ya que el surtido es por Ruta y Pedido.
+3.4. Al Imprimir el Ticket del Bulto se debe de imprimir las Ordenes de Surtido que tiene el Bulto.
+	¿Que pasa si un mismo Pedido requiere de varios Bultos? ¿como se acomodan todos estos Bultos en las Charolas del Carrito de Surtido?
+3.5. Como se estan Surtiendo varios Pedidos de forma simultánea, el surtido se hace por Producto y Localizador (orden de recorrido de los pasillos del Almacén);
+puede ser que un mismo Producto pueda estar en diferentes Pedidos, entonces un mismo Producto se puede surtir varias veces y colocarse en varias Charolas/Bultos.
+3.6. Al Cerrar el Carrito de Surtido se estaciona en el Riel correspondiente a la Ruta a la que pertenece el Surtido.
+4. El Embarque toma los Carritos estacionados y escanea Charolas/Bultos.
+4.1. El Embarque se asegura que los Bultos sean de la Ruta que se esta Embarcando.
+4.2. El Embarque junta todos los Bultos de un mismo Pedido.
+5. Carga a Camioneta.
+5.1. El que Carga a Camioneta va escaneando todos los Bultos de los Pedidos.
+5.2. El Orden de Escaneo es por Parada de Ruta. (los que se entregan al último se suben primero a la camioneta)
+5.3. Hasta que estan todos los Bultos de la Ruta, se puede Cerrar la Ruta.
+
+
+- Integración.
+Varias Ordenes de Surtido pueden tener el mismo Bulto asignado (ya no es Bulto único por Orden de Surtido).
+Es el único cambio que veo, que los Bultos asignados se pueden repetir en varias Ordenes de Surtido.
+
+
+==============================================================================================================================
+==============================================================================================================================
+
+
+40 HRS de Desarrollo durante tres meses
+- 800 MXN por hora.
+- 100% del pago al inicio.
+- No acumulables.
+- Caducan en tres meses.
+
+
+==============================================================================================================================
+==============================================================================================================================
+
+
+select count(*) as c, ruta from OrdenSurtido where compania = '1000' and status = '00' and usuario = 'INTEGRACION' group by ruta order by c desc;
+
+--
+
+export RUTA="MXF01 0003 AN"
+./test.sh --compania 1000 --sucursal 2205 --command abre-ruta "${RUTA}"
+
+d() { /usr/local/mysql/bin/mysql -u ecommerce -pEC\$89yeR fanasa; }
+
+--
+
+export IDRUTA=1
+./test.sh --compania 1000 --sucursal 2496 --command surte-ruta $IDRUTA
+./test.sh --compania 1000 --sucursal 2496 --command sorter
+./test.sh --compania 1000 --sucursal 2496 --command jaula $IDRUTA
+./test.sh --compania 1000 --sucursal 2496 --command embarque $IDRUTA
+./test.sh --compania 1000 --sucursal 2496 --command carga $IDRUTA
+
+--
+
+set @idrutadistribucion = 8;
+
+select os.* from OrdenSurtido os where os.compania = '1000' and os.sucursal = '2205' and os.idrutadistribucion = @idrutadistribucion;
+select osd.* from OrdenSurtido os inner join OrdenSurtidoDetalle osd using (compania, sucursal, orden) where os.compania = '1000' and os.sucursal = '2496' and os.idrutadistribucion = @idrutadistribucion;
+select osb.* from OrdenSurtido os inner join OrdenSurtidoBulto osb using (compania, sucursal, orden) where os.compania = '1000' and os.sucursal = '2496' and os.idrutadistribucion = @idrutadistribucion;
+
+--
+
+
+==============================================================================================================================
+==============================================================================================================================
+
+
+cd /Users/joelbecerramiranda/Documents/FANASA
+
+sed '1d' Ordenes_MXF.csv | sed 's/\r//' > /tmp/ordenes.csv
+
+
+/usr/local/mysql/bin/mysql --local-infile=1 -u ecommerce -pEC\$89yeR fanasa
+
+
+drop table if exists ordenes;
+create table ordenes (ID_TASK varchar(20), ORGANIZATION_ID varchar(10), ORGANIZATION_CODE varchar(10), ID_PEDIDO varchar(20), ORDER_NUMBER varchar(20),
+ID_ORDEN varchar(20), ORDEN_LINE_ID varchar(20), ORDEN varchar(20), 
+SUBINVENTORY_CODE varchar(20), LOCALIZADOR varchar(20), RUTA varchar(20), NUM_CLIENTE varchar(10), NOMBRE_FARMACIA varchar(240), RAZON_SOCIAL varchar(360), 
+INVENTORY_ITEM_ID varchar(20), ITEM varchar(20), CODIGO_ESCANEO varchar(40), DESCRIPTION varchar(240), 
+CANTIDAD_PIEZA int, LOT_NUM varchar(30), PRIORIDAD_ENTREGA varchar(20), ORDER_TYPE varchar(10), CODIGO_ESCANEO_1 varchar(40),
+CREATION_DATE varchar(30));
+
+SET GLOBAL local_infile=1;
+
+truncate ordenes;
+load data local infile '/tmp/ordenes.csv' into table ordenes fields terminated by ',';
+
+create index ordenes_indx0 on ordenes (ORGANIZATION_ID, ORDEN, SUBINVENTORY_CODE, RUTA, PRIORIDAD_ENTREGA, NUM_CLIENTE, NOMBRE_FARMACIA);
+
+update ordenes set PRIORIDAD_ENTREGA = 0 WHERE PRIORIDAD_ENTREGA = '';
+update ordenes set PRIORIDAD_ENTREGA = 0 WHERE LENGTH(PRIORIDAD_ENTREGA) > 6;
+update ordenes set LOT_NUM = replace(LOT_NUM, '@COMA@', ',');
+update ordenes set NOMBRE_FARMACIA = replace(NOMBRE_FARMACIA, '@COMA@', ',');
+update ordenes set RAZON_SOCIAL = replace(RAZON_SOCIAL, '@COMA@', ',');
+update ordenes set DESCRIPTION = replace(DESCRIPTION, '@COMA@', ',');
+update ordenes set CREATION_DATE = '01/01/2024 00:00:00' WHERE CREATION_DATE='';
+
+alter table ordenes add column HEADER_ID varchar(20);
+alter table ordenes add column ORDEN_HEADER_ID varchar(20);
+alter table ordenes add column LOCATOR_ID varchar(20);
+alter table ordenes add column LINE_ID varchar(20);
+
+update ordenes set HEADER_ID = ID_PEDIDO;
+update ordenes set ORDEN_HEADER_ID = "00000000", LOCATOR_ID = "00000000", LINE_ID = "00000000";
+
+
+truncate Ruta;
+insert ignore into Ruta 
+select '1000', ORGANIZATION_ID, RUTA, '90', '0', '0', 'SEGUNDO', '20:00', '23:30', 0 from ordenes group by ORGANIZATION_ID, RUTA;
+
+# Despues de esto, ya se pueden generar las Ordenes de Surtido
+cd /Users/joelbecerramiranda/Apps/FANASA/WMSWEB
+./limpia-surtido.sh
+
+#dump and load on DEV
+du() { /usr/local/mysql/bin/mysqldump -u ecommerce -pEC\$89yeR fanasa  ordenes Sucursal Ruta lotes LoteActivo CodigoBarras; }
+
+
+--
+--
+--
+
+cd /Users/joelbecerramiranda/Documents/FANASA
+
+sed '1d' Lotes_MXF.csv | sed 's/\r//' > /tmp/lotes.csv
+
+
+/usr/local/mysql/bin/mysql --local-infile=1 -u ecommerce -pEC\$89yeR fanasa
+
+drop table if exists lotes;
+create table lotes (ORGANIZATION_ID varchar(10), ORGANIZATION_CODE varchar(10), INVENTORY_ITEM_ID varchar(20), ITEM varchar(20), 
+CODIGO_BARRAS varchar(20), LOT_NUMBER varchar(20), EXPIRATION_DATE varchar(20));
+
+SET GLOBAL local_infile=1;
+
+truncate lotes;
+load data local infile '/tmp/lotes.csv' into table lotes fields terminated by ',';
+
+update lotes set LOT_NUMBER = replace(LOT_NUMBER, '@COMA@', ',');
+
+select CODIGO_BARRAS, INVENTORY_ITEM_ID from lotes where CODIGO_BARRAS in ('07501082242720','07501122900368','07501122961253') 
+group by CODIGO_BARRAS, INVENTORY_ITEM_ID order by CODIGO_BARRAS;
+
+
+truncate LoteActivo;
+insert into LoteActivo 
+select '1000', ORGANIZATION_ID, INVENTORY_ITEM_ID, CODIGO_BARRAS, LOT_NUMBER, COALESCE(EXPIRATION_DATE,'01-01-50') from lotes;
+
+update LoteActivo set fechacaducidad = concat(substr(fechacaducidad,9,2),'-',substr(fechacaducidad,6,2),'-',substr(fechacaducidad,3,2)) 
+where length (fechacaducidad)=10;
+
+truncate CodigoBarras;
+insert ignore into CodigoBarras 
+select '1000', CODIGO_BARRAS, INVENTORY_ITEM_ID from lotes where CODIGO_BARRAS != '' group by CODIGO_BARRAS, INVENTORY_ITEM_ID;
+
+--
+--
+--
+
+
+
+==============================================================================================================================
+==============================================================================================================================
+
+
+Un favor Joel,  primero inicia sesión  en la página de office365 
+https://login.microsoftonline.com/
+y sigue los pasos; Cuando ya hallas iniciado sesión intenta conectarte a la VPN porfa.
+
+
+VPN
+Ya esta generado la cuenta: 
+joel.becerra@fanafesa.com
+F@rmacos2024.
+
+https://aka.ms/mysecurityinfo
+
+AnyDesk
+110841446
+FANASA11
+Fan2023*
+
+
+==============================================================================================================================
+==============================================================================================================================
+
+
+
+Nombre Completo: Becerra Miranda Joel
+Correo Electronico: jbecerra@gnew.com.mx
+Puesto: IT Manager
+Área: IT
+Empresa/Proveedor: GNEW S.A. DE C.V.
+Ubicación Física: Oficinas en CDMX
+Celular para poder configurar el MFA: 5513859557
+Persona de Grupo FANAFESA a la que reportan / Autoriza: JOSE RAMON GONZALEZ SEGRESTE <ramon.gonzalez@fanafesa.com>
+Nombre completo: JOSE RAMON GONZALEZ SEGRESTE
+Correo: ramon.gonzalez@fanafesa.com
+ 
+
+
+==============================================================================================================================
+==============================================================================================================================
+
+
+truncate Ruta;
+insert ignore into Ruta 
+select '1000', ORGANIZATION_ID, RUTA, '90', '0', '0', 'SEGUNDO', '20:00', '23:30', 0 from ordenes group by ORGANIZATION_ID, RUTA;
+
+
+==============================================================================================================================
+==============================================================================================================================
+
+ramon.gonzalez@fanafesa.com
+alejandro.flores@fanafesa.com
+gonzalo.nunez@fanafesa.com
+
+
+==============================================================================================================================
+==============================================================================================================================
+
+Marco Mujica
+Draft Propuesta Picking sin papel_V1.pptx
+
+
+==============================================================================================================================
+==============================================================================================================================
+
+
+MXF-F 0200 AN
+12:00 PM
+1:30 PM
+
+TNS-GPE
+11:00 PM
+02:00 AM 1 dias precierre
+
+
+==============================================================================================================================
+==============================================================================================================================
+
+
+http://10.0.66.8:8080/wms
+
+==============================================================================================================================
+==============================================================================================================================
+
+Accesso VPN FANAFESA
+
+https://vpn.fanafesa.com/sso
+
+jbecerra@gnew.com.mx
+j&b@18m#
+
+==============================================================================================================================
+==============================================================================================================================
+
+
+#
+# Windows FANASA PC
+#
+
+ipconfig
+ping 10.0.66.8
+ping 140.87.206.248
+ping 172.16.0.100
+
+
+netsh interface portproxy add v4tov4 listenport=8080 listenaddress=172.16.0.100 connectport=8080 connectaddress=10.0.66.8
+netsh interface portproxy add v4tov4 listenport=22 listenaddress=172.16.0.100 connectport=22 connectaddress=10.0.66.8
+netsh interface portproxy add v4tov4 listenport=1521 listenaddress=172.16.0.100 connectport=1521 connectaddress=140.87.206.248
+
+
+Test-NetConnection -ComputerName 172.16.0.100  -Port 8080
+Test-NetConnection -ComputerName 172.16.0.100  -Port 1521
+
+
+#
+# Mac
+#
+
+nc -vz 172.16.0.100 22
+nc -vz 172.16.0.100 8080
+nc -vz 172.16.0.100 1521
+
+
+ssh -i /Users/joelbecerramiranda/Documents/FANASA/id_rsa_KeyProvGnew_private_test.pem gnewdev@172.16.0.100
+
+http://172.16.0.100:8080/wms
+
+
+==============================================================================================================================
+==============================================================================================================================
+
+
+./adb shell
+su
+rm /data/user/0/com.fanasa.android/files/SQLite.db
+exit
+exit
+
+
+==============================================================================================================================
+==============================================================================================================================
+
+
+select count(*) as c, ruta from OrdenSurtido where compania = '1000' and sucursal = '2205' and status = '00' and usuario = 'INTEGRACION' group by ruta order by c desc;
+
+
+==============================================================================================================================
+==============================================================================================================================
+
+drop table if exists Ruta;
+CREATE TABLE Ruta ( 
+	compania varchar(20) not null, sucursal varchar(10) not null, ruta varchar(20) not null, cortina varchar(10) not null, 
+	certifica varchar(1) not null, auditoria varchar(1) not null, turno varchar(30) not null, 
+	apertura varchar(10) not null, precierre varchar(10) not null, diasprecierre int not null,
+	PRIMARY KEY (compania, sucursal, ruta)
+	) ENGINE=InnoDB;
+
+drop table if exists RutaDistribucion;
+CREATE TABLE RutaDistribucion ( 
+	idrutadistribucion int auto_increment not null, compania varchar(20) not null, sucursal varchar(10) not null, ruta varchar(20) not null, cortina varchar(10) not null,
+	certifica varchar(1) not null, auditoria varchar(1) not null, camioneta varchar(20) not null, status varchar(2) not null, fechastatus datetime not null, usuario varchar(30) not null, 
+	fechacreacion datetime, fechaaperturat datetime, fechaapertura datetime, fechaprecierre datetime, fechacierre datetime, 
+	PRIMARY KEY (idrutadistribucion)
+	) ENGINE=InnoDB;
+CREATE INDEX RutaDistribucionINDX1 on RutaDistribucion (compania, sucursal, idrutadistribucion);
+
+
+==============================================================================================================================
+==============================================================================================================================
+
+
+./adb shell
+su
+rm /data/user/0/com.fanasa.android/files/SQLite.db
+exit
+exit
+
+
+==============================================================================================================================
+==============================================================================================================================
+
+
+select count(*) as c, ruta from OrdenSurtido where compania = '1000' and sucursal = '2205' and status = '00' and usuario = 'INTEGRACION' group by ruta order by c desc;
+
+--
+
+export RUTA="MXF01 1250 AN"
+./test.sh --compania 1000 --sucursal 2205 --command abre-ruta "${RUTA}"
+
+d() { /usr/local/mysql/bin/mysql -u ecommerce -pEC\$89yeR fanasa; }
+
+--
+
+export IDRUTA=8
+./test.sh --compania 1000 --sucursal 2205 --command surte-ruta $IDRUTA
+./test.sh --compania 1000 --sucursal 2205 --command sorter
+./test.sh --compania 1000 --sucursal 2205 --command jaula $IDRUTA
+./test.sh --compania 1000 --sucursal 2205 --command embarque $IDRUTA
+./test.sh --compania 1000 --sucursal 2205 --command carga $IDRUTA
+
+--
+
+set @idrutadistribucion = 8;
+
+select os.* from OrdenSurtido os where os.compania = '1000' and os.sucursal = '2205' and os.idrutadistribucion = @idrutadistribucion;
+select osd.* from OrdenSurtido os inner join OrdenSurtidoDetalle osd using (compania, sucursal, orden) where os.compania = '1000' and os.sucursal = '2205' and os.idrutadistribucion = @idrutadistribucion;
+select osb.* from OrdenSurtido os inner join OrdenSurtidoBulto osb using (compania, sucursal, orden) where os.compania = '1000' and os.sucursal = '2205' and os.idrutadistribucion = @idrutadistribucion;
+
+--
+
+
+==============================================================================================================================
+==============================================================================================================================
+
+
+drop table if exists OrdenSurtido;
+CREATE TABLE OrdenSurtido ( 
+	compania varchar(20) not null, sucursal varchar(10) not null, orden varchar(20) not null, fechacreacion datetime not null,
+	ordenheaderid varchar(20) not null, headerid varchar(20) not null, subinventario varchar(10) not null, ruta varchar(20) not null, 
+	prioridad int not null, corte int not null, ordenes int not null, cliente int not null, nombrecliente varchar(150) not null, 
+	status varchar(2) not null, fechastatus datetime not null, usuario varchar(30) not null, idrutadistribucion int,
+	lineas int not null, cantidad int not null, surtidas int not null, certificadas int not null, tiposurtido varchar(1) not null, 
+	certifica varchar(1) not null, auditoria varchar(1) not null, bultos int not null, fechaconfirmada datetime,
+	PRIMARY KEY (compania, sucursal, orden)
+	) ENGINE=InnoDB;
+CREATE INDEX OrdenSurtidoINDX1 on OrdenSurtido (compania, sucursal, ruta);
+CREATE INDEX OrdenSurtidoINDX2 on OrdenSurtido (compania, sucursal, idrutadistribucion);
+CREATE INDEX OrdenSurtidoINDX3 on OrdenSurtido (compania, sucursal, subinventario);
+CREATE INDEX OrdenSurtidoINDX4 on OrdenSurtido (compania, cliente);
+
+drop table if exists OrdenSurtidoBitacora;
+CREATE TABLE OrdenSurtidoBitacora ( 
+	id int auto_increment not null, compania varchar(20) not null, sucursal varchar(10) not null, orden varchar(20) not null, 
+	status varchar(2) not null, fechastatus datetime not null, usuario varchar(30) not null, 
+	PRIMARY KEY (id)
+	) ENGINE=InnoDB;
+CREATE INDEX OrdenSurtidoBitacoraINDX1 on OrdenSurtidoBitacora (compania, sucursal, orden);
+
+drop table if exists OrdenSurtidoDetalle;
+CREATE TABLE OrdenSurtidoDetalle ( 
+	compania varchar(20) not null, sucursal varchar(10) not null, orden varchar(20) not null, lineaid varchar(20) not null, locatorid varchar(20) not null, 
+	codigoescaneo varchar(30) not null, taskid varchar(20) not null, linea int not null, lineap int not null, 
+	localizador varchar(20) not null, clave varchar(20) not null, descripcion varchar(150) not null, cantidad int not null, 
+	lote varchar(30) not null, caducidad varchar(10) not null, 
+	surtidas int not null, certificadas int not null, verificalote varchar(1) not null, cambiolote varchar(1) not null, bulto varchar(4), causanosurtido varchar(2),
+	PRIMARY KEY (compania, sucursal, orden, linea)
+	) ENGINE=InnoDB;
+
+drop table if exists OrdenSurtidoBulto;
+CREATE TABLE OrdenSurtidoBulto ( 
+	compania varchar(20) not null, sucursal varchar(10) not null, orden varchar(20) not null, bulto varchar(10) not null, 
+	tiposurtido varchar(1) not null, lineas int not null, surtidas int not null, idcarrito int not null, posicion varchar(15) not null, 
+	tobogan varchar(15) not null, contenedor varchar(15) not null, jaula varchar(15) not null, embarque varchar(15) not null, carga varchar(15) not null, 
+	status varchar(2) not null, fechastatus datetime not null, usuario varchar(30) not null, 
+	PRIMARY KEY (compania, sucursal, orden, bulto)
+	) ENGINE=InnoDB;
+CREATE INDEX OrdenSurtidoBultoINDX1 on OrdenSurtidoBulto (compania, sucursal, idcarrito, posicion);
+CREATE INDEX OrdenSurtidoBultoINDX2 on OrdenSurtidoBulto (compania, sucursal, embarque);
+
+
+==============================================================================================================================
+==============================================================================================================================
+
+
+Estimado José Ramón y Alejandro.
+ 
+En las pruebas de Embarque de FANAFESA, nos están indicando cambios en la etiqueta de surtido que pegamos en los bultos que se arman en el surtido.
+ 
+Incluir es la etiqueta del bulto el número de Pedido de la Orden de Surtido.
+Incluir el número total de Ordenes de Surtido que el Pedido del Cliente tiene.
+Incluir el número de Orden de Surtido que corresponde del Pedido, lo que quiere el Embarque es que en la etiqueta se pinte lo siguiente:
+Número de Ordenes de Surtido del Pedido / Número total de Ordenes de Surtido del pedido.
+Incluir en la etiqueta la ‘Prioridad de Corte’, actualmente ya tenemos la ‘Prioridad de Entrega’; pero nos indican en el Embarque, que la Prioridad de Corte es otro valor distinto a este y se encuentra en el ERP de Oracle. Como dato nos indicaron que este valor solo contiene prioridades de 0 a 30 máximo.
+ 
+Como pueden ver necesitamos agregar los siguientes atributos en la Integración de las Ordenes de Surtido que se envían a GNEW.
+ 
+Atributo de Numero de Pedido.
+Atributo de Número Total de Ordenes de Surtido del Pedido. (Nt)
+Atributo del Número de Orden de Surtido del Pedido (N). Para pintar N / Nt.
+Atributo de Prioridad de Corte.
+ 
+Estos nuevos atributos se deben de enviar en JSON de las Ordenes de Surtido que se mandan a GNEW para su integración; así que por favor les solicitamos que los agreguen; definan ustedes los nombres de los nuevos atributos que se van a mandar.
+ 
+Nosotros vamos a guardar estos valores y los vamos a utilizar para imprimir la etiqueta de surtido del Bulto tal y como la solicita el área de Embarque.
+ 
+Quedo atento a sus comentarios.
+ 
+Saludos,
+Joel Becerra
+ 
+
+
+==============================================================================================================================
+==============================================================================================================================
+
+
+Sara Peralta <sara.peralta@i-condor.com>; ALEJANDRO FLORES PONCE <alejandro.flores@fanafesa.com>
+Angel Orozco <angel.orozco@i-condor.com>; JOSE RAMON GONZALEZ SEGRESTE <ramon.gonzalez@fanafesa.com>; Marco A Vazquez Balmori <marcobalmori@gnew.com.mx>; Maria Victoria Mejía López <vickymejia@gnew.com.mx>; Camerino Tesillos <camerino.tesillos@i-condor.com>
+
+
+==============================================================================================================================
+==============================================================================================================================
+
+
+update SubInventario set verificalote = '1' where compania = '1000' and sucursal = '2205' 
+and subinventario in ('PSICOTROP','PSICOTROP1','REFRIGER','BODESTUP','BODPSICOTR','BODREFRIG');
+
+update OrdenSurtidoDetalle osd, OrdenSurtido os set osd.verificalote = '1' where osd.compania = os.compania and osd.sucursal = os.sucursal and osd.orden = os.orden 
+and os.compania = '1000' and os.sucursal = '2205' and os.subinventario in ('PSICOTROP','PSICOTROP1','REFRIGER','BODESTUP','BODPSICOTR','BODREFRIG');
+
+select * from OrdenSurtido os, OrdenSurtidoDetalle osd
+where osd.compania = os.compania and osd.sucursal = os.sucursal and osd.orden = os.orden
+and os.compania = '1000' and os.sucursal = '2205' and os.ruta = 'MXF01 0800 AN' and osd.verificalote = '1';
+
+
+
+==============================================================================================================================
+==============================================================================================================================
+
+--
+
+select count(*) as c, ruta 
+from OrdenSurtido 
+where compania = '1000' and sucursal = '2205' and status = '00' and usuario = 'INTEGRACION' 
+and ruta in (
+select os.ruta
+from OrdenSurtido os inner join OrdenSurtidoDetalle osd using (compania, sucursal, orden) 
+where os.compania = '1000' and os.sucursal = '2205' and caducidad = '' 
+group by ruta
+)
+group by ruta order by c desc;
+
+--
+
+set @ruta = 'MXF01 1550 AN';
+
+select ruta, cliente, nombrecliente, count(*) 
+from OrdenSurtido 
+where compania = '1000' and sucursal = '2205' and ruta = @ruta 
+group by ruta, cliente, nombrecliente;
+
+--
+
+update OrdenSurtido os, OrdenSurtidoDetalle osd, Cliente c set osd.verificalote = '1'
+where os.compania = osd.compania and os.sucursal = osd.sucursal and os.orden = osd.orden 
+and os.compania = c.compania and os.cliente = c.cliente
+and os.compania = '1000' and os.sucursal = '2205' and ruta = @ruta
+and c.verificalote = '1';
+
+--
+
+select os.ruta, os.orden, os.ordenheaderid, osd.lineaid, osd.locatorid, osd.codigoescaneo, osd.linea, osd.verificalote, osd.cambiolote, osd.lote, osd.caducidad 
+from OrdenSurtido os, OrdenSurtidoDetalle osd 
+where osd.compania = os.compania and osd.sucursal = os.sucursal and osd.orden = os.orden 
+and os.compania = '1000' and os.sucursal = '2205' and os.ruta = @ruta
+and osd.verificalote = '1';
+
+--
+
+
+select count(*) as c, ruta from OrdenSurtido where compania = '1000' and sucursal = '2205' and status = '00' and usuario = 'INTEGRACION' group by ruta order by c desc;
+
+
+
+==============================================================================================================================
+==============================================================================================================================
+
+
+./test.sh --compania 1000 --sucursal 2205 --command abre-ruta "MXF01 1550 AN"
+
+
+set @idrutadistribucion = 1;
+
+select os.* from OrdenSurtido os where os.compania = '1000' and os.sucursal = '2205' and os.idrutadistribucion = @idrutadistribucion;
+select osd.* from OrdenSurtido os inner join OrdenSurtidoDetalle osd using (compania, sucursal, orden) where os.compania = '1000' and os.sucursal = '2205' and os.idrutadistribucion = @idrutadistribucion;
+select osb.* from OrdenSurtido os inner join OrdenSurtidoBulto osb using (compania, sucursal, orden) where os.compania = '1000' and os.sucursal = '2205' and os.idrutadistribucion = @idrutadistribucion;
+
+
+select 'COMPLETA' as status, os.ruta, os.orden, os.ordenheaderid, os.lineas, os.cantidad, os.surtidas, os.bultos from OrdenSurtido os where os.compania = '1000' and os.sucursal = '2205' and os.idrutadistribucion = @idrutadistribucion and os.surtidas = os.cantidad
+union
+select 'FALTANTE' as status, os.ruta, os.orden, os.ordenheaderid, os.lineas, os.cantidad, os.surtidas, os.bultos from OrdenSurtido os where os.compania = '1000' and os.sucursal = '2205' and os.idrutadistribucion = @idrutadistribucion and os.surtidas > 0 and os.surtidas < os.cantidad
+union
+select 'TODA FALTANTE' as status, os.ruta, os.orden, os.ordenheaderid, os.lineas, os.cantidad, os.surtidas, os.bultos from OrdenSurtido os where os.compania = '1000' and os.sucursal = '2205' and os.idrutadistribucion = @idrutadistribucion and os.surtidas = 0;
+select count(*), sum(lineas), sum(cantidad), sum(surtidas), sum(bultos) from OrdenSurtido os where os.compania = '1000' and os.sucursal = '2205' and os.idrutadistribucion = @idrutadistribucion;
+
+
+select 'CAMBIO LOTE' as status, os.ruta, os.orden, os.ordenheaderid, osd.lineaid, osd.locatorid, osd.clave, osd.codigoescaneo, osd.linea, osd.cambiolote, osd.lote, osd.caducidad 
+from OrdenSurtido os, OrdenSurtidoDetalle osd 
+where osd.compania = os.compania and osd.sucursal = os.sucursal and osd.orden = os.orden 
+and os.compania = '1000' and os.sucursal = '2205' and os.idrutadistribucion = @idrutadistribucion
+and osd.cambiolote = 'Y';
+
+
+==============================================================================================================================
+==============================================================================================================================
+
+MXF01 5930 AN
+MXF01 4450 AN
+
+./test.sh --compania 1000 --sucursal 2205 --command abre-ruta "MXF-F 0050 AN"
+./test.sh --compania 1000 --sucursal 2205 --command abre-ruta "MXF-F 0200 AN"
+./test.sh --compania 1000 --sucursal 2205 --command abre-ruta "MXF-FVI 1330 AN"
+./test.sh --compania 1000 --sucursal 2205 --command abre-ruta "MXF01 0300 AN"
+./test.sh --compania 1000 --sucursal 2205 --command abre-ruta "MXF01 0450 AN"
+./test.sh --compania 1000 --sucursal 2205 --command abre-ruta "MXF01 0480 AN"
+./test.sh --compania 1000 --sucursal 2205 --command abre-ruta "MXF01 1300 AN"
+./test.sh --compania 1000 --sucursal 2205 --command abre-ruta "MXF01 1400 AN"
+./test.sh --compania 1000 --sucursal 2205 --command abre-ruta "MXF01 1450 AN"
+
+
+for ruta in 1 2 3 4 5 6 7 8 9
+do
+	out=ruta-${ruta}.out
+	rm ${out}
+	./test.sh --compania 1000 --sucursal 2205 --command ruta ${ruta} >> ${out} 2>> $out &
+done
+
+
+==============================================================================================================================
+==============================================================================================================================
+
+
+delete from EstadoOrdenSurtido where status like '4%';
+insert into EstadoOrdenSurtido values ('1000','40','Liberada para Embarque');
+insert into EstadoOrdenSurtido values ('1000','41','Inicio de Jaula');
+insert into EstadoOrdenSurtido values ('1000','42','Fin de Jaula');
+insert into EstadoOrdenSurtido values ('1000','43','Inicio de Embarque');
+insert into EstadoOrdenSurtido values ('1000','44','Fin de Embarque');
+
+
+==============================================================================================================================
+==============================================================================================================================
+
+
+Buenas tardes,
+ 
+Mando un resumen breve, de las conclusiones de esta reunión.
+ 
+ 
+Se discutió acerca de la integración, se acordó que es mejor integrar a nivel de base de datos.
+ 
+Lotes y Rutas
+- Se consultará la información de una vista de Oracle.
+ 
+Intercambio de las Ordenes de Surtido.
+- Se queda por servicio REST.
+- Ya FANASA está trabajando en la implementación.
+ 
+Información de Surtido
+- La información se escribe en una tabla de Oracle.
+- Se ejecuta un StoreProcedure para arrancar el proceso en Oracle.
+- POSTERIORMENTE se tiene que ir a revisar si se procesó la información (cambio de estatus)
+- Se tiene que esperar a que todas las ordenes de surtido estén confirmadas por parte del ERP Oracle.
+ 
+Confirmación de Ruta por Distribución.
+- Se escribe el registro en la base de datos de Oracle junto las cifras de control.
+- POSTERIORMENTE se tiene que revisar el estado del proceso de TODAS las Ordenes de Surtido (columna con el estado).
+ 
+Confirmación de Facturas.
+- Me entregaran una vista para consultar la información.
+ 
+ 
+Siguientes pasos.
+ 
+FANASA.
+Definir las Vistas y las Tablas asociadas a las interfases.
+Proporcionar los atributos necesarios para la conexión a Oracle en el ambiente de pruebas.
+ 
+
+==============================================================================================================================
+==============================================================================================================================
+
+
+==============================================================================================================================
+==============================================================================================================================
+
+
+#
+# Integracion
+#
+integracion.driver=oracle.jdbc.OracleDriver
+integracion.url=jdbc:oracle:thin:@//140.87.206.248:1521/ebs_PEBSDE6
+integracion.usuario=BOLINF
+integracion.password=g_zU7#0aCg
+
+
+==============================================================================================================================
+==============================================================================================================================
+
+
+Les voy adelantando la información del servidor de pruebas:
+ 
+IP: 10.0.66.8
+Usuario: OPC
+Puerto: 22
+Llave privada: ssh-key-2023-02-15.key
+Indicarme a quien le mando la llave del usuario root
+
+
+Equipo GNew:
+ 
+El presente es para notificarles que se creó el ambiente de producción, la información del servidor de es la siguiente:
+ 
+IP: 10.0.6.7
+Usuario: OPC
+Puerto: 22
+Llave privada:  ssh-key-2023-08-22_FN_WMS_GNEW_PROD.key
+ 
+Nos ayudan a validar que tengan acceso correcto al server desde la VPN, por favor.
+ 
+Desde las oficinas de FANASA se tiene acceso, les dejo evidencia…
+
+
+==============================================================================================================================
+==============================================================================================================================
+
+Windows Ambiente de desarrollo: 172.16.0.100
+Username: GNEW-FANASA
+Anydesk: 110841446
+Pass Windows y Anydesk: Fan2023*
+Pass Anydesk: Fan2023*
+
+MariaDB:
+root / MyQ$01_a4&
+syda / sY%_3srew
+ecommerce / EC$89yeR
+
+--
+--
+--
+
+Subsistema UNIX:
+username: fanasa
+password: Fan2023*
+
+# 
+# https://stackoverflow.com/questions/65625762/wsl2-use-localhost-to-access-windows-service
+# 
+# You should use hostname.local to access Windows from WSL2 because that will use the correct IP. Note that hostname should be replaced with the result of the hostname command run in WSL2. You can check the IP by running ping $(hostname).local from WSL2.
+# 
+# You also need to add a firewall rule to allow traffic from WSL2 to Windows. In an elevated PowerShell prompt run this:
+# 
+# New-NetFirewallRule -DisplayName "WSL" -Direction Inbound  -InterfaceAlias "vEthernet (WSL)"  -Action Allow
+# The command above should allow you to access anything exposed by Windows from WSL, no matter what port, however bear in mind that any apps you've launched get an automated rule created for them when you first launch them, blocking access from public networks (this is when you get a prompt from Windows Firewall, asking whether the app should be allowed to accept connections from public networks).
+# 
+# If you don't explicitly allow, they will be blocked by default, which also blocks connections from WSL. So you might need to find that inbound rule, and change it from block to allow (or just delete it).
+# 
+# See info here:
+# 
+# https://github.com/microsoft/WSL/issues/4585#issuecomment-610061194
+# 
+# 
+
+lsb_release -a
+
+ping $(hostname).local
+nslookup $(hostname).local
+nc -vz $(hostname).local 3306
+
+mysql -h $(hostname).local -u syda -psY%_3srew
+
+rename user 'ecommerce'@'localhost' to 'ecommerce'@'%';
+flush privileges;
+
+==============================================================================================================================
+==============================================================================================================================
+
+
+
+
+==============================================================================================================================
+==============================================================================================================================
+
+
+Ordenes de Surtido
+- En el atributo mensaje cambiar el OK por la cifra de control (UUID).
+- Cancelación de Ordenes de Surtido.
+- Si se transmite la Orden de Surtido del ERP se deja disponible para Surtido del WMS.
+
+---
+---
+
+- Agregar el campo para la fecha de caducidad de la Orden de Surtido. En el JSON de Ordenes de Surtido.
+- Indicar las Observaciones de la solicitud de la Ordenes de Surtido, fechas, cantidades solicitadas.
+
+
+- Se debe de leer el status del correcto procesamiento de las Ordenes de Surtido (de todas las Ordenes de una Ruta) para cerrar la Ruta.
+- Se debe de leer el status del correcto procesamiento del viaje de la Ruta para poder cerrar la Ruta.
+
+
+
+==============================================================================================================================
+==============================================================================================================================
+
+
+https://fesa1-my.sharepoint.com/:f:/g/personal/ramon_gonzalez_fanafesa_com/Es8KJcp0fY1JhaTFqU-JyqwBls96M3ZBXeZdlH8lOEJB2g?email=jbecerra%40gnew.com.mx&e=5%3aadILhr&at=9
+
+
+
+==============================================================================================================================
+==============================================================================================================================
+
+cd /Users/joelbecerramiranda/Documents/FANASA
+
+sed '1d' OS\ 37964320\ y\ 137964390.csv | sed 's/\r//' > /tmp/ordenes.csv
+sed '1d' OS\ 15082023\ muestra\ real.csv | sed 's/\r//' > /tmp/ordenes.csv
+sed '1d' OS\ 040823\ muestra\ real.csv | sed 's/\r//' > /tmp/ordenes.csv
+sed '1d' OS\ 2do\ Rep\ 18ago23.csv | sed 's/\r//' > /tmp/ordenes.csv
+
+
+/usr/local/mysql/bin/mysql --local-infile=1 -u ecommerce -pEC\$89yeR fanasa
+
+
+drop table if exists ordenes;
+create table ordenes (ID_TASK varchar(20), ORGANIZATION_ID varchar(10), ORGANIZATION_CODE varchar(10), ID_PEDIDO varchar(20), ORDER_NUMBER varchar(20),
+ID_ORDEN varchar(20), ORDEN_LINE_ID varchar(20), ORDEN varchar(20), 
+SUBINVENTORY_CODE varchar(20), LOCALIZADOR varchar(20), RUTA varchar(20), NUM_CLIENTE varchar(10), NOMBRE_FARMACIA varchar(240), RAZON_SOCIAL varchar(360), 
+INVENTORY_ITEM_ID varchar(20), ITEM varchar(20), CODIGO_ESCANEO varchar(40), DESCRIPTION varchar(240), 
+CANTIDAD_PIEZA int, LOT_NUM varchar(30), PRIORIDAD_ENTREGA varchar(20), ORDER_TYPE varchar(10), CODIGO_ESCANEO_1 varchar(40),
+CREATION_DATE varchar(30));
+
+SET GLOBAL local_infile=1;
+
+truncate ordenes;
+load data local infile '/tmp/ordenes.csv' into table ordenes fields terminated by ',';
+
+create index ordenes_indx0 on ordenes (ORGANIZATION_ID, ORDEN, SUBINVENTORY_CODE, RUTA, PRIORIDAD_ENTREGA, NUM_CLIENTE, NOMBRE_FARMACIA);
+
+update ordenes set PRIORIDAD_ENTREGA = 0 WHERE PRIORIDAD_ENTREGA = '';
+update ordenes set PRIORIDAD_ENTREGA = 0 WHERE LENGTH(PRIORIDAD_ENTREGA) > 6;
+update ordenes set LOT_NUM = replace(LOT_NUM, '@COMA@', ',');
+update ordenes set NOMBRE_FARMACIA = replace(NOMBRE_FARMACIA, '@COMA@', ',');
+update ordenes set RAZON_SOCIAL = replace(RAZON_SOCIAL, '@COMA@', ',');
+update ordenes set DESCRIPTION = replace(DESCRIPTION, '@COMA@', ',');
+
+alter table ordenes add column HEADER_ID varchar(20);
+alter table ordenes add column ORDEN_HEADER_ID varchar(20);
+alter table ordenes add column LOCATOR_ID varchar(20);
+alter table ordenes add column LINE_ID varchar(20);
+
+update ordenes set HEADER_ID = ID_PEDIDO;
+update ordenes set ORDEN_HEADER_ID = "00000000", LOCATOR_ID = "00000000", LINE_ID = "00000000";
+
+--
+--
+--
+
+sed '1d' Lotes\ MXF\ GPE\ BJX\ 150823.csv | sed 's/\r//' > /tmp/lotes.csv
+sed '1d' Lotes\ MXF\ GPE\ BJX\ 040823.csv | sed 's/\r//' > /tmp/lotes.csv
+sed '1d' Lotes\ MXF\ 180823.csv | sed 's/\r//' > /tmp/lotes.csv
+
+/usr/local/mysql/bin/mysql --local-infile=1 -u ecommerce -pEC\$89yeR fanasa
+
+drop table if exists lotes;
+create table lotes (ORGANIZATION_ID varchar(10), ORGANIZATION_CODE varchar(10), INVENTORY_ITEM_ID varchar(20), ITEM varchar(20), 
+CODIGO_BARRAS varchar(20), LOT_NUMBER varchar(20), EXPIRATION_DATE varchar(20));
+
+SET GLOBAL local_infile=1;
+
+truncate lotes;
+load data local infile '/tmp/lotes.csv' into table lotes fields terminated by ',';
+
+update lotes set LOT_NUMBER = replace(LOT_NUMBER, '@COMA@', ',');
+
+select CODIGO_BARRAS, INVENTORY_ITEM_ID from lotes where CODIGO_BARRAS in ('07501082242720','07501122900368','07501122961253') 
+group by CODIGO_BARRAS, INVENTORY_ITEM_ID order by CODIGO_BARRAS;
+
+
+truncate LoteActivo;
+insert into LoteActivo 
+select '1000', ORGANIZATION_ID, INVENTORY_ITEM_ID, CODIGO_BARRAS, LOT_NUMBER, COALESCE(EXPIRATION_DATE,'01-01-50') from lotes;
+
+--update LoteActivo set fechacaducidad = concat(substr(fechacaducidad,9,2),'-',substr(fechacaducidad,6,2),'-',substr(fechacaducidad,3,2)) 
+--where length (fechacaducidad)=10;
+
+truncate CodigoBarras;
+insert ignore into CodigoBarras 
+select '1000', CODIGO_BARRAS, INVENTORY_ITEM_ID from lotes where CODIGO_BARRAS != '' group by CODIGO_BARRAS, INVENTORY_ITEM_ID;
+
+--
+--
+--
+
+==============================================================================================================================
+==============================================================================================================================
+
+
+alter table Ruta add column auditoria varchar(1);
+update Ruta set auditoria = '0';
+alter table Ruta modify column auditoria varchar(1) not null;
+
+alter table RutaDistribucion add column auditoria varchar(1) after certifica;
+update RutaDistribucion set auditoria = '0';
+alter table RutaDistribucion modify column auditoria varchar(1) not null;
+
+alter table OrdenSurtido add column auditoria varchar(1) after certifica;
+update OrdenSurtido set auditoria = '0';
+alter table OrdenSurtido modify column auditoria varchar(1) not null;
+
+delete from EstadoOrdenSurtido where compania = '1000' and status like '5%';
+insert into EstadoOrdenSurtido values ('1000','50','Liberada para Auditoria de Ruta');
+insert into EstadoOrdenSurtido values ('1000','51','Inicio de Auditoria de Ruta');
+insert into EstadoOrdenSurtido values ('1000','52','Fin de Auditoria de Ruta');
+
+
+==============================================================================================================================
+==============================================================================================================================
+
+
+drop table if exists RutaDistribucion;
+CREATE TABLE RutaDistribucion ( 
+	idrutadistribucion int auto_increment not null, compania varchar(20) not null, sucursal varchar(10) not null, ruta varchar(20) not null, cortina varchar(10) not null,
+	certifica varchar(1) not null, auditoria varchar(1) not null, camioneta varchar(20) not null, status varchar(2) not null, fechastatus datetime not null, 
+	usuario varchar(30) not null, fechacreacion datetime, fechaapertura datetime, fechacierre datetime, 
+	PRIMARY KEY (idrutadistribucion)
+	) ENGINE=InnoDB;
+CREATE INDEX RutaDistribucionINDX1 on RutaDistribucion (compania, sucursal, idrutadistribucion);
+
+drop table if exists Ruta;
+CREATE TABLE Ruta ( 
+	compania varchar(20) not null, sucursal varchar(10) not null, ruta varchar(20) not null, cortina varchar(10) not null, 
+	certifica varchar(1) not null, auditoria varchar(1) not null,
+	PRIMARY KEY (compania, sucursal, ruta)
+	) ENGINE=InnoDB;
+
+
+drop table if exists OrdenSurtido;
+CREATE TABLE OrdenSurtido ( 
+	compania varchar(20) not null, sucursal varchar(10) not null, orden varchar(20) not null, subinventario varchar(10) not null, ruta varchar(20) not null, prioridad int not null,
+	cliente int not null, nombrecliente varchar(150) not null, status varchar(2) not null, fechastatus datetime not null, usuario varchar(30) not null, idrutadistribucion int,
+	lineas int not null, cantidad int not null, surtidas int not null, certificadas int not null, tiposurtido varchar(1) not null, certifica varchar(1) not null, 
+	auditoria varchar(1) not null, bultos int not null, fechaconfirmada datetime,
+	PRIMARY KEY (compania, sucursal, orden)
+	) ENGINE=InnoDB;
+CREATE INDEX OrdenSurtidoINDX1 on OrdenSurtido (compania, sucursal, ruta);
+CREATE INDEX OrdenSurtidoINDX2 on OrdenSurtido (compania, sucursal, idrutadistribucion);
+CREATE INDEX OrdenSurtidoINDX3 on OrdenSurtido (compania, sucursal, subinventario);
+CREATE INDEX OrdenSurtidoINDX4 on OrdenSurtido (compania, cliente);
+
+
+==============================================================================================================================
+==============================================================================================================================
+
+
+Auditoria de Ruta
+
+
+==============================================================================================================================
+==============================================================================================================================
+
+
+insert into EstadoOrdenSurtido values ('1000','61','Inicio de Carga');
+insert into EstadoOrdenSurtido values ('1000','62','Fin de Carga');
+
+delete from EstadoOrdenSurtido where compania = '1000' and status like '9%';
+insert into EstadoOrdenSurtido values ('1000','90','Finalizada');
+
+
+alter table OrdenSurtido add column fechaconfirmada datetime;
+
+alter table OrdenSurtidoBulto add column carga varchar(15) after charola;
+update OrdenSurtidoBulto set carga = '';
+alter table OrdenSurtidoBulto modify column carga varchar(15) not null;
+alter table OrdenSurtidoBulto drop column charola;
+
+CREATE INDEX OrdenSurtidoBultoINDX2 on OrdenSurtidoBulto (compania, sucursal, embarque);
+
+
+alter table RutaDistribucion add column camioneta varchar(20) after certifica;
+update RutaDistribucion set camioneta = '';
+alter table RutaDistribucion modify column camioneta varchar(20) not null;
+
+
+==============================================================================================================================
+==============================================================================================================================
+
+drop table if exists RutaDistribucion;
+CREATE TABLE RutaDistribucion ( 
+	idrutadistribucion int auto_increment not null, compania varchar(20) not null, sucursal varchar(10) not null, ruta varchar(20) not null, cortina varchar(10) not null,
+	certifica varchar(1) not null, camioneta varchar(20) not null, status varchar(2) not null, fechastatus datetime not null, usuario varchar(30) not null, 
+	fechacreacion datetime, fechaapertura datetime, fechacierre datetime, 
+	PRIMARY KEY (idrutadistribucion)
+	) ENGINE=InnoDB;
+CREATE INDEX RutaDistribucionINDX1 on RutaDistribucion (compania, sucursal, idrutadistribucion);
+
+drop table if exists OrdenSurtido;
+CREATE TABLE OrdenSurtido ( 
+        compania varchar(20) not null, sucursal varchar(10) not null, orden varchar(20) not null, subinventario varchar(10) not null, ruta varchar(20) not null, prioridad int not null,
+        cliente int not null, nombrecliente varchar(150) not null, status varchar(2) not null, fechastatus datetime not null, usuario varchar(30) not null, idrutadistribucion int,
+        lineas int not null, cantidad int not null, surtidas int not null, certificadas int not null, tiposurtido varchar(1) not null, certifica varchar(1) not null, bultos int not null,
+        fechaconfirmada datetime,
+        PRIMARY KEY (compania, sucursal, orden)
+        ) ENGINE=InnoDB;
+CREATE INDEX OrdenSurtidoINDX1 on OrdenSurtido (compania, sucursal, ruta);
+CREATE INDEX OrdenSurtidoINDX2 on OrdenSurtido (compania, sucursal, idrutadistribucion);
+CREATE INDEX OrdenSurtidoINDX3 on OrdenSurtido (compania, sucursal, subinventario);
+CREATE INDEX OrdenSurtidoINDX4 on OrdenSurtido (compania, cliente);
+
+drop table if exists OrdenSurtidoDetalle;
+CREATE TABLE OrdenSurtidoDetalle ( 
+	compania varchar(20) not null, sucursal varchar(10) not null, orden varchar(20) not null, linea int not null, lineap int not null, 
+	localizador varchar(20) not null, clave varchar(20) not null, descripcion varchar(150) not null, cantidad int not null, lote varchar(30) not null,
+	surtidas int not null, certificadas int not null, verificalote varchar(1) not null, cambiolote varchar(1) not null, bulto varchar(4), causanosurtido varchar(2),
+	PRIMARY KEY (compania, sucursal, orden, linea)
+	) ENGINE=InnoDB;
+
+drop table if exists OrdenSurtidoBulto;
+CREATE TABLE OrdenSurtidoBulto ( 
+	compania varchar(20) not null, sucursal varchar(10) not null, orden varchar(20) not null, bulto varchar(10) not null, 
+	tiposurtido varchar(1) not null, lineas int not null, surtidas int not null, idcarrito int not null, posicion varchar(15) not null, 
+	tobogan varchar(15) not null, contenedor varchar(15) not null, embarque varchar(15) not null, carga varchar(15) not null, 
+	status varchar(2) not null, fechastatus datetime not null, usuario varchar(30) not null, 
+	PRIMARY KEY (compania, sucursal, orden, bulto)
+	) ENGINE=InnoDB;
+CREATE INDEX OrdenSurtidoBultoINDX1 on OrdenSurtidoBulto (compania, sucursal, idcarrito, posicion);
+CREATE INDEX OrdenSurtidoBultoINDX2 on OrdenSurtidoBulto (compania, sucursal, embarque);
+
+
+==============================================================================================================================
+==============================================================================================================================
+
+
+delete from EstadoOrdenSurtido where status in ('40','50','60');
+insert into EstadoOrdenSurtido values ('1000','40','Liberada para Embarque');
+insert into EstadoOrdenSurtido values ('1000','41','Inicio de Embarque');
+insert into EstadoOrdenSurtido values ('1000','42','Fin de Embarque');
+insert into EstadoOrdenSurtido values ('1000','50','Liberada para Auditoria');
+insert into EstadoOrdenSurtido values ('1000','60','Liberada para Carga');
+
+
+==============================================================================================================================
+==============================================================================================================================
+
+
+drop table if exists OrdenSurtidoDetalle;
+CREATE TABLE OrdenSurtidoDetalle ( 
+	compania varchar(20) not null, sucursal varchar(10) not null, orden varchar(20) not null, linea int not null, lineap int not null, 
+	localizador varchar(20) not null, clave varchar(20) not null, descripcion varchar(150) not null, cantidad int not null, lote varchar(30) not null,
+	surtidas int not null, certificadas int not null, verificalote varchar(1) not null, cambiolote varchar(1) not null, bulto varchar(4), causanosurtido varchar(2),
+	PRIMARY KEY (compania, sucursal, orden, linea)
+	) ENGINE=InnoDB;
+
+drop table if exists OrdenSurtidoBulto;
+CREATE TABLE OrdenSurtidoBulto ( 
+	compania varchar(20) not null, sucursal varchar(10) not null, orden varchar(20) not null, bulto varchar(10) not null, 
+	tiposurtido varchar(1) not null, lineas int not null, surtidas int not null, idcarrito int not null, posicion varchar(15) not null, 
+	tobogan varchar(15) not null, contenedor varchar(15) not null, embarque varchar(15) not null, charola varchar(15) not null, 
+	status varchar(2) not null, fechastatus datetime not null, usuario varchar(30) not null, 
+	PRIMARY KEY (compania, sucursal, orden, bulto)
+	) ENGINE=InnoDB;
+CREATE INDEX OrdenSurtidoBultoINDX1 on OrdenSurtidoBulto (compania, sucursal, idcarrito, posicion);
+
+
+delimiter //
+DROP PROCEDURE InformacionOrdenSurtido//
+CREATE PROCEDURE InformacionOrdenSurtido (IN _compania CHAR(20), _sucursal CHAR(20), IN _orden CHAR(20))
+BEGIN
+	SELECT * FROM OrdenSurtido WHERE compania = _compania AND sucursal = _sucursal AND orden = _orden;
+	SELECT * FROM OrdenSurtidoBitacora WHERE compania = _compania AND sucursal = _sucursal AND orden = _orden;
+	SELECT * FROM OrdenSurtidoDetalle WHERE compania = _compania AND sucursal = _sucursal AND orden = _orden ORDER by lineap, linea DESC;
+	SELECT * FROM OrdenSurtidoBulto WHERE compania = _compania AND sucursal = _sucursal AND orden = _orden;
+	SELECT compania, sucursal, bulto, COUNT(*), SUM(surtidas) FROM OrdenSurtidoDetalle WHERE compania = _compania AND sucursal = _sucursal AND orden = _orden 
+	GROUP BY compania, sucursal, bulto;
+END//
+delimiter ;
+
+CALL InformacionOrdenSurtido('1000', '2205', '37791183.3'); 
+
+
+
+==============================================================================================================================
+==============================================================================================================================
+
+
+Se discutió acerca de la integración, se acordó que es mejor integrar a nivel de base de datos.
+ 
+Lotes y Rutas
+- Se consultará la información de una vista de Oracle.
+ 
+Intercambio de las Ordenes de Surtido.
+- Se queda por servicio REST.
+- Ya FANASA está trabajando en la implementación.
+ 
+Información de Surtido
+- La información se escribe en una tabla de Oracle.
+- Se ejecuta un StoreProcedure para arrancar el proceso en Oracle.
+- POSTERIORMENTE se tiene que ir a revisar si se procesó la información (cambio de estatus)
+- Se tiene que esperar a que todas las ordenes de surtido estén confirmadas por parte del ERP Oracle.
+ 
+Confirmación de Ruta por Distribución.
+- Se escribe el registro en la base de datos de Oracle junto las cifras de control.
+- POSTERIORMENTE se tiene que revisar el estado del proceso (columna con el estado).
+ 
+Confirmación de Facturas.
+- Me entregaran una vista para consultar la información.
+ 
+ 
+Siguientes pasos.
+ 
+GNEW:
+Para conectarse a Oracle desde Java se utiliza el JDBC de Oracle.
+Los parámetros necesarios para la conexión son estos:
+ 
+Image
+https://docs.oracle.com/en/database/oracle/oracle-database/21/jjdbc/data-sources-and-URLs.html#GUID-44572C63-10D2-478A-BB2E-ACF6674C59CC
+ 
+FANASA.
+Definir las Vistas y las Tablas asociadas a las interfases.
+Proporcionar los atributos necesarios para la conexión a Oracle en el ambiente de pruebas.
+
+
+==============================================================================================================================
+==============================================================================================================================
+
+
+1000-2205-37964390.3-0001
+
+
+https://chartjs-plugin-datalabels.netlify.app/samples/advanced/multiple-labels.html
+https://chartjs-plugin-datalabels.netlify.app/guide/options.html#scriptable-options
+https://chartjs-plugin-datalabels.netlify.app/guide/positioning.html#clamping
+https://chartjs-plugin-datalabels.netlify.app/guide/formatting.html#data-transformation
+
+
+https://fesa1-my.sharepoint.com/:f:/g/personal/ramon_gonzalez_fanafesa_com/Es8KJcp0fY1JhaTFqU-JyqwBls96M3ZBXeZdlH8lOEJB2g?email=jbecerra%40gnew.com.mx&e=5%3aadILhr&at=9
+
+
+==============================================================================================================================
+==============================================================================================================================
+
+
+
+update Cliente set certifica = '0';
+update Ruta set certifica = '0';
+update SubInventario set certifica = '0';
+update OrdenSurtido set certifica = '0' where status = '10';
+
+
+update OrdenSurtidoBulto set status = '40' where status = '30';
+update OrdenSurtido set status = '40' where status = '30';
+update EstadoOrdenSurtido set status = '40' where status = '30';
+
+insert into EstadoOrdenSurtido values ('1000','30','Liberada para Certificacion');
+insert into EstadoOrdenSurtido values ('1000','31','Inicio de Certificacion');
+insert into EstadoOrdenSurtido values ('1000','32','Fin de Certificacion');
+insert into EstadoOrdenSurtido values ('1000','50','Liberada para Embarque');
+insert into EstadoOrdenSurtido values ('1000','60','Liberada para Auditoria');
+
+
+
+delimiter //
+DROP PROCEDURE InformacionCarritoSurtido//
+CREATE PROCEDURE InformacionCarritoSurtido (IN _compania CHAR(20), _sucursal CHAR(20), IN _idcarrito INT)
+BEGIN
+	SELECT * FROM CarritoSurtido WHERE compania = _compania AND sucursal = _sucursal AND idcarrito = _idcarrito;
+	SELECT * FROM OrdenSurtidoBulto WHERE compania = _compania AND sucursal = _sucursal AND idcarrito = _idcarrito;
+	SELECT * FROM OrdenSurtido WHERE compania = _compania AND sucursal = _sucursal AND orden IN (SELECT DISTINCT orden FROM OrdenSurtidoBulto WHERE compania = _compania AND sucursal = _sucursal AND idcarrito = _idcarrito);
+END//
+delimiter ;
+
+CALL InformacionCarritoSurtido('1000', '2205', 55); 
+
+
+==============================================================================================================================
+==============================================================================================================================
+
+
+-- Surtido
+
+    *** CarritoSurtidoTO currentCarritoSurtidoTO;
+    *** OrdenSurtidoTO ordenSurtidoTO;
+    *** ArrayList<OrdenSurtidoDetalleUI> detalles;
+    *** ArrayList<OrdenSurtidoBultoTO> bultos;
+
+    private OrdenSurtidoBultoTO currentOrdenSurtidoBultoTO;
+    private int currentIndexDetalle;
+
+
+    
+-- Sorter
+
+    *** CarritoSurtidoUI currentCarritoSurtidoUI;
+    *** ArrayList<OrdenSurtidoTO> ordenes;
+    *** ArrayList<OrdenSurtidoBultoUI> bultos;
+    
+    private int currentIndexBulto;
+    
+    
+
+==============================================================================================================================
+==============================================================================================================================
+
+
+alter table CarritoSurtido add fechasorter datetime after fechacierre;
+alter table CarritoSurtido add fechaliberado datetime after fechasorter;
+
+insert into EstadoOrdenSurtido values ('1000','30','Liberada para Hauler');
+
+delete from EstadoOrdenSurtido where compania = '1000' and status like '2%';
+insert into EstadoOrdenSurtido values ('1000','20','Liberada para Sorter');
+insert into EstadoOrdenSurtido values ('1000','21','Inicio de Auditoria');
+insert into EstadoOrdenSurtido values ('1000','22','Fin de Auditoria');
+insert into EstadoOrdenSurtido values ('1000','23','Inicio de Sorter');
+insert into EstadoOrdenSurtido values ('1000','24','Fin de Sorter');
+
+alter table OrdenSurtidoBulto add column tobogan varchar(15) after posicion;
+update OrdenSurtidoBulto set tobogan = '';
+alter table OrdenSurtidoBulto modify column tobogan varchar(15) not null;
+
+alter table OrdenSurtidoBulto add column contenedor varchar(15) after tobogan;
+update OrdenSurtidoBulto set contenedor = '';
+alter table OrdenSurtidoBulto modify column contenedor varchar(15) not null;
+
+alter table Cliente add column clase varchar(1);
+update Cliente set clase = 'N';
+alter table Cliente modify column clase varchar(1) not null;
+
+update Cliente set clase = 'C' where nombre like 'FARMACIAS DEL AHORRO%';
+update Cliente set clase = 'C' where nombre like 'BENAVIDES%';
+
+
+CREATE TABLE RutaTobogan  ...
+CREATE TABLE Tobogan  ...
+
+
+==============================================================================================================================
+==============================================================================================================================
+
+
+*** Observaciones de Certificación de Bultos.
+
+Recordar que los Carritos de Surtido tienen varias Charolas con varios Bultos de varias Ordenes de Surtido. Por lo que, inclusive, pueden tener varias Ordenes de Surtido de varias Rutas distintas. Mas que por Ruta, el Carrito de Surtido es del SubInventario del cual provienen los Bultos de Surtido.
+
+¿Que define la prioridad más alta del Carrito de Surtido?
+Respuesta. Las Ordenes de Surtido que esta almacenando (en las Charolas). Se toma la prioridad de las Ordenes de Surtido y se ordenan; el Sorter se lleva el primer Carrito con la prioridad mas alta.
+
+
+- La Certificación de Bultos de Surtido inicia cuando el Sorter toma el Carrito de Surtido (que esta estacionado) y lo va a llevar al Palomar.
+
+El Carrito de Surtido que se le asigna al Sorter es el que tiene la mayor prioridad y el Sorter debe de ir hasta donde esta estacionado su carrito.
+
+
+- Recordar que el Carrito de Surtido tiene varias Charolas con varios Bultos de Orden de Surtido de varias Ordenes de Surtido que pueden ser de varias Rutas. 
+
+- Si el Carrito de Surtido tiene Bultos de Ordenes de Surtido que se Certifican, estos Bultos de Ordenes de Surtido se desvían a la mesa del Certificador.
+
+El Sorter recibirá la instrucción del sistema de cuáles son los Bultos que debe de dejar en la mesa del Auditor de Surtido (Certificador).
+Para esto, el Sorter deberá escanear la etiqueta de la mesa del Auditor de Surtido y los bultos que está dejando, con esto se realiza el acuse de la entrega del Sorter al Auditor de Certificación.
+
+
+- Los demas Bultos de Orden de Surtido que no se Certifican, son llevados por el Sorter en el Carrito de Surtido al Palomar.
+
+- Al finalizar la Certificación de los Bultos de Orden de Surtido, el Auditor de Surtido (Certificador) cierra el Carrito de Surtido con los Bultos ya Certificados y lo deposita nuevamente en el Estacionamiento de Carritos para que el Sorter se lo lleve al Palomar.
+Esto se hará por cada Orden de Surtido que se Certifica, no importa que el Carrito de Surtido, lleve solo los bultos de esa Orden de Surtido, se tiene que cerrar y llevarse al estacionamiento lo mas rápido posible.
+
+
+
+*** Observaciones de Sorter
+
+
+Lo comentado con Marco es que existirán muebles (palomares) con capacidad de 20 (filas de 5 x 4) toboganes designados para cada Ruta del almacén.
+Se propone que haya hasta 5 o más muebles de estos (palomares), con lo cual se podrá hacer Sorter de hasta 4 Rutas distintas de forma simultánea; cada Ruta tiene predefinido 1 mueble (asigando a la Ruta) y la capacidad (volumen) de los 20 toboganes esta sobrada (50% o más) para todos los bultos de toda la Ruta.
+
+Los Carritos de Surtido de Psicotrópicos también son llevados por el Sorter al palomar (así está el diagrama de flujo) y al depositarlos en los toboganes del palomar, se revolverán con los demás bultos de las demás Ordenes de Surtido. Hay que confirmar que está bien esto.
+
+Los Carritos de Surtido de Refrigerados son tomados también por el Sorter, la diferencia es que no se depositan en los toboganes del palomar, se dejan en la tarima asignada a la Ruta (que está a lado del mueble del palomar) (así está el diagrama de flujo); la pregunta es ... ¿cómo es que se van a separar los bultos de Ordenes de Surtido pertenecientes a una misma Ruta? recordar que el Carrito de Surtido tiene varios bultos de varias Ordenes de Surtido de varias Rutas. 
+
+Por el momento no se realizará el Sorter de los pedidos 3PL, no hasta que haya acuerdo de llevar a cabo la IT5.
+
+
+- Falta las Reglas de depósito de bultos de Orden de Surtido dentro de los toboganes de los palomares.
+
+
+
+==============================================================================================================================
+==============================================================================================================================
+
+Recrear y recargar las tablas de acuerdo a 
+
+fanasa-web.ddl 
+querys de carga de datos
+
+==============================================================================================================================
+==============================================================================================================================
+
+
+drop table if exists EstadoOrdenSurtido;
+CREATE TABLE EstadoOrdenSurtido ( 
+	compania varchar(20) not null, status varchar(2) not null, descripcion varchar(60) not null, 
+	PRIMARY KEY (compania, status)
+	) ENGINE=InnoDB;
+
+insert into EstadoOrdenSurtido values ('1000','00','Creada');
+insert into EstadoOrdenSurtido values ('1000','01','Ruta Abierta');
+
+insert into EstadoOrdenSurtido values ('1000','10','Liberada para Surtido');
+insert into EstadoOrdenSurtido values ('1000','11','Inicio de Surtido');
+insert into EstadoOrdenSurtido values ('1000','12','Fin de Surtido');
+insert into EstadoOrdenSurtido values ('1000','13','Espera Traspaleo Carrito');
+insert into EstadoOrdenSurtido values ('1000','14','Inicio Traspaleo Carrito');
+insert into EstadoOrdenSurtido values ('1000','15','Fin Traspaleo Carrito');
+insert into EstadoOrdenSurtido values ('1000','16','Area Espera de Carrito');
+
+insert into EstadoOrdenSurtido values ('1000','20','Liberada para Sorter');
+insert into EstadoOrdenSurtido values ('1000','21','Auditoria de Surtido');
+insert into EstadoOrdenSurtido values ('1000','22','Inicio de Auditoria');
+insert into EstadoOrdenSurtido values ('1000','23','Fin de Auditoria');
+insert into EstadoOrdenSurtido values ('1000','24','Inicio de Sorter');
+insert into EstadoOrdenSurtido values ('1000','25','Fin de Sorter');
+
+insert into EstadoOrdenSurtido values ('1000','90','Confirmada Oracle');
+insert into EstadoOrdenSurtido values ('1000','ZZ','Ruta Cerrada');
+
+
+==============================================================================================================================
+==============================================================================================================================
+
+
+Etiquetas de Orden de Surtido
+Localizador:
+Lote:
+Quitar la clave de producto.
+
+
+==============================================================================================================================
+==============================================================================================================================
+
+
+Presentacion FANASA
+
+
+Avance de Ruta,
+Primero Generar, luego de las Rutas que tienes Abiertas, luego por Ruta, luego por SubInventario.
+App de Escaneo de código de bulto.
+
+Falló en Impresión y se cierra el App. 
+
+
+==============================================================================================================================
+==============================================================================================================================
+
+
+Al traspalear y el escanear el bulto se valida que sea la etiqueta del bulto.
+RESUELTO.
+Al traspalear y el escanear el bulto se valida que el bulto sea de la orden de surtido que se esta traspaleando en este momento.
+RESUELTO.
+
+
+No puedes cerrar sesion si tienes algo pendiente en la handheld (surtido, carrito abierto)
+RESUELTO.
+Anclar la rotación del dispositivo. 
+RESUELTO.
+Horizontal para derecha e izquierda. 
+RESUELTO.
+
+Orden de líneas de Surtido, de acuerdo a los localizadores, parece que no esta ordenado el surtido. 
+RESUELTO. Se ordena por localizador.
+
+==============================================================================================================================
+==============================================================================================================================
+
+
+update Permiso set nombre = 'appSurtido' where nombre = 'surtidoAppSurtido';
+update Permiso set nombre = 'appTraspaleo' where nombre = 'traspaleoAppSurtido';
+update Permiso set nombre = 'appEtiquetaSurtido' where nombre = 'etiquetaSurtidoAppSurtido';
+
+
+==============================================================================================================================
+==============================================================================================================================
+
+
+alter table CarritoSurtido add column tipo varchar(1) after subinventario;
+update CarritoSurtido set tipo = 'N';
+alter table CarritoSurtido modify column tipo varchar(1) not null;
+
+update OrdenSurtido set status = '16' where status = '15';
+update OrdenSurtidoBitacora set status = '16' where status = '15';
+
+
+==============================================================================================================================
+==============================================================================================================================
+
+
+Preguntas de FANASA
+
+- Al cerrar el Carrito de General se lleva a la zona de espera de General.
+
+- Al cerrar el Carrito de Controlados se tiene que llevar a la zona de espera de Controlados.
+De la misma forma, al cerrar el Carrito de Refrigerados se tiene que llevar a la zona de espera de Refrigerados.
+¿Son dos zonas de espera distintas? ¿La zona de espera de controlados es diferente a la zona de espera de refrigerados?
+
+--
+--
+Si, hay una area por cada tipo de surtido. Cada tipo de surtido tiene su area especifica dentro del almacén, estan separadas
+por una malla, no se mezclan entre si.
+--
+--
+
+
+- De acuerdo al flujo de refrigerados, el carrito cerrado se debe de colocar en una hielera ¿?,
+se supone que desde que esta surtiendo refrigerados los carritos que se usan son hieleras, pero de acuerdo al flujo, hasta que
+se cierra el carrito se debe de traspasar a una hielera para después colocarlo en el proceso de sorter.
+Favor de dar claridad en este punto.
+**** En el nuevo proceso de surtido, el surtido de refrigerados se hace en una hielera y ya no se traspalea a otra hielera.
+**** Cuando se cierra la hielera del surtido, se pasa al area de espera de carritos cerrados de refrigerados.
+
+--
+--
+Las ordenes de surtido de refrigerado se surten directamente en hieleras, el carrito es la hielera. Al cerrar el carrito se coloca
+en el area de espera de refrigerados.
+El surtido de refrigerados no pasa por el Sorter ni el Hauler.
+--
+--
+
+
+- De acuerdo con el fujo, al cerrar el carrito de controlados se lleva a la zona de espera de controlados.
+De ahi se inicia el traspaso a otro carrito, pero aparece en el flujo el proceso de Sorter, y luego al finalizar el traspaso,
+vuelve a aparecer el proceso de sorter, ¿porque esta dos veces el proceso de sorter? ¿uno al iniciar el traspaso y el segundo
+al finalizar el traspaso?
+Yo entiendo que al final del traspaso, se lleva el carrito traspasado al proceso de sorter, al final, solo una ves.
+Favor de dar claridad en este punto.
+
+--
+--
+Las ordenes de surtido de controlados se surten internamente en carrito de controlados, después es carrito de controlados se tiene
+que traspalear a otro carrito, para que ese carrito traspaleado, se lleve al area de espera de controlados.
+El surtido de controlados no pasa por el Sorter ni el Hauler.
+--
+--
+
+
+- De acuerdo al flujo, el surtido de bodega se hace directamente en pallets, discutimos en la mañana que los pallets es un tipo 
+diferente de carrito, pero se abre y se cierra al igual que in carrito de surtido.
+El tema aqui, es que al cerrar el pallet, el flujo dice que se debe de llevar el pallet a la zona asignada; entonces tenemos una
+cuarta zona de espera (zona de espera de carritos normales, zona de espera de carritos controlados, zona de espera de carritos refrigerados,
+y zona de espera de pallets :)).
+Pero el flujo indica que los pallets no pasan por el proceso de Sorter, y se van directo al proceso de Embarque.
+¿Es correcto esto? Favor de dar claridad en este punto.
+- En el surtido de bodega, se supone que lo que se surten son cajas, entonces al cerrar el bulto, se deberían de imprimir varias etiquetas
+de bulto, una por cada caja, para que no pierdan identificación las cajas. ¿que opinan al respecto?
+
+--
+--
+Las ordenes de surtido de bodega se realizan en pallets, las cajas son los bultos, se imprime una etiqueta por cada caja.
+El surtido de bodega no pasa por el Sorter ni el Hauler.
+--
+--
+
+- Al final de los flujos de carrito (general, controlados, refrigerados, control de precios y bodega) ... ¿todos llegan al proceso 
+de Sorter? ¿y la Auditoria (Certificación) de Surtido? ¿cuando ocurre?
+- Proceso de Auditoria de Surtido
+En el nuevo proceso no se distingue entre surtido general, controlados, refrigerados, control de precios y bodega ..
+¿porque? ¿solo de auditan los bultos del surtido general?
+Favor de dar claridad en este punto.
+
+--
+Solo las ordenes de surtido generales pasan por el proceso de Auditoria de Surtido y después pasan a Sorter y Hauler.
+<TODAS LAS DEMAS> se quedan en la zona de espera para pasar directamente al embarque.
+--
+
+- Proceso de Sorter
+El nuevo proceso de sorter si distingue entre sorter de general, controlados y refrigerados; pero no esta para control de precios y bodega.
+¿el surtido de Bodega no pasa por el Sorter? ¿el surtido de control de precios no pasa por el Sorter?
+
+--
+Solo las ordenes de surtido generales pasan por el proceso de Sorter y Hauler.
+<TODAS LAS DEMAS> se quedan en la zona de espera para pasar directamente al embarque.
+--
+
+
+==============================================================================================================================
+==============================================================================================================================
+
+
+
+curl -X POST -H "Content-Type: application/json; charset=UTF-8" -H "Authorization: bda94326-c9e9-11ed-afa1-0242ac120002" -d '{}' -X POST http://10.0.66.8:8080/wms/Integracion?operacion=Test
+
+curl -X POST -H "Content-Type: application/json; charset=UTF-8" -H "Authorization: bda94326-c9e9-11ed-afa1-0242ac120002" -d '[{"ORGANIZATION_ID": "2205", "ORGANIZATION_CODE": "MXF", "INVENTORY_ITEM_ID": "818427", "CODIGO_BARRAS": "07501124184667", "LOT_NUMBER": "S2206404", "EXPIRATION_DATE": "2024-08-31"},{"ORGANIZATION_ID": "2205", "ORGANIZATION_CODE": "MXF", "INVENTORY_ITEM_ID": "818427", "CODIGO_BARRAS": "07501124184667", "LOT_NUMBER": "S22006404", "EXPIRATION_DATE": "2024-08-18"},{"ORGANIZATION_ID": "2205", "ORGANIZATION_CODE": "MXF", "INVENTORY_ITEM_ID": "560259", "CODIGO_BARRAS": "07501101611544", "LOT_NUMBER": "21g264v1", "EXPIRATION_DATE": "2023-07-31"},{"ORGANIZATION_ID": "2205", "ORGANIZATION_CODE": "MXF", "INVENTORY_ITEM_ID": "132044", "CODIGO_BARRAS": "07501101633348", "LOT_NUMBER": "226308v", "EXPIRATION_DATE": "2023-03-10"}]' -X POST http://10.0.66.8:8080/wms/Integracion?operacion=LotesActivos
+
+curl -X POST -H "Content-Type: application/json; charset=UTF-8" -H "Authorization: bda94326-c9e9-11ed-afa1-0242ac120002" -d '[{"ORGANIZATION_ID": "2205", "ORGANIZATION_CODE": "MXF", "RUTA": "MXF-F 0050 AN", "PUERTA_EMBARQUE": "01"},{"ORGANIZATION_ID": "2205", "ORGANIZATION_CODE": "MXF", "RUTA": "MXF-FVI 0490 AN", "PUERTA_EMBARQUE": "02"},{"ORGANIZATION_ID": "2205", "ORGANIZATION_CODE": "MXF", "RUTA": "MXF01 0001 AN", "PUERTA_EMBARQUE": "10"},{"ORGANIZATION_ID": "2205", "ORGANIZATION_CODE": "MXF", "RUTA": "TNS-BJX", "PUERTA_EMBARQUE": "22"}]' -X POST http://10.0.66.8:8080/wms/Integracion?operacion=Rutas
+
+curl -X POST -H "Content-Type: application/json; charset=UTF-8" -H "Authorization: bda94326-c9e9-11ed-afa1-0242ac120002" -d '[{"ORGANIZATION_ID": "2205", "ORGANIZATION_CODE": "MXF", "CREATION_DATE": "2023-03-21 08:37:44", "ORDEN": "37068176.1", "SUBINVENTORY_CODE": "AFESCONTR1", "PRIORIDAD_ENTREGA": "1", "ID_PEDIDO": "94283217", "NUM_CLIENTE": "24693", "NOMBRE_FARMACIA": "FARMACIAS ESPECIALIZADAS SUCURSAL CIUDAD VICTORIA", "RAZON_SOCIAL": "FARMACOS ESPECIALIZADOS SA DE CV", "RUTA": "MXF-F 0100 AN", "ORDEN_LINE_ID": "690837999", "INVENTORY_ITEM_ID": "718329", "DESCRIPTION": "_RHOPHYLAC_INMUNOGLOBULINA HUMANA ANTI-D__300 mcg / 2 ml_1_SOL__CSLBE", "LOT_NUM": "P100478785,31-03-25", "LOCALIZADOR": "FESA.000.N1", "CANTIDAD_PIEZA": 1},{"ORGANIZATION_ID": "2205", "ORGANIZATION_CODE": "MXF", "CREATION_DATE": "2023-03-21 08:37:44", "ORDEN": "37069078.1", "SUBINVENTORY_CODE": "AFESCONTR2", "PRIORIDAD_ENTREGA": "6", "ID_PEDIDO": "94284911", "NUM_CLIENTE": "14454", "NOMBRE_FARMACIA": "FARMACOS ESPECIALIZADO SA DE CV", "RAZON_SOCIAL": "FARMACOS ESPECIALIZADO SA DE CV", "RUTA": "MXF-F 0100 AN", "ORDEN_LINE_ID": "690838002", "INVENTORY_ITEM_ID": "21725", "DESCRIPTION": "_ALACRAMYN_FABOTERAPICO POLIVALENTE ANTIALACRAN__1.8 mg_1_SOL__LSILA", "LOT_NUM": "B-2L-33,31-10-24", "LOCALIZADOR": "IFES.06.N3", "CANTIDAD_PIEZA": 6},{"ORGANIZATION_ID": "2205", "ORGANIZATION_CODE": "MXF", "CREATION_DATE": "2023-03-21 08:37:44", "ORDEN": "37069078.1", "SUBINVENTORY_CODE": "AFESCONTR2", "PRIORIDAD_ENTREGA": "6", "ID_PEDIDO": "94284911", "NUM_CLIENTE": "14454", "NOMBRE_FARMACIA": "FARMACOS ESPECIALIZADO SA DE CV", "RAZON_SOCIAL": "FARMACOS ESPECIALIZADO SA DE CV", "RUTA": "MXF-F 0100 AN", "ORDEN_LINE_ID": "690838003", "INVENTORY_ITEM_ID": "817444", "DESCRIPTION": "_KEYRHO INYECTABLE_INMUNOGLOBULINA HUMANA ANTI-D__300 mcg / 2 ml_1_SOL__KEDRI", "LOT_NUM": "N02F01221A,31-12-24", "LOCALIZADOR": "IFES.11.N5", "CANTIDAD_PIEZA": 6},{"ORGANIZATION_ID": "2205", "ORGANIZATION_CODE": "MXF", "CREATION_DATE": "2023-03-21 17:55:53", "ORDEN": "37070351.1", "SUBINVENTORY_CODE": "CELDA1", "PRIORIDAD_ENTREGA": "344", "ID_PEDIDO": "94288797", "NUM_CLIENTE": "42000", "NOMBRE_FARMACIA": "FARMACIA DEL PUEBLO", "RAZON_SOCIAL": "MARTINEZ ALVAREZ MIRIAM", "RUTA": "MXF01 3950 AN", "ORDEN_LINE_ID": "690692160", "INVENTORY_ITEM_ID": "21561", "DESCRIPTION": "_CONTUMAX_POLIETILENGLICOL 3350___15_SOB_17 g_ASOFA", "LOT_NUM": "06749,31-10-24", "LOCALIZADOR": "PO03.N2.05", "CANTIDAD_PIEZA": 2},{"ORGANIZATION_ID": "2205", "ORGANIZATION_CODE": "MXF", "CREATION_DATE": "2023-03-21 17:55:53", "ORDEN": "37070352.4", "SUBINVENTORY_CODE": "CELDA7", "PRIORIDAD_ENTREGA": "731", "ID_PEDIDO": "94288798", "NUM_CLIENTE": "56272", "NOMBRE_FARMACIA": "FARMACIA DIVINA PROVIDENCIA SUCURSAL CANTAROS", "RAZON_SOCIAL": "ANGULO OLALDE JORGE", "RUTA": "MXF01 2800 AN", "ORDEN_LINE_ID": "690692168", "INVENTORY_ITEM_ID": "16547", "DESCRIPTION": "_ISOX_ITRACONAZOL__100 mg_15_CAP__LSENO", "LOT_NUM": "S2H807,31-08-24", "LOCALIZADOR": "PD6.09.N1", "CANTIDAD_PIEZA": 1}]' -X POST http://10.0.66.8:8080/wms/Integracion?operacion=OrdenesSurtido
+
+
+==============================================================================================================================
+==============================================================================================================================
+
+Compartir imagen
+JOSE RAMON GONZALEZ SEGRESTE compartió una carpeta contigo
+Aquí está la carpeta que JOSE RAMON GONZALEZ SEGRESTE compartió contigo.
+icon	Extracciones
+permission globe icon	Este vínculo solo funciona para los destinatarios directos de este mensaje.
+Abrir
+
+Carpeta
+
+https://fesa1-my.sharepoint.com/:f:/g/personal/ramon_gonzalez_fanafesa_com/Es8KJcp0fY1JhaTFqU-JyqwBls96M3ZBXeZdlH8lOEJB2g?email=jbecerra%40gnew.com.mx&e=5%3aadILhr&at=9
+
+
+==============================================================================================================================
+==============================================================================================================================
+
+
+Agregar la interfase de FANAFESA a GNEW de Datos de Ruta
+
+Si no hay Factura Timbrada no se pueden subir los bultos a la camioneta.
+
+Agregar la interfase de Confirmación de Facturas del ERP de FANASA para GNEW.
+
+
+
+==============================================================================================================================
+==============================================================================================================================
+
+
+https://www.bmc.org/bmc-help-desk-file-downloads
+
+Invalid server certificate. (Error:1107)
+(Error 1107)". This issue occurs when the Dynamic certificate trust is disabled for the Pulse Desktop Client connection set. Pulse Secure does recommend disabling the Dynamic certificate trust. This option helps to avoid end-user from connecting to the untrusted device instead of trusted PCS.
+
+https://kb.pulsesecure.net/articles/Pulse_Secure_Article/KB44623#:~:text=(Error%201107)%22.&text=This%20issue%20occurs%20when%20the,device%20instead%20of%20trusted%20PCS.
+https://www.it.ucsb.edu/ivanti-secure-access-campus-vpn/vpn-service-frequently-asked-questions
+https://support.sectigo.com/articles/Knowledge/Sectigo-AddTrust-External-CA-Root-Expiring-May-30-2020
+
+
+==============================================================================================================================
+==============================================================================================================================
+
+
+https://vpn.fanafesa.com/sso
+
+jbecerra@gnew.com.mx
+j&b@18m#
+
+
+==============================================================================================================================
+==============================================================================================================================
+
+
+Les voy adelantando la información del servidor de pruebas:
+ 
+IP: 10.0.66.8
+Usuario: OPC
+Puerto: 22
+Llave privada: ssh-key-2023-02-15.key
+Indicarme a quien le mando la llave del usuario root
+ 
+Desde las oficinas de FANASA se tiene acceso, les dejo evidencia…
+
+
+==============================================================================================================================
+==============================================================================================================================
+
+
+9 de Marzo del 2023
+
+Reabasto.
+El proceso de reabasto se elimina, es bajo el porcentaje que no es necesario implementarlo.
+
+Verificación de Lote y Fecha de Caducidad
+En GNEW se debe de colocar un indicador por Cliente y/o Producto para verificar Lote y Fecha de Caducidad surtido,
+este indicador afecta a todas las Ordenes de Surtido.
+Al verificar el lote y fecha de caducidad el surtidor podrá cambiarlo de acuerdo a lo que esta surtiendo fisicamente.
+Para el cambio de lote se mostraran los lotes activos por producto, si el lote no existe el Surtidor podrá escribirlo.
+
+
+¿La clave de subinventario me dice si es Controlado, Refrigerado o Control de Precio?
+Indicador de subinventario
+
+
+Las Ordenes de Surtido heredan del Cliente, Ruta o Producto, de ahi el sistema GNEW sabe que se desvia a Certificación.
+Cuando las Ordens de Surtido se desvia a Certificación se imprime una nueva etiqueta para el bulto.
+
+3PL
+Para la interfase, solo se requiere el encabezado del bulto, no el detalla
+Fecha - Pedido - Cliente - Orden de Surtido - Bulto - Consecutivo (n de m)
+
+
+==============================================================================================================================
+==============================================================================================================================
+
+
+Usuarios a nivel nacional.
+La administración de roles y permisos es en el WMS.
+Un usuario puede pertenecer a un almacén en particular (puede cambiar por un motivo de apoyos).
+
+
+Recibo Ordenes de Surtido (interfaz de Oracle a WMS) en todo tiempo, mediante Oracle.
+WMS lanza olas de surtido de acuerdo a la prioridad de rutas y clientes.
+Surtidores inician surtido en HH
+Cada surtido de OS bare bultos de surtido
+	- Se imprime el numero de bulto y se pega en la bolsa de surtido
+Controlados al finalizar el surtido va a una zona de espera de controlados.
+Refrigerados al finalizar el surtido va a una zona de espera de refrigerados.
+
+Las ordenes de surtido se llevan al palomar y se dejan en la posición del palomar que define el WSM (algoritmo de palomar).
+
+
+==============================================================================================================================
+==============================================================================================================================
+
+7 de Marzo del 2023
+
+Se pacta un 60% de Incremento para la realizacion de los siguientes modulos:
+
+- Reabasto
+- 3PL
+- Crossdock
+
+Con este incremento FANASA recupera el 10% de modificaciones globales del proyecto.
+
+
+60% de 402,500 = 241,500 MXN
+
+
+==============================================================================================================================
+==============================================================================================================================
+
+
+16 de Diciembre del 2022
+
+Se pacto con Marco un incremento del 15% sobre los costos de desarrollo.
+
+
+Total de Horas: 700 HRS, costo por hora: 575 MXN, gran total de desarrollo 402,500 MXN.
+
+En estos costos no esta incluida la implementación, así que debes de considerar un par de recursos durante unos 2 meses trabajando en el almacén de FANAFESA.
+
+A estos costos hay que agregar tus márgenes de comercialización y de venta y agregar los costos de la implementación que realizara el personal de GNEW.
+
+
+
+
+==============================================================================================================================
+==============================================================================================================================
+
+
+Tecnificación del Proceso
+
+600,000 piezas por turno (6 HRS)
+
+Hoy por la tarde y mañana 12 de Julio, se empezara a revisar el contrato
+FANASA se puede tardar varias semanas en la parte administrativa de la contratación del proyecto
+
+
+3 meses
+Solo en el segundo reparto de FINSA
+
+Sigmund Gonzalez, Director de Operaciones
+
+
+Rafael Roldan, Mejora Continua, FINSA
+Gerardo Leon, Ingeniería de Procesos, FINSA
+
+Francisco Moreno, TESOL (Consultores)
+5517030963
+francisco.moreno@tesolco.biz
+
+
+PO por parte de FANASA, Enrique Alatriste
+
+
+- Integración ERP Oracle - WMS GNEW
+
+-- Entrega de Ordenes de Surtido (ERP -> WMS)
+-- Cierre de Orden de Surtido (WMS -> ERP)
+-- Entrega de Orden de Surtido a Embarque (WMS)
+-- Carga Orden de Surtido a Camioneta (WMS -> ERP)
+-- Cierre de Ruta de Reparto (WMS -> ERP)
+
+
+11:00 - 11:15 Inicio de Preparación del Segundo Reparto en FINSA
+Lunes 18 de Julio
+
+
+Upgrade de Oracle (Septiembre - Octubre)
+
+
+Opciones de Soporte, Reunion con Jose Ramon para Soporte post proyecto
+11:00 HRS
+
+
+==============================================================================================================================
+==============================================================================================================================
+
+
+Modalidad 7x12 (diurno)
+Brindar el servicio de Soporte Técnico de la aplicación (APP) de Surtido (Picking) para los Centros de Distribución de FINSA de lunes a domingo en un horario diurno de 8:00 HRS a 20:00 HRS
+
+Servicios por proporcionar
+● Soporte Técnico del servidor de aplicaciones todos los días de la semana de 8:00 HRS a 20:00 HRS.
+o Administración del servidor de aplicaciones.
+o Para el soporte del servidor es necesario contar con una VPN que brinde acceso remoto al servidor. o Resolución de defectos de tipo A, B y C (ver sección mas adelante).
+● Solución de Defectos.
+o Solución de Defectos con severidad A (que detengan el funcionamiento de la aplicación), serán atendidos en
+menos de 6 horas.
+o Solución de Defectos con severidad B (que ocasionen que las reglas de negocio fallen en la aplicación), serán atendidos en menos de 24 horas.
+o Solución de Defectos con severidad C (que sean errores cosméticos), serán atendidos en menos de 48 horas.
+o El soporte de defectos con severidad A o B no está cerrado al horario diurno y podrán ser atendidos en horarios fuera del establecido llamando al teléfono 5513859557 y escribiendo un correo electrónico a jbecerra@gnew.com.mx
+o El soporte técnico es remoto vía VPN y/o por vía telefónica; no aplica de forma presencial porque los servidores están disponibles las instalaciones del cliente.
+
+Costo
+180,000 MXN anuales
+
+
+==============================================================================================================================
+==============================================================================================================================
+
+
+Estimado Marco,
+
+Te mando la propuesta de solución para que la revises y me des tu vo.bo. antes de enviarla a FANASA.
+
+<<Ver el archivo adjunto>>
+
+En cuanto a los costos del desarrollo esta es la estimación.
+
+Total de Horas: 700 HRS, costo por hora: 500 MXN, gran total de desarrollo 350,000 MXN.
+
+En estos costos no esta incluida la implementación, así que debes de considerar un par de recursos durante unos 2 meses trabajando en el almacén de FANAFESA.
+
+A estos costos hay que agregar tus márgenes de comercialización y de venta y agregar los costos de la implementación que realizara el personal de GNEW.
+
+Quedo al pendiente de tus comentarios.
+
+Saludos,
+Joel Becerra
+
+
+==============================================================================================================================
+==============================================================================================================================
+
+
+Conteo Ciclico no se registra Lote
+
+Conteo Cuatrimestral se reigistra el Lote
+	Totales por Producto
+	Totales por Lote
+		Ajustes o Traspasos
+
+Asignacion de Conteos
+	Por el numero de pasillo (3 primeros caracteres del Localizador)
+	
+Tablero de Diferencias en WEB
+	Se actualiza cada 30 segundos
+
+
