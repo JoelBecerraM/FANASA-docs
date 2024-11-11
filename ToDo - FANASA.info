@@ -1,6 +1,52 @@
 
 
 
+--
+-- Junta de Seguimiento, 11 Noviembre
+--
+
+En el proyect hablan del numero de semana, 1 a 52, el año 2025 lo inician con la 1.
+	¿como empatan esta semanas con las semanas S1, S2 ... S21)?
+
+Volumetria lo estan realizando manualmente, mesa y regla (calibrador vernier), tardan un mes.
+	¿estarán a tiempo?
+	
+Carros de Surtido, apenas estan evaluando el diseño; hay dos propuestas que estan evaluando. Apenas lo estan usando en el almacén.
+Hay uno de plastico que ya esta en el almacén.
+Selladoras térmicas que van en el carro, se requiere que se apruebe el diseño.
+	¿estarán a tiempo?
+
+Contenedores, primero se va a comprar el 20%, ya esta fincada la orden de compra, no tienen fecha de entrega.
+	¿estarán a tiempo?
+
+Mandiles, apenas van a fincar la orden de compra, se espera que lleguen en enero.
+	¿estarán a tiempo?
+
+Muro, el equipo interno sera realizado por la gente interna de L&D360. Ya hay una propuesta para hacerlo.
+El muro, quitarlo les va afectar mucho en el turno nocturno. Les va a robar mucho espacio a la operación actual.
+	¿estarán a tiempo?
+
+
+==============================================================================================================================
+==============================================================================================================================
+
+
+Un favor Joel,  primero inicia sesión  en la página de office365 
+https://login.microsoftonline.com/
+y sigue los pasos; cuando ya hallas iniciado sesión intenta conectarte a la VPN porfa.
+
+
+VPN
+Ya esta generado la cuenta: 
+joel.becerra@fanafesa.com
+F@rmacos2024.
+
+https://aka.ms/mysecurityinfo
+
+
+==============================================================================================================================
+==============================================================================================================================
+
 
       October               November              December        
 Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  
@@ -15,12 +61,63 @@ Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
 ==============================================================================================================================
 
 
+Mesa de Control
+
+2.2 	Configurar Productos
+•	Peso del Producto.
+•	Volumen del Producto.
+
 2.3 	Configurar Rutas
 •	Hora Teórica de Precierre.
+PreCierre Automático
 
 2.5 	Configurar Tipo de Transporte
 •	Capacidad Volumétrica. (cm3)
 •	Capacidad Máximo de Peso. (kg)
+
+2.5.A	Contenedores
+* Capacidad Volumetrica. (cm3)
+
+2.7 	Tipo de Surtido
+•	Surtido Simultaneo (más de un pedido al mismo tiempo).
+•	Surtido Pedido Completo.
+Este tipo de Surtido va configurado en la Ruta.
+
+2.8 	Capacidad Volumétrica, Capacidad de Peso y Traspaleo
+
+2.9 	Programar Auditoria por Ruta, Cliente, Producto
+Cancelación de Auditoria
+Auditoria Fast-Track 
+
+2.11 	Liberar Rutas (Abrirlas)
+PreCierre pueda ser automático pero que también pueda ser manual
+
+2.12 	Cancelación de Auditoria
+
+
+Surtido
+
+3.3 	Calcular cuantos pedidos se pueden asignar al Surtidor.
+
+App Surtido
+
+4.7 	Indicar localizador de producto a surtir.
+No se escanea el localizador del producto
+
+4.4 	Indicar tipo de contenedor que debe de asignar de acuerdo con el volumen de cada Pedido.
+
+4.5 	Asignar Contenedor, Tarima o Delantal escaneando su código.
+Los Contenedores se deben de escanear
+
+4.6 	Iniciar surtido simultaneo.
+
+4.8 	Escanear código de barras del producto solicitado.
+
+4.11 	Indicar a sistema que se dejó producto en Contenedor.
+
+4.12 	Cierre de Bulto y/o Contenedor y/o Transporte.
+
+4.14 	Cierre de Transporte.
 
 
 
