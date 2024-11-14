@@ -1,6 +1,101 @@
 
 
 
+App Surtido:
+
+*** Modelo Tradicional: Transporte - Contenedor - Bulto
+
+- Abre Transporte
+	- Abre Contenedores
+	- Selecciona Pedidos
+		(1 pedido por Contenedor) 
+	- Surte Productos
+		- Abre Bulto
+		- Cierra Bulto
+	- Cierra Contenedores
+- Cierra Transporte
+- Lleva a Sorter
+
+
+*** Modelo Traspaleo Contenedor: Transporte - Contenedor - Bulto - Traspaleo
+++ El Tipo de Transporte determina este Traspaleo a Contenedor
+++ Mandiles, Hieleras
+
+(Todo esto lo hace el Surtidor)
+- Abre Transporte-Contenedor
+	- Selecciona Pedidos
+		(1 pedido por Contenedor) 
+	- Surte Productos
+		- Abre Bulto
+		- Cierra Bulto
+- Cierra Transporte-Contenedor
+- Traspalea a Transporte-Contenedor
+	- Abre Contenedor
+		- Traspalea Bultos
+	- Cierra Contenedor
+	- Cierra Transporte
+- Lleva Sorter
+
+*** Modelo Traspaleo Bultos: Transporte - Contenedor - Bulto - Espera Traspaleo - Traspaleo
+++ El Bloque determina este Traspaleo de Bultos
+++ Surtido Controlados, Surtido Refrigerados
+
+- Abre Transporte
+	- Abre Contenedores
+	- Selecciona Pedidos
+		(1 pedido por Contenedor) 
+	- Surte Productos
+		- Abre Bulto
+		- Cierra Bulto
+	- Cierra Contenedores
+- Cierra Transporte
+- Lleva a Espera Traspaleo
+
+(Esta parte del proceso la hace el 'Traspaleador')
+- Abre Transporte-Contenedor
+	- Abre Transporte (el que esta en espera)
+		- Abre Contenedores
+			- Traspalea Bultos
+		- Cierra Contenedor
+	- Cierra Transporte
+- Cierra Transporte-Contenedor
+- Lleva a Sorter
+
+
+==============================================================================================================================
+==============================================================================================================================
+
+
+truncate Producto;
+insert into Producto 
+select '1000', INVENTORY_ITEM_ID, DESCRIPTION, '0', 0, 0 from ordenes group by INVENTORY_ITEM_ID, DESCRIPTION;
+update Producto set peso = FLOOR(RAND() * (1000 + 1)) / 1000.0;
+update Producto set volumen = FLOOR(RAND() * (20 + 1));
+update Producto set volumen = 1 where volumen = 0;
+
+truncate SubInventario;
+insert into SubInventario
+select '1000', ORGANIZATION_ID, SUBINVENTORY_CODE, '0', '' from ordenes group by ORGANIZATION_ID, SUBINVENTORY_CODE;
+update SubInventario set verificalote = '1' where subinventario in ('BODESTUP','BODPSICOTR','BODREFRIG','ESTUPEFAC','PSICOTROP','PSICOTROP1','REFRIGER');
+
+
+==============================================================================================================================
+==============================================================================================================================
+
+
+      October               November              December        
+Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  
+       1  2  3  4  5                  1  2   1  2  3  4  5  6  7  
+ 6  7  8  9 10 11 12   3  4  5  6  7  8  9   8  9 10 11 12 13 14  
+13 14 15 16 17 18 19  10 11 12 13 14 15 16  15 16 17 18 19 20 21  
+20 21 22 23 24 25 26  17 18 19 20 21 22 23  22 23 24 25 26 27 28  
+27 28 29 30 31        24 25 26 27 28 29 30  29 30 31              
+    
+
+==============================================================================================================================
+==============================================================================================================================
+
+
 --
 -- Junta de Seguimiento, 11 Noviembre
 --
@@ -42,84 +137,6 @@ joel.becerra@fanafesa.com
 F@rmacos2024.
 
 https://aka.ms/mysecurityinfo
-
-
-==============================================================================================================================
-==============================================================================================================================
-
-
-      October               November              December        
-Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  
-       1  2  3  4  5                  1  2   1  2  3  4  5  6  7  
- 6  7  8  9 10 11 12   3  4  5  6  7  8  9   8  9 10 11 12 13 14  
-13 14 15 16 17 18 19  10 11 12 13 14 15 16  15 16 17 18 19 20 21  
-20 21 22 23 24 25 26  17 18 19 20 21 22 23  22 23 24 25 26 27 28  
-27 28 29 30 31        24 25 26 27 28 29 30  29 30 31              
-    
-    
-==============================================================================================================================
-==============================================================================================================================
-
-
-Mesa de Control
-
-2.2 	Configurar Productos
-•	Peso del Producto.
-•	Volumen del Producto.
-
-2.3 	Configurar Rutas
-•	Hora Teórica de Precierre.
-PreCierre Automático
-
-2.5 	Configurar Tipo de Transporte
-•	Capacidad Volumétrica. (cm3)
-•	Capacidad Máximo de Peso. (kg)
-
-2.5.A	Contenedores
-* Capacidad Volumetrica. (cm3)
-
-2.7 	Tipo de Surtido
-•	Surtido Simultaneo (más de un pedido al mismo tiempo).
-•	Surtido Pedido Completo.
-Este tipo de Surtido va configurado en la Ruta.
-
-2.8 	Capacidad Volumétrica, Capacidad de Peso y Traspaleo
-
-2.9 	Programar Auditoria por Ruta, Cliente, Producto
-Cancelación de Auditoria
-Auditoria Fast-Track 
-
-2.11 	Liberar Rutas (Abrirlas)
-PreCierre pueda ser automático pero que también pueda ser manual
-
-2.12 	Cancelación de Auditoria
-
-
-Surtido
-
-3.3 	Calcular cuantos pedidos se pueden asignar al Surtidor.
-
-App Surtido
-
-4.7 	Indicar localizador de producto a surtir.
-No se escanea el localizador del producto
-
-4.4 	Indicar tipo de contenedor que debe de asignar de acuerdo con el volumen de cada Pedido.
-
-4.5 	Asignar Contenedor, Tarima o Delantal escaneando su código.
-Los Contenedores se deben de escanear
-
-4.6 	Iniciar surtido simultaneo.
-
-4.8 	Escanear código de barras del producto solicitado.
-
-4.11 	Indicar a sistema que se dejó producto en Contenedor.
-
-4.12 	Cierre de Bulto y/o Contenedor y/o Transporte.
-
-4.14 	Cierre de Transporte.
-
-
 
 
 ==============================================================================================================================
