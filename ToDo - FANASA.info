@@ -1,12 +1,69 @@
 
 
+
+mysql> select compania, sucursal, headerid, count(*) as c from OrdenSurtido group by compania, sucursal, headerid order by c desc limit 10;
++----------+----------+-----------+----+
+| compania | sucursal | headerid  | c  |
++----------+----------+-----------+----+
+| 1000     | 2205     | 113337204 | 25 |
+| 1000     | 2205     | 113330389 | 24 |
+| 1000     | 2205     | 113339512 | 23 |
+| 1000     | 2205     | 113334862 | 23 |
+| 1000     | 2205     | 113336367 | 22 |
+| 1000     | 2205     | 113338490 | 21 |
+| 1000     | 2205     | 113336455 | 21 |
+| 1000     | 2205     | 113319160 | 21 |
+| 1000     | 2205     | 113319167 | 21 |
+| 1000     | 2205     | 113331918 | 21 |
++----------+----------+-----------+----+
+10 rows in set (0.05 sec)
+
+mysql> select * from OrdenSurtido where compania = '1000' and sucursal = '2205' and headerid = '113337204';
++----------+----------+-------------+---------------------+---------------+-----------+---------------+------------+---------------+-----------+-----------+-------+---------+---------+----------------------------------------+--------+---------------------+-------------+--------------------+--------+----------+----------+--------------+--------+---------+-------------+-----------+-----------+--------+-----------------+
+| compania | sucursal | orden       | fechacreacion       | ordenheaderid | headerid  | subinventario | bloque     | ruta          | agrupador | prioridad | corte | ordenes | cliente | nombrecliente                          | status | fechastatus         | usuario     | idrutadistribucion | lineas | cantidad | surtidas | certificadas | peso   | volumen | tiposurtido | certifica | auditoria | bultos | fechaconfirmada |
++----------+----------+-------------+---------------------+---------------+-----------+---------------+------------+---------------+-----------+-----------+-------+---------+---------+----------------------------------------+--------+---------------------+-------------+--------------------+--------+----------+----------+--------------+--------+---------+-------------+-----------+-----------+--------+-----------------+
+| 1000     | 2205     | 44310864.1  | 2024-08-16 22:13:55 | 00000000      | 113337204 | BODALM        | GENERAL    | MXF01 1390 AN |         0 |       163 |     0 |      99 |  170749 | FARMACIAS DEL AHORRO SUCURSAL EL TUNEL | 00     | 2024-11-19 19:29:47 | INTEGRACION |               NULL |      7 |        9 |        0 |            0 |      0 |       0 | 1           | 0         | 0         |      0 | NULL            |
+| 1000     | 2205     | 44310864.10 | 2024-08-16 22:13:55 | 00000000      | 113337204 | CELDA3        | DINAMICO   | MXF01 1390 AN |         0 |       163 |     0 |      99 |  170749 | FARMACIAS DEL AHORRO SUCURSAL EL TUNEL | 00     | 2024-11-19 19:29:47 | INTEGRACION |               NULL |      2 |        2 |        0 |            0 |      0 |       0 | 1           | 0         | 0         |      0 | NULL            |
+| 1000     | 2205     | 44310864.11 | 2024-08-16 22:13:55 | 00000000      | 113337204 | CELDA5        | DINAMICO   | MXF01 1390 AN |         0 |       163 |     0 |      99 |  170749 | FARMACIAS DEL AHORRO SUCURSAL EL TUNEL | 00     | 2024-11-19 19:29:47 | INTEGRACION |               NULL |     16 |       23 |        0 |            0 |     50 |       0 | 1           | 0         | 0         |      0 | NULL            |
+| 1000     | 2205     | 44310864.12 | 2024-08-16 22:13:55 | 00000000      | 113337204 | CELDA5        | DINAMICO   | MXF01 1390 AN |         0 |       163 |     0 |      99 |  170749 | FARMACIAS DEL AHORRO SUCURSAL EL TUNEL | 00     | 2024-11-19 19:29:47 | INTEGRACION |               NULL |     16 |       20 |        0 |            0 |      0 |       0 | 1           | 0         | 0         |      0 | NULL            |
+| 1000     | 2205     | 44310864.13 | 2024-08-16 22:13:55 | 00000000      | 113337204 | CELDA5        | DINAMICO   | MXF01 1390 AN |         0 |       163 |     0 |      99 |  170749 | FARMACIAS DEL AHORRO SUCURSAL EL TUNEL | 00     | 2024-11-19 19:29:47 | INTEGRACION |               NULL |     10 |       12 |        0 |            0 |      0 |       0 | 1           | 0         | 0         |      0 | NULL            |
+| 1000     | 2205     | 44310864.14 | 2024-08-16 22:13:55 | 00000000      | 113337204 | CELDA6        | GENERAL    | MXF01 1390 AN |         0 |       163 |     0 |      99 |  170749 | FARMACIAS DEL AHORRO SUCURSAL EL TUNEL | 00     | 2024-11-19 19:29:47 | INTEGRACION |               NULL |     16 |       18 |        0 |            0 |  176.7 |       0 | 1           | 0         | 0         |      0 | NULL            |
+| 1000     | 2205     | 44310864.15 | 2024-08-16 22:13:55 | 00000000      | 113337204 | CELDA6        | GENERAL    | MXF01 1390 AN |         0 |       163 |     0 |      99 |  170749 | FARMACIAS DEL AHORRO SUCURSAL EL TUNEL | 00     | 2024-11-19 19:29:47 | INTEGRACION |               NULL |     16 |       19 |        0 |            0 |   69.6 |       0 | 1           | 0         | 0         |      0 | NULL            |
+| 1000     | 2205     | 44310864.16 | 2024-08-16 22:13:55 | 00000000      | 113337204 | CELDA6        | GENERAL    | MXF01 1390 AN |         0 |       163 |     0 |      99 |  170749 | FARMACIAS DEL AHORRO SUCURSAL EL TUNEL | 00     | 2024-11-19 19:29:47 | INTEGRACION |               NULL |      6 |        6 |        0 |            0 |      0 |       0 | 1           | 0         | 0         |      0 | NULL            |
+| 1000     | 2205     | 44310864.17 | 2024-08-16 22:13:55 | 00000000      | 113337204 | CELDA7        | GENERAL    | MXF01 1390 AN |         0 |       163 |     0 |      99 |  170749 | FARMACIAS DEL AHORRO SUCURSAL EL TUNEL | 00     | 2024-11-19 19:29:47 | INTEGRACION |               NULL |     16 |       22 |        0 |            0 |    210 |       0 | 1           | 0         | 0         |      0 | NULL            |
+| 1000     | 2205     | 44310864.18 | 2024-08-16 22:13:55 | 00000000      | 113337204 | CELDA7        | GENERAL    | MXF01 1390 AN |         0 |       163 |     0 |      99 |  170749 | FARMACIAS DEL AHORRO SUCURSAL EL TUNEL | 00     | 2024-11-19 19:29:47 | INTEGRACION |               NULL |     16 |       20 |        0 |            0 |  171.5 |       0 | 1           | 0         | 0         |      0 | NULL            |
+| 1000     | 2205     | 44310864.19 | 2024-08-16 22:13:55 | 00000000      | 113337204 | CELDA7        | GENERAL    | MXF01 1390 AN |         0 |       163 |     0 |      99 |  170749 | FARMACIAS DEL AHORRO SUCURSAL EL TUNEL | 00     | 2024-11-19 19:29:47 | INTEGRACION |               NULL |     16 |       18 |        0 |            0 |    206 |       0 | 1           | 0         | 0         |      0 | NULL            |
+| 1000     | 2205     | 44310864.2  | 2024-08-16 22:13:55 | 00000000      | 113337204 | BODCTRLPRE    | CTRLPRECIO | MXF01 1390 AN |         0 |       163 |     0 |      99 |  170749 | FARMACIAS DEL AHORRO SUCURSAL EL TUNEL | 00     | 2024-11-19 19:29:47 | INTEGRACION |               NULL |      2 |        2 |        0 |            0 |      0 |       0 | 1           | 0         | 0         |      0 | NULL            |
+| 1000     | 2205     | 44310864.20 | 2024-08-16 22:13:55 | 00000000      | 113337204 | CELDA7        | GENERAL    | MXF01 1390 AN |         0 |       163 |     0 |      99 |  170749 | FARMACIAS DEL AHORRO SUCURSAL EL TUNEL | 00     | 2024-11-19 19:29:47 | INTEGRACION |               NULL |      5 |        6 |        0 |            0 |      0 |       0 | 1           | 0         | 0         |      0 | NULL            |
+| 1000     | 2205     | 44310864.21 | 2024-08-16 22:13:55 | 00000000      | 113337204 | CELDA8        | GENERAL    | MXF01 1390 AN |         0 |       163 |     0 |      99 |  170749 | FARMACIAS DEL AHORRO SUCURSAL EL TUNEL | 00     | 2024-11-19 19:29:47 | INTEGRACION |               NULL |      7 |       10 |        0 |            0 |      0 |       0 | 1           | 0         | 0         |      0 | NULL            |
+| 1000     | 2205     | 44310864.22 | 2024-08-16 22:13:55 | 00000000      | 113337204 | CELDA9        | GENERAL    | MXF01 1390 AN |         0 |       163 |     0 |      99 |  170749 | FARMACIAS DEL AHORRO SUCURSAL EL TUNEL | 00     | 2024-11-19 19:29:47 | INTEGRACION |               NULL |      9 |       14 |        0 |            0 |  258.6 |       0 | 1           | 0         | 0         |      0 | NULL            |
+| 1000     | 2205     | 44310864.23 | 2024-08-16 22:13:55 | 00000000      | 113337204 | CELDA_T1      | PERFUMERIA | MXF01 1390 AN |         0 |       163 |     0 |      99 |  170749 | FARMACIAS DEL AHORRO SUCURSAL EL TUNEL | 00     | 2024-11-19 19:29:47 | INTEGRACION |               NULL |     14 |       18 |        0 |            0 |  180.4 |       0 | 1           | 0         | 0         |      0 | NULL            |
+| 1000     | 2205     | 44310864.24 | 2024-08-16 22:13:55 | 00000000      | 113337204 | CTRLPRECI1    | CTRLPRECIO | MXF01 1390 AN |         0 |       163 |     0 |      99 |  170749 | FARMACIAS DEL AHORRO SUCURSAL EL TUNEL | 00     | 2024-11-19 19:29:47 | INTEGRACION |               NULL |     10 |       11 |        0 |            0 |      0 |       0 | 1           | 0         | 0         |      0 | NULL            |
+| 1000     | 2205     | 44310864.25 | 2024-08-16 22:13:55 | 00000000      | 113337204 | CTRLPRECIO    | CTRLPRECIO | MXF01 1390 AN |         0 |       163 |     0 |      99 |  170749 | FARMACIAS DEL AHORRO SUCURSAL EL TUNEL | 00     | 2024-11-19 19:29:47 | INTEGRACION |               NULL |     12 |       14 |        0 |            0 |      0 |       0 | 1           | 0         | 0         |      0 | NULL            |
+| 1000     | 2205     | 44310864.3  | 2024-08-16 22:13:55 | 00000000      | 113337204 | BODFRAG       | GENERAL    | MXF01 1390 AN |         0 |       163 |     0 |      99 |  170749 | FARMACIAS DEL AHORRO SUCURSAL EL TUNEL | 00     | 2024-11-19 19:29:47 | INTEGRACION |               NULL |      1 |        3 |        0 |            0 |      0 |       0 | 1           | 0         | 0         |      0 | NULL            |
+| 1000     | 2205     | 44310864.4  | 2024-08-16 22:13:55 | 00000000      | 113337204 | BODPER        | GENERAL    | MXF01 1390 AN |         0 |       163 |     0 |      99 |  170749 | FARMACIAS DEL AHORRO SUCURSAL EL TUNEL | 00     | 2024-11-19 19:29:47 | INTEGRACION |               NULL |      4 |        7 |        0 |            0 |  330.6 |       0 | 1           | 0         | 0         |      0 | NULL            |
+| 1000     | 2205     | 44310864.5  | 2024-08-16 22:13:55 | 00000000      | 113337204 | CELDA10       | PERFUMERIA | MXF01 1390 AN |         0 |       163 |     0 |      99 |  170749 | FARMACIAS DEL AHORRO SUCURSAL EL TUNEL | 00     | 2024-11-19 19:29:47 | INTEGRACION |               NULL |      6 |       11 |        0 |            0 |     21 |       0 | 1           | 0         | 0         |      0 | NULL            |
+| 1000     | 2205     | 44310864.6  | 2024-08-16 22:13:55 | 00000000      | 113337204 | CELDA2        | DINAMICO   | MXF01 1390 AN |         0 |       163 |     0 |      99 |  170749 | FARMACIAS DEL AHORRO SUCURSAL EL TUNEL | 00     | 2024-11-19 19:29:47 | INTEGRACION |               NULL |     16 |       31 |        0 |            0 | 2248.2 |       0 | 1           | 0         | 0         |      0 | NULL            |
+| 1000     | 2205     | 44310864.7  | 2024-08-16 22:13:55 | 00000000      | 113337204 | CELDA2        | DINAMICO   | MXF01 1390 AN |         0 |       163 |     0 |      99 |  170749 | FARMACIAS DEL AHORRO SUCURSAL EL TUNEL | 00     | 2024-11-19 19:29:47 | INTEGRACION |               NULL |     16 |       26 |        0 |            0 |  452.6 |       0 | 1           | 0         | 0         |      0 | NULL            |
+| 1000     | 2205     | 44310864.8  | 2024-08-16 22:13:55 | 00000000      | 113337204 | CELDA2        | DINAMICO   | MXF01 1390 AN |         0 |       163 |     0 |      99 |  170749 | FARMACIAS DEL AHORRO SUCURSAL EL TUNEL | 00     | 2024-11-19 19:29:47 | INTEGRACION |               NULL |     16 |       21 |        0 |            0 | 911.44 |       0 | 1           | 0         | 0         |      0 | NULL            |
+| 1000     | 2205     | 44310864.9  | 2024-08-16 22:13:55 | 00000000      | 113337204 | CELDA2        | DINAMICO   | MXF01 1390 AN |         0 |       163 |     0 |      99 |  170749 | FARMACIAS DEL AHORRO SUCURSAL EL TUNEL | 00     | 2024-11-19 19:29:47 | INTEGRACION |               NULL |      2 |        2 |        0 |            0 |      0 |       0 | 1           | 0         | 0         |      0 | NULL            |
++----------+----------+-------------+---------------------+---------------+-----------+---------------+------------+---------------+-----------+-----------+-------+---------+---------+----------------------------------------+--------+---------------------+-------------+--------------------+--------+----------+----------+--------------+--------+---------+-------------+-----------+-----------+--------+-----------------+
+25 rows in set (0.05 sec)
+
+mysql> 
+
+
+==============================================================================================================================
+==============================================================================================================================
+
+
 ./test.sh --compania 1000 --sucursal 2205 --sincronizacion rutas 
 ./test.sh --compania 1000 --sucursal 2205 --sincronizacion lotes 
 ./test.sh --compania 1000 --sucursal 2205 --sincronizacion codigobarras 
 ./test.sh --compania 1000 --sucursal 2205 --sincronizacion productos 
 
 for tipo in rutas lotes codigobarras productos
-for tipo in productos
+for tipo in rutas
 do
 	./test.sh --compania 1000 --sucursal 2205 --sincronizacion $tipo > sincronizacion-${tipo}.out
 done
@@ -37,6 +94,32 @@ select o.* from ordenes o left join Producto p on o.INVENTORY_ITEM_ID = p.clave 
 -- Ordenes de Surtido que no tienen Ruta
 select distinct o.RUTA from ordenes o left join Ruta r on o.ORGANIZATION_ID = r.sucursal and o.RUTA = r.ruta where r.ruta is null;
 select o.* from ordenes o left join Ruta r on o.ORGANIZATION_ID = r.sucursal and o.RUTA = r.ruta where r.ruta is null;
+
+
+mysql> select o.* from ordenes o left join Producto p on o.INVENTORY_ITEM_ID = p.clave where p.clave is null;
++------------+-----------------+-------------------+-----------+--------------+-----------+---------------+------------+-------------------+-------------+---------------+-------------+-----------------+--------------------------+-------------------+-----------------+-------------------------+--------------------------------------------------------------+----------------+---------+-------------------+------------+------------------+---------------------+-----------+-----------------+------------+----------+
+| ID_TASK    | ORGANIZATION_ID | ORGANIZATION_CODE | ID_PEDIDO | ORDER_NUMBER | ID_ORDEN  | ORDEN_LINE_ID | ORDEN      | SUBINVENTORY_CODE | LOCALIZADOR | RUTA          | NUM_CLIENTE | NOMBRE_FARMACIA | RAZON_SOCIAL             | INVENTORY_ITEM_ID | ITEM            | CODIGO_ESCANEO          | DESCRIPTION                                                  | CANTIDAD_PIEZA | LOT_NUM | PRIORIDAD_ENTREGA | ORDER_TYPE | CODIGO_ESCANEO_1 | CREATION_DATE       | HEADER_ID | ORDEN_HEADER_ID | LOCATOR_ID | LINE_ID  |
++------------+-----------------+-------------------+-----------+--------------+-----------+---------------+------------+-------------------+-------------+---------------+-------------+-----------------+--------------------------+-------------------+-----------------+-------------------------+--------------------------------------------------------------+----------------+---------+-------------------+------------+------------------+---------------------+-----------+-----------------+------------+----------+
+| 9487642200 | 2205            | MXF               | 113349686 | 44314447     | 315894972 | 813666074     | 44314447.1 | REFRIGER          | PL1.38.N4   | MXF01 1400 AN | 20725       | OCAMPO          | RODRIGUEZ RUIZ RICA ELMA | 26802             | 7501165002937AA | 44314447.1.0.315894972. | 4158_LANTUS_INSULINA GLARGINA__100 UI / ml_1_FAM_10 ml_SANPA |              1 | 1F032B  | 154               | E          |                  | 08/16/2024 22:15:36 | 113349686 | 00000000        | 00000000   | 00000000 |
++------------+-----------------+-------------------+-----------+--------------+-----------+---------------+------------+-------------------+-------------+---------------+-------------+-----------------+--------------------------+-------------------+-----------------+-------------------------+--------------------------------------------------------------+----------------+---------+-------------------+------------+------------------+---------------------+-----------+-----------------+------------+----------+
+1 row in set (0.11 sec)
+
+mysql> select distinct o.RUTA from ordenes o left join Ruta r on o.ORGANIZATION_ID = r.sucursal and o.RUTA = r.ruta where r.ruta is null;
++---------+
+| RUTA    |
++---------+
+| TNS-BJX |
+| TNS-CLN |
+| TNS-GPE |
+| TNS-HER |
++---------+
+4 rows in set (0.06 sec)
+
+insert into Ruta values ('1000', '2205', 'TNS-BJX', 99, '99', '0', '0', '', '1', '', '', 0);
+insert into Ruta values ('1000', '2205', 'TNS-CLN', 99, '99', '0', '0', '', '1', '', '', 0);
+insert into Ruta values ('1000', '2205', 'TNS-GPE', 99, '99', '0', '0', '', '1', '', '', 0);
+insert into Ruta values ('1000', '2205', 'TNS-HER', 99, '99', '0', '0', '', '1', '', '', 0);
+insert into Producto values ('1000', '26802', '4158_LANTUS_INSULINA GLARGINA__100 UI / ml_1_FAM_10 ml_SANPA', '0', '0', 0, 0);
 
 
 ==============================================================================================================================
