@@ -1,11 +1,93 @@
 
 
+./test.sh --compania 1000 --sucursal 2205 --sincronizacion rutas 
+./test.sh --compania 1000 --sucursal 2205 --sincronizacion lotes 
+./test.sh --compania 1000 --sucursal 2205 --sincronizacion codigobarras 
+./test.sh --compania 1000 --sucursal 2205 --sincronizacion productos 
+
+for tipo in rutas lotes codigobarras productos
+for tipo in productos
+do
+	./test.sh --compania 1000 --sucursal 2205 --sincronizacion $tipo > sincronizacion-${tipo}.out
+done
+
+
+du() { mysqldump -u syda -psY%_3srew fanasa Ruta LoteActivo Producto CodigoBarras; }
+du > dump.sql
+gzip -f dump.sql
+
+
+d() { /usr/local/mysql/bin/mysql -u ecommerce -pEC\$89yeR fanasa; }
+
+rm ~/Downloads/dump.sql
+scp -i /Users/joelbecerramiranda/Documents/FANASA/id_rsa_KeyProvGnew_private_test.pem gnewdev@172.16.0.135:./dump.sql.gz ~/Downloads/
+gzip -d ~/Downloads/dump.sql.gz 
+d < ~/Downloads/dump.sql 
+
+d
+-- Codigos de Barra que no estan en Producto
+select c.* from CodigoBarras c left join Producto p on c.compania = p.compania and c.clave = p.clave where p.clave is null;
+-- Lotes Activos que no estan en Producto
+select l.* from LoteActivo l left join Producto p on l.compania = p.compania and l.clave = p.clave where p.clave is null;
+-- Productos que no tienen Codigo de Barras
+select p.* from Producto p left join CodigoBarras c on p.compania = c.compania and p.clave = c.clave where c.clave is null;
+
+-- Ordenes de Surtido que no tienen Producto
+select o.* from ordenes o left join Producto p on o.INVENTORY_ITEM_ID = p.clave where p.clave is null;
+-- Ordenes de Surtido que no tienen Ruta
+select distinct o.RUTA from ordenes o left join Ruta r on o.ORGANIZATION_ID = r.sucursal and o.RUTA = r.ruta where r.ruta is null;
+select o.* from ordenes o left join Ruta r on o.ORGANIZATION_ID = r.sucursal and o.RUTA = r.ruta where r.ruta is null;
+
+
+==============================================================================================================================
+==============================================================================================================================
+
+#
+# Integracion
+#
+integracion.driver=oracle.jdbc.OracleDriver
+integracion.url=jdbc:oracle:thin:@//140.87.206.194:1521/ebs_PEBSDE6
+integracion.usuario=BOLINF
+integracion.password=g_zU7#0aCg
+
+
+nc -vz 172.16.0.135 1521
+nc -vz 172.16.0.135 22
+nc -vz 172.16.0.135 8080
+
+ssh -i /Users/joelbecerramiranda/Documents/FANASA/id_rsa_KeyProvGnew_private_test.pem gnewdev@172.16.0.135
+
+
+==============================================================================================================================
+==============================================================================================================================
+
 Donde se almacenaran los datos transaccionales que se generaran en PP&D.
 Auditoria por Surtidor.
 Reporte de Audioria (cuantos bultos se van)
 Parametro para scanear Localizador de Inventarios.
 Registro de Contenedores que se embarcan en la Ruta. Enviar los contenedores que salen.
 Cinchos por Bulto en Controlados y Control de Precios.
+
+
+En los siguientes puntos anoté cambios:
+AUDITORIAS
+En el punto 2.10 aumentar la figura del PICKER
+Considerar un tablero donde den seguimiento a las auditorías, por ejemplo por qué se cancelan
+SURTIDO
+En el punto 10.3 considerar poner un switch para activar o desactivar el escaneo utilizando el localizador de producto (se arrancará el proyecto con el switch apagado)
+JAULER
+En el punto 7.2 modificar el texto pues dice la carga en la camioneta y  debe redactarse comentado que se puede ir acomodando todo en la jaula, no ir cargando la camioneta pues aún no se tienen todos los pedidos.
+En el punto 7.8 cambiar la palabra BULTO por la palabra CONTENEDOR.
+
+OTRO COMENTARIOS:
+a. Importante considerar que los localizadores deben estar ordenados para que el recorrido sea eficiente
+b. La etiqueta no se pegará en las bolsas se meterá en la bolsa.  IMPLICACIONES:  Diseñar una etiqueta grande  visible y no es necesario comprar papel adhesivo.  La etiquetadora debe manejar el corte de papel.
+c. NO llevarán selladora térmica en los carritos, en alguna parte del documento se menciona,  sugiero que se quite.
+d. Aunque no es parte del documento, es importante asegurar que la gente capture la información en el ERP, que necesitaremos para que PP&D funcione.  
+e. Quizás insistir en la separación de las OS entre picking y caja cerrada para que ya lleguen así desde el ERP y se genere el bloque de BODEGA.
+
+Otra implicación de la no etiqueta, es que para leer el qr hay que acomodar la etiqueta para que quede visible
+
 
 
 ==============================================================================================================================
