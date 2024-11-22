@@ -1,58 +1,126 @@
 
 
+drop table if exists OrdenSurtidoBulto;
+CREATE TABLE OrdenSurtidoBulto ( 
+	compania varchar(20) not null, sucursal varchar(10) not null, orden varchar(20) not null, bulto varchar(10) not null, 
+	tiposurtido varchar(1) not null, lineas int not null, surtidas int not null, idcarrito int not null, posicion varchar(15) not null, 
+	carrito varchar(15) not null, contenedor varchar(20) not null, jaula varchar(15) not null, embarque varchar(15) not null, carga varchar(15) not null, 
+	status varchar(2) not null, fechastatus datetime not null, usuario varchar(30) not null, 
+	PRIMARY KEY (compania, sucursal, orden, bulto)
+	) ENGINE=InnoDB;
+CREATE INDEX OrdenSurtidoBultoINDX1 on OrdenSurtidoBulto (compania, sucursal, idcarrito, posicion);
+CREATE INDEX OrdenSurtidoBultoINDX2 on OrdenSurtidoBulto (compania, sucursal, embarque);
+
+
+
+--- Prioritarios
+
+ToDo: Agregar al registro de PedidoSurtido 
+	- Total de lineas y total de cantidad
+	- Tambien agregar total surtidas, este campo se actualiza hasta que se afecta el surtido de la HH
+
+ToDo: Ordenar los Detalles del Surtido por Orden de Localizador (recorrido inteligente)
+	- SurtidoStage2Fragment -> linea 245
+	
+ToDo: AutoAsignar los Pedidos
+	- SurtidoStage2Fragment -> linea 151
+	- No es necesario esperar a que le den clic al boton
+			
+ToDo: Cancelar TransporteSurtido desde HH
+	- Inclusive cuando ya estan los Pedidos Asignados.
+	- Dar Reversa en el backend.
+
+ToDo: Cerrar la Captura de Surtido
+
+
+---
+
 ToDo: Mesa de Control abrir Rutas por prioridad.
-		- Cuando se abren las rutas se abren por prioridad.
-		- Se abren las rutas de la misma prioridad.
+	- Cuando se abren las rutas se abren por prioridad.
+	- Se abren las rutas de la misma prioridad.
 
 ToDo: Desde la Mesa de Control poder ver los TransportesSurtido.
-		- Ver cuantos hay asignados y en que otros estados estan.
-		- Quitar los liberados y cancelados.
-		- Poder cancelar un TransporteSurtido *** SI HAY EN ALGUNA HH ESTE TransporteSurtido CREAMOS UNA INCONSISTENCIA ***
+	- Ver cuantos hay asignados y en que otros estados estan.
+	- Quitar los liberados y cancelados.
+	- Poder cancelar un TransporteSurtido *** SI HAY EN ALGUNA HH ESTE TransporteSurtido CREAMOS UNA INCONSISTENCIA ***
 		
-		
-		
-ToDo: Comando para Asignar los Pedidos
-		- Se requiere bloque e idtransporte.
-		- Seleccionar Pedidos en base a la siguiente logica:
-			Para asignar los Pedidos se sigue esta lógica en el backend. 
-				(1) En base al Bloque del Surtidor se obtiene el Pedido de Mayor Prioridad. (2) Del Pedido de Mayor prioridad se obtiene la Ruta. (3) Con la Ruta ya sabemos el Tipo de Surtido.
-				(4) Si el Tipo de Surtido es ‘Simultáneo’, se mandan n-pedidos de acuerdo con el número máximo de Contenedores del Transporte. Si el Tipo de Surtido es ‘Pedido Completo’, se manda un solo Pedido.
-				En el backend se actualiza el registro de TransporteSurtido. Se coloca la prioridad del primer Pedido prioridad. Se coloca el horario de fechapedidos.
-				
-		- Un Pedido es una agrupación de Ordenes de Surtido (se usa el atributo idpedido de la tabla OrdenSurtido).
-		- Solo se pueden agrupar por 'Pedido Completo'.
-		- Se crea en el backend el registro de Pedido.
-		
+	-- Inclusive poder cancelar un TransporteSurtido cuando ya se hayan asignado los Pedidos
+		transporteSurtidoDAO.status = Constantes.STATUS_TRANSPORTESURTIDO_PEDIDOS;
+		Puede ser que el TransporteSurtido se haya 'perdido' en la HandHeld y deba de ser cancelado
 
+ToDo: Dashboard
+	- Primero una tabla con el Avance de Todas las Rutas.
+		Con filtros, columnas ordenables
+		Por Turno Distribucion, por Prioridad de Ruta, etc.
+	- Luego el Avance particular por Ruta 
+
+			
 
 ==============================================================================================================================
 ==============================================================================================================================
+
+
+delimiter //
+DROP PROCEDURE InformacionRutaTransportePedido//
+CREATE PROCEDURE InformacionRutaTransportePedido (IN _compania CHAR(20), _sucursal CHAR(20), IN _ruta CHAR(20))
+BEGIN
+	SELECT * FROM OrdenSurtido WHERE compania = _compania AND sucursal = _sucursal AND ruta = _ruta;
+	SELECT * FROM TransporteSurtido WHERE compania = _compania AND sucursal = _sucursal AND ruta = _ruta;
+	SELECT * FROM PedidoSurtido WHERE compania = _compania AND sucursal = _sucursal AND ruta = _ruta;
+	SELECT SUM(ordenes) FROM PedidoSurtido WHERE compania = _compania AND sucursal = _sucursal AND ruta = _ruta;
+	SELECT COUNT(DISTINCT idtransporte) FROM PedidoSurtido WHERE compania = _compania AND sucursal = _sucursal AND ruta = _ruta;
+END//
+delimiter ;
+
+==============================================================================================================================
+==============================================================================================================================
+
 
 export RUTA="MXF01 1250 AN"
 ./test.sh --compania 1000 --sucursal 2205 --command abre-ruta "${RUTA}"
 ./test.sh --compania 1000 --sucursal 2205 --command surte-ruta "${RUTA}"
+
+CALL InformacionRutaTransportePedido('1000', '2205', 'MXF01 1250 AN'); 
 
 
 export RUTA="MXF-F 0300 AN"
 ./test.sh --compania 1000 --sucursal 2205 --command abre-ruta "${RUTA}"
 ./test.sh --compania 1000 --sucursal 2205 --command surte-ruta "${RUTA}"
 
+CALL InformacionRutaTransportePedido('1000', '2205', 'MXF-F 0300 AN'); 
+
 
 export RUTA="MXF01 0034 AN"
 ./test.sh --compania 1000 --sucursal 2205 --command abre-ruta "${RUTA}"
 ./test.sh --compania 1000 --sucursal 2205 --command surte-ruta "${RUTA}"
 
+CALL InformacionRutaTransportePedido('1000', '2205', 'MXF01 0034 AN'); 
+
+
+export RUTA="MXF01 1380 AN"
+./test.sh --compania 1000 --sucursal 2205 --command abre-ruta "${RUTA}"
+./test.sh --compania 1000 --sucursal 2205 --command surte-ruta "${RUTA}"
+
+CALL InformacionRutaTransportePedido('1000', '2205', 'MXF01 1380 AN'); 
+
+
+export RUTA="MXF01 0004 AN"
+./test.sh --compania 1000 --sucursal 2205 --command abre-ruta "${RUTA}"
+./test.sh --compania 1000 --sucursal 2205 --command surte-ruta "${RUTA}"
+
+CALL InformacionRutaTransportePedido('1000', '2205', 'MXF01 0004 AN'); 
 
 
 ==============================================================================================================================
 ==============================================================================================================================
 
 
-./adb shell
+./adb shell << EOF
 su
 rm /data/user/0/com.fanasa.android/files/SQLite.db
 exit
 exit
+EOF
 
 
 ==============================================================================================================================
