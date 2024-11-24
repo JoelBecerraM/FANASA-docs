@@ -1,45 +1,22 @@
 
 
-drop table if exists OrdenSurtidoBulto;
-CREATE TABLE OrdenSurtidoBulto ( 
-	compania varchar(20) not null, sucursal varchar(10) not null, orden varchar(20) not null, bulto varchar(10) not null, 
-	tiposurtido varchar(1) not null, lineas int not null, surtidas int not null, idcarrito int not null, posicion varchar(15) not null, 
-	carrito varchar(15) not null, contenedor varchar(20) not null, jaula varchar(15) not null, embarque varchar(15) not null, carga varchar(15) not null, 
-	status varchar(2) not null, fechastatus datetime not null, usuario varchar(30) not null, 
-	PRIMARY KEY (compania, sucursal, orden, bulto)
-	) ENGINE=InnoDB;
-CREATE INDEX OrdenSurtidoBultoINDX1 on OrdenSurtidoBulto (compania, sucursal, idcarrito, posicion);
-CREATE INDEX OrdenSurtidoBultoINDX2 on OrdenSurtidoBulto (compania, sucursal, embarque);
+Para la Prueba.
+
+- Imprimir Etiquetas de Transporte.
+- Imprimir Etiquetas de Contenedores.
+- Imprimir Etiqueta de '-' (comodin)
+- Imprimir Etiquetas de Estacionamiento.
 
 
-
---- Prioritarios
-
-ToDo: Agregar al registro de PedidoSurtido 
-	- Total de lineas y total de cantidad
-	- Tambien agregar total surtidas, este campo se actualiza hasta que se afecta el surtido de la HH
-
-ToDo: Ordenar los Detalles del Surtido por Orden de Localizador (recorrido inteligente)
-	- SurtidoStage2Fragment -> linea 245
-	
-ToDo: AutoAsignar los Pedidos
-	- SurtidoStage2Fragment -> linea 151
-	- No es necesario esperar a que le den clic al boton
-			
-ToDo: Cancelar TransporteSurtido desde HH
-	- Inclusive cuando ya estan los Pedidos Asignados.
-	- Dar Reversa en el backend.
-
-ToDo: Cerrar la Captura de Surtido
-
-
----
-
-ToDo: Mesa de Control abrir Rutas por prioridad.
-	- Cuando se abren las rutas se abren por prioridad.
-	- Se abren las rutas de la misma prioridad.
+--
+-- Prioritarios
+--
 
 ToDo: Desde la Mesa de Control poder ver los TransportesSurtido.
+	- Listas todos los Transportes que tiene asignada la Sucursal.
+	- Haces JOIN con TransporteSurtido (puede que regrese varios, porque TransporteSurtido tiene toda la historia)
+		DISCRIMINAS los status STATUS_TRANSPORTESURTIDO_CANCELADO y STATUS_TRANSPORTESURTIDO_LIBERADO 
+			**ESTO DEBE DE DAR SOLO UN REGISTRO EN EL JOIN**
 	- Ver cuantos hay asignados y en que otros estados estan.
 	- Quitar los liberados y cancelados.
 	- Poder cancelar un TransporteSurtido *** SI HAY EN ALGUNA HH ESTE TransporteSurtido CREAMOS UNA INCONSISTENCIA ***
@@ -47,6 +24,48 @@ ToDo: Desde la Mesa de Control poder ver los TransportesSurtido.
 	-- Inclusive poder cancelar un TransporteSurtido cuando ya se hayan asignado los Pedidos
 		transporteSurtidoDAO.status = Constantes.STATUS_TRANSPORTESURTIDO_PEDIDOS;
 		Puede ser que el TransporteSurtido se haya 'perdido' en la HandHeld y deba de ser cancelado
+
+
+--
+-- Prioridad 2
+--
+
+ToDo: Integración del Surtido con ORACLE 
+	- Al estacionar el TransporteSurtido se podra hacer la Integracion del Surtido con ORACLE de las Ordenes de Surtido que vienen en el TransporteSurtido.
+		O mejor hasta que toma el Sorter el TransporteSurtido y lo lleva a la Cortina de Embarque.
+		Si el TransporteSurtido va a Auditoria aun puede cambiar las piezas surtidas.
+		¿En que momento es mejor?
+
+ToDo: Implementar Traspaleo
+	-- Como hereda el indicador de 'traspaleo'
+	- El TransporteSurtido debe de heredar el indicador de 'traspaleo' del Bloque.
+	- El TransporteSurtido generado del Tipo de Surtido 'Pedido Completo' no se puede traspalear, aunque alguno de sus Bloques diga indicación de traspaleo.
+	- Cuando el Tipo de Surtido es 'Simultaneo' todos los PedidosSurtido asignados vienen de OrdenesSurtido que tienen el mismo indicador de traspaleo, porque pertenecen al mismo Bloque. EXELENT !!!!
+
+	-- Como opera el 'traspaleo'
+	- Al Enviar el Surtido el TransporteSurtido se queda con status STATUS_TRANSPORTESURTIDO_SURTIDO
+	- Si el TransporteSurtido tiene el indicador de 'traspaleo', se debe de mandar al fragment de traspaleo, SurtidoStageNNNFragment
+	- El 'traspaleo' es pasar los bultos a otro TransporteSurtido que tiene Contenedores Consolidados.
+	- El TransporteSurtido que tiene los Contenedores Consolidados se asigno en algún momento previo.
+		En ese momento tambien se le asignan Contenedores Consolidados.
+		(puede ser en el mismo fragment SurtidoStageNNNFragment, el Surtidor abre este TransporteSurtido para Traspaleo) 
+	- Posteriormente el Traspaleador es quien lleva este TransporteSurtido al Estacionamiento del Sorter.
+	- Al terminar de 'traspalear' todos los Bultos, el Surtidor Libera el TransporteSurtido que uso para Surtir.
+		Este TransporteSurtido lo puede usar nuevamente para otro ciclo de Surtido, o lo regresa a el area de Transportes Liberados.
+	- Todo esto ocurre en SurtidoStageNNNFragment.
+	
+--
+-- Para después
+--
+
+
+ToDo: AutoAsignar los Pedidos
+	- SurtidoStage2Fragment -> linea 151
+	- No es necesario esperar a que le den clic al boton
+	
+ToDo: Mesa de Control abrir Rutas por prioridad.
+	- Cuando se abren las rutas se abren por prioridad.
+	- Se abren las rutas de la misma prioridad.
 
 ToDo: Dashboard
 	- Primero una tabla con el Avance de Todas las Rutas.
@@ -60,17 +79,58 @@ ToDo: Dashboard
 ==============================================================================================================================
 
 
+
+delimiter //
+DROP PROCEDURE InformacionPedido//
+CREATE PROCEDURE InformacionPedido (IN _idpedido INTEGER)
+BEGIN
+	SELECT * FROM PedidoSurtido WHERE idpedido = _idpedido;
+	SELECT os.* FROM PedidoSurtido p 
+		INNER JOIN OrdenSurtido os ON os.compania = p.compania AND os.sucursal = p.sucursal AND os.idpedido = p.idpedido
+		WHERE p.idpedido = _idpedido;
+END//
+delimiter ;
+
+CALL InformacionPedido(91); 
+CALL InformacionPedido(92); 
+
+
+delimiter //
+DROP PROCEDURE InformacionTransportePedido//
+CREATE PROCEDURE InformacionTransportePedido (IN _idtransporte INTEGER)
+BEGIN
+	SELECT * FROM TransporteSurtido WHERE idtransporte = _idtransporte;
+	SELECT p.* FROM TransporteSurtido t 
+		INNER JOIN PedidoSurtido p ON p.compania = t.compania AND p.sucursal = t.sucursal AND p.idtransporte = t.idtransporte
+		WHERE t.idtransporte = _idtransporte;
+	SELECT os.* FROM TransporteSurtido t 
+		INNER JOIN PedidoSurtido p ON p.compania = t.compania AND p.sucursal = t.sucursal AND p.idtransporte = t.idtransporte
+		INNER JOIN OrdenSurtido os ON os.compania = p.compania AND os.sucursal = p.sucursal AND os.idpedido = p.idpedido
+		WHERE t.idtransporte = _idtransporte;
+END//
+delimiter ;
+
+CALL InformacionTransportePedido(10); 
+
+
+UPDATE OrdenSurtidoDetalle osd INNER JOIN OrdenSurtido os ON os.compania = osd.compania AND os.sucursal = osd.sucursal AND os.orden = osd.orden
+SET osd.verificalote = '1'
+WHERE os.compania = '1000' and os.sucursal = '2205' and os.subinventario = 'CELDA9';
+
 delimiter //
 DROP PROCEDURE InformacionRutaTransportePedido//
 CREATE PROCEDURE InformacionRutaTransportePedido (IN _compania CHAR(20), _sucursal CHAR(20), IN _ruta CHAR(20))
 BEGIN
 	SELECT * FROM OrdenSurtido WHERE compania = _compania AND sucursal = _sucursal AND ruta = _ruta;
-	SELECT * FROM TransporteSurtido WHERE compania = _compania AND sucursal = _sucursal AND ruta = _ruta;
-	SELECT * FROM PedidoSurtido WHERE compania = _compania AND sucursal = _sucursal AND ruta = _ruta;
-	SELECT SUM(ordenes) FROM PedidoSurtido WHERE compania = _compania AND sucursal = _sucursal AND ruta = _ruta;
-	SELECT COUNT(DISTINCT idtransporte) FROM PedidoSurtido WHERE compania = _compania AND sucursal = _sucursal AND ruta = _ruta;
+	SELECT * FROM TransporteSurtido WHERE compania = _compania AND sucursal = _sucursal AND ruta = _ruta AND status != '10';
+	SELECT * FROM PedidoSurtido WHERE compania = _compania AND sucursal = _sucursal AND ruta = _ruta AND status != '10';
+	SELECT SUM(ordenes), SUM(lineas), SUM(cantidad), SUM(peso), SUM(volumen) FROM PedidoSurtido WHERE compania = _compania AND sucursal = _sucursal AND ruta = _ruta AND status != '10';
+	SELECT COUNT(DISTINCT idtransporte) FROM PedidoSurtido WHERE compania = _compania AND sucursal = _sucursal AND ruta = _ruta AND status != '10';
 END//
 delimiter ;
+
+CALL InformacionRutaTransportePedido('1000', '2205', 'MXF01 1250 AN'); 
+
 
 ==============================================================================================================================
 ==============================================================================================================================
