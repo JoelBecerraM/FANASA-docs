@@ -1,4 +1,41 @@
 
+4. Traer datos de otros catalogos
+
+Hacer dump de MacBook y llevar a desarrollo
+
+SubInventario;
+Bloque;
+Transporte;
+TiposTransporte;
+ordenes;
+
+
+3. Normalizar datos
+
+d() { /usr/local/mysql/bin/mysql -u ecommerce -pEC\$89yeR fanasa; }
+d
+update Ruta set turno = 'PRIMERO', apertura = '13:00' where compania = '1000' and sucursal = '2205';
+
+
+2. Ejecutar la Integracion
+
+for tipo in rutas lotes codigobarras productos
+do
+	./test.sh --compania 1000 --sucursal 2205 --sincronizacion $tipo > sincronizacion-${tipo}.out
+done
+
+
+1. Inicialiar la Base de Datos
+
+d() { /usr/local/mysql/bin/mysql -u ecommerce -pEC\$89yeR fanasa; }
+d < fanasa-web.ddl
+d < init-compania.sql
+
+
+
+============================================================================================================
+============================================================================================================
+
 
 Para la Prueba.
 
@@ -8,22 +45,13 @@ Para la Prueba.
 - Imprimir Etiquetas de Estacionamiento.
 
 
+============================================================================================================
+============================================================================================================
+
 --
 -- Prioritarios
 --
 
-ToDo: Desde la Mesa de Control poder ver los TransportesSurtido.
-	- Listas todos los Transportes que tiene asignada la Sucursal.
-	- Haces JOIN con TransporteSurtido (puede que regrese varios, porque TransporteSurtido tiene toda la historia)
-		DISCRIMINAS los status STATUS_TRANSPORTESURTIDO_CANCELADO y STATUS_TRANSPORTESURTIDO_LIBERADO 
-			**ESTO DEBE DE DAR SOLO UN REGISTRO EN EL JOIN**
-	- Ver cuantos hay asignados y en que otros estados estan.
-	- Quitar los liberados y cancelados.
-	- Poder cancelar un TransporteSurtido *** SI HAY EN ALGUNA HH ESTE TransporteSurtido CREAMOS UNA INCONSISTENCIA ***
-		
-	-- Inclusive poder cancelar un TransporteSurtido cuando ya se hayan asignado los Pedidos
-		transporteSurtidoDAO.status = Constantes.STATUS_TRANSPORTESURTIDO_PEDIDOS;
-		Puede ser que el TransporteSurtido se haya 'perdido' en la HandHeld y deba de ser cancelado
 
 
 --
