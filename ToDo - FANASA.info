@@ -1,7 +1,7 @@
 
 
 
-4. Traer datos de otros catalogos
+4. Actualizar datos de otros catalogos
 
 d() { mysql -u syda -psY%_3srew fanasa; }
 rm datos-bloques-transportes.sql
@@ -12,13 +12,11 @@ vi datos-bloques-transportes.sql
 d < datos-bloques-transportes.sql
 
 
-du() { /usr/local/mysql/bin/mysqldump -u ecommerce -pEC\$89yeR fanasa ordenes; }
-du > ~/Downloads/datos-ordenes.sql
-gzip -f ~/Downloads/datos-ordenes.sql 
-scp -i /Users/joelbecerramiranda/Documents/FANASA/id_rsa_KeyProvGnew_private_test.pem ~/Downloads/datos-ordenes.sql.gz gnewdev@172.16.0.135:.
+du() { /usr/local/mysql/bin/mysqldump -u ecommerce -pEC\$89yeR fanasa SubInventario Bloque BloqueSubInventario TipoTransporte Transporte; }
+du > ~/Downloads/datos-bloques-transportes.sql
+gzip -f ~/Downloads/datos-bloques-transportes.sql
+scp -i /Users/joelbecerramiranda/Documents/FANASA/id_rsa_KeyProvGnew_private_test.pem ~/Downloads/datos-bloques-transportes.sql.gz gnewdev@172.16.0.135:.
 
-
-ordenes;
 
 
 3. Normalizar datos
