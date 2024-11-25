@@ -1,20 +1,37 @@
 
+
+
 4. Traer datos de otros catalogos
 
-Hacer dump de MacBook y llevar a desarrollo
+d() { mysql -u syda -psY%_3srew fanasa; }
+rm datos-bloques-transportes.sql
+gzip -d datos-bloques-transportes.sql.gz
+vi datos-bloques-transportes.sql
+:%s/ DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci//g
+:wq
+d < datos-bloques-transportes.sql
 
-SubInventario;
-Bloque;
-Transporte;
-TiposTransporte;
+
+du() { /usr/local/mysql/bin/mysqldump -u ecommerce -pEC\$89yeR fanasa ordenes; }
+du > ~/Downloads/datos-ordenes.sql
+gzip -f ~/Downloads/datos-ordenes.sql 
+scp -i /Users/joelbecerramiranda/Documents/FANASA/id_rsa_KeyProvGnew_private_test.pem ~/Downloads/datos-ordenes.sql.gz gnewdev@172.16.0.135:.
+
+
 ordenes;
 
 
 3. Normalizar datos
 
-d() { /usr/local/mysql/bin/mysql -u ecommerce -pEC\$89yeR fanasa; }
+d() { mysql -u syda -psY%_3srew fanasa; }
 d
 update Ruta set turno = 'PRIMERO', apertura = '13:00' where compania = '1000' and sucursal = '2205';
+insert into Token values ('1000', 'API', 'bda94326-c9e9-11ed-afa1-0242ac120002', '2025-01-01 00:00:00');
+insert into Ruta values ('1000', '2205', 'TNS-BJX', 99, '99', '0', '0', '', '1', '', '', '0');
+insert into Ruta values ('1000', '2205', 'TNS-CLN', 99, '99', '0', '0', '', '1', '', '', '0');
+insert into Ruta values ('1000', '2205', 'TNS-GPE', 99, '99', '0', '0', '', '1', '', '', '0');
+insert into Ruta values ('1000', '2205', 'TNS-HER', 99, '99', '0', '0', '', '1', '', '', '0');
+insert into Producto values ('1000', '26802', '4158_LANTUS_INSULINA GLARGINA__100 UI / ml_1_FAM_10 ml_SANPA', '0', '0', 0, 0);
 
 
 2. Ejecutar la Integracion
@@ -27,7 +44,7 @@ done
 
 1. Inicialiar la Base de Datos
 
-d() { /usr/local/mysql/bin/mysql -u ecommerce -pEC\$89yeR fanasa; }
+d() { mysql -u syda -psY%_3srew fanasa; }
 d < fanasa-web.ddl
 d < init-compania.sql
 
