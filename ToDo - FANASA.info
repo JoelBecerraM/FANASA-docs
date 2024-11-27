@@ -1,4 +1,34 @@
 
+--
+-- Prioritarios
+--
+
+ToDo: Agregar vista de SubInventarios del ERP
+	Es necesario sincronizarlos antes de la llegada de las Ordenes de Surtido.
+
+ToDo: PedidoSurtidoContenedor debe de tener volumen y peso
+	  PedidoSurtidoBulto debe de tener volumen y peso
+
+ToDo: Prueba de Impresion, una etiqueta para ver la impresora.
+
+ToDo: Etiqueta de Bulto, imprimir Contenedor
+	Como en la Etiqueta de Bulto va el HeaderID, en la lista de Pedidos Asignados
+		colocar tambien el HeaderID
+
+ToDo: CausaNoSurtido, Localizador Incorrecto
+
+ToDo: App de Surtido, edittext sin autofocus
+	La idea es que no aparezca el teclado (ocultarlo siempre)
+		para que no lo tengas que desaparecer.
+
+ToDo: App de Surtido, despues de asignar la cantidad, hacer el scaneo del contenedor
+	La idea es que dejaron el producto en el contenedor correcto.
+
+ToDo: App de Surtido, agregar reimpresion de Etiquetas de Bultos.
+
+
+============================================================================================================
+============================================================================================================
 
 
 ./test.sh --compania 1000 --sucursal 2205 --command sorter
@@ -155,6 +185,8 @@ Para la Prueba.
 -- Prioritarios
 --
 
+ToDo: Agregar vista de SubInventarios del ERP
+	Es necesario sincronizarlos antes de la llegada de las Ordenes de Surtido.
 ToDo: PedidoSurtidoContenedor debe de tener volumen y peso
 	  PedidoSurtidoBulto debe de tener volumen y peso
 
