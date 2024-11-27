@@ -1,6 +1,94 @@
 
 
 
+./test.sh --compania 1000 --sucursal 2205 --command sorter
+
+
+--
+--
+
+export RUTA="MXF01 3700 AN"
+./test.sh --compania 1000 --sucursal 2205 --command abre-ruta "${RUTA}"
+./test.sh --compania 1000 --sucursal 2205 --command surte-ruta "${RUTA}"
+
+CALL InformacionRutaTransportePedido('1000', '2205', 'MXF01 3700 AN'); 
+
+CALL InformacionTransportePedido('1000', '2205', 1247); 
+
+CALL InformacionPedido('1000', '2205', 595);
+
+--
+--
+
+export RUTA="MXF01 2950 AN"
+./test.sh --compania 1000 --sucursal 2205 --command abre-ruta "${RUTA}"
+./test.sh --compania 1000 --sucursal 2205 --command surte-ruta "${RUTA}"
+
+CALL InformacionRutaTransportePedido('1000', '2205', 'MXF01 2950 AN'); 
+
+CALL InformacionTransportePedido('1000', '2205', 1247); 
+
+CALL InformacionPedido('1000', '2205', 595);
+
+--
+--
+
+export RUTA="MXF01 2500 AN"
+./test.sh --compania 1000 --sucursal 2205 --command abre-ruta "${RUTA}"
+./test.sh --compania 1000 --sucursal 2205 --command surte-ruta "${RUTA}"
+
+CALL InformacionRutaTransportePedido('1000', '2205', 'MXF01 2500 AN'); 
+
+--
+--
+
+export RUTA="MXF01 0003 AN"
+./test.sh --compania 1000 --sucursal 2205 --command abre-ruta "${RUTA}"
+./test.sh --compania 1000 --sucursal 2205 --command surte-ruta "${RUTA}"
+
+CALL InformacionRutaTransportePedido('1000', '2205', 'MXF01 0003 AN'); 
+
+--
+--
+
+export RUTA="MXF01 0002 AN"
+./test.sh --compania 1000 --sucursal 2205 --command abre-ruta "${RUTA}"
+./test.sh --compania 1000 --sucursal 2205 --command surte-ruta "${RUTA}"
+
+CALL InformacionRutaTransportePedido('1000', '2205', 'MXF01 0002 AN'); 
+
+--
+--
+
+export RUTA="MXF01 0008 AN"
+./test.sh --compania 1000 --sucursal 2205 --command abre-ruta "${RUTA}"
+./test.sh --compania 1000 --sucursal 2205 --command surte-ruta "${RUTA}"
+
+CALL InformacionRutaTransportePedido('1000', '2205', 'MXF01 0008 AN'); 
+
+CALL InformacionTransportePedido('1000', '2205', 1222); 
+
+--
+--
+
+
+
+==============================================================================================================================
+==============================================================================================================================
+
+
+./adb shell << EOF
+su
+rm /data/user/0/com.fanasa.android/files/SQLite.db
+exit
+exit
+EOF
+
+
+============================================================================================================
+============================================================================================================
+
+
 4. Actualizar datos de otros catalogos
 
 d() { mysql -u syda -psY%_3srew fanasa; }
@@ -67,6 +155,9 @@ Para la Prueba.
 -- Prioritarios
 --
 
+ToDo: PedidoSurtidoContenedor debe de tener volumen y peso
+	  PedidoSurtidoBulto debe de tener volumen y peso
+
 
 
 --
@@ -116,7 +207,104 @@ ToDo: Dashboard
 		Por Turno Distribucion, por Prioridad de Ruta, etc.
 	- Luego el Avance particular por Ruta 
 
-			
+
+CUENTA TOTAL
+count(*)	sum(lineas)	sum(cantidad)
+1113	2737	5272
+
+CUENTA POR STATUS
+compania	sucursal	status	count(*)
+1000	2205	12	1
+1000	2205	00	1013
+1000	2205	02	99
+
+CUENTA POR RUTA
+compania	sucursal	ruta	count(*)
+1000	2205	MXF01 0002 AN	10
+1000	2205	MXF01 0003 AN	5
+1000	2205	MXF01 0004 AN	1
+1000	2205	MXF01 0008 AN	100
+1000	2205	MXF01 0480 AN	12
+1000	2205	MXF01 0800 AN	29
+1000	2205	MXF01 0850 AN	15
+1000	2205	MXF01 0860 AN	12
+1000	2205	MXF01 0950 AN	21
+1000	2205	MXF01 1050 AN	13
+1000	2205	MXF01 1300 AN	36
+1000	2205	MXF01 1450 AN	23
+1000	2205	MXF01 1550 AN	79
+1000	2205	MXF01 1600 AN	12
+1000	2205	MXF01 1650 AN	19
+1000	2205	MXF01 1750 AN	28
+1000	2205	MXF01 1850 AN	10
+1000	2205	MXF01 1910 AN	11
+1000	2205	MXF01 2100 AN	11
+1000	2205	MXF01 2250 AN	31
+1000	2205	MXF01 2350 AN	28
+1000	2205	MXF01 2500 AN	11
+1000	2205	MXF01 2800 AN	9
+1000	2205	MXF01 2900 AN	38
+1000	2205	MXF01 2950 AN	95
+1000	2205	MXF01 3000 AN	34
+1000	2205	MXF01 3100 AN	43
+1000	2205	MXF01 3120 AN	27
+1000	2205	MXF01 3150 AN	48
+1000	2205	MXF01 3200 AN	77
+1000	2205	MXF01 3600 AN	7
+1000	2205	MXF01 3700 AN	97
+1000	2205	MXF01 3900 AN	30
+1000	2205	MXF01 4000 AN	11
+1000	2205	MXF01 4250 AN	21
+1000	2205	MXF01 4500 AN	1
+1000	2205	MXF01 4800 AN	43
+1000	2205	MXF01 4950 AN	13
+1000	2205	MXF01 5000 AN	2
+
+CUENTA POR RUTA STATUS
+compania	sucursal	ruta	status	count(*)
+1000	2205	MXF01 0002 AN	00	10
+1000	2205	MXF01 0003 AN	00	5
+1000	2205	MXF01 0004 AN	00	1
+1000	2205	MXF01 0008 AN	02	99
+1000	2205	MXF01 0008 AN	12	1
+1000	2205	MXF01 0480 AN	00	12
+1000	2205	MXF01 0800 AN	00	29
+1000	2205	MXF01 0850 AN	00	15
+1000	2205	MXF01 0860 AN	00	12
+1000	2205	MXF01 0950 AN	00	21
+1000	2205	MXF01 1050 AN	00	13
+1000	2205	MXF01 1300 AN	00	36
+1000	2205	MXF01 1450 AN	00	23
+1000	2205	MXF01 1550 AN	00	79
+1000	2205	MXF01 1600 AN	00	12
+1000	2205	MXF01 1650 AN	00	19
+1000	2205	MXF01 1750 AN	00	28
+1000	2205	MXF01 1850 AN	00	10
+1000	2205	MXF01 1910 AN	00	11
+1000	2205	MXF01 2100 AN	00	11
+1000	2205	MXF01 2250 AN	00	31
+1000	2205	MXF01 2350 AN	00	28
+1000	2205	MXF01 2500 AN	00	11
+1000	2205	MXF01 2800 AN	00	9
+1000	2205	MXF01 2900 AN	00	38
+1000	2205	MXF01 2950 AN	00	95
+1000	2205	MXF01 3000 AN	00	34
+1000	2205	MXF01 3100 AN	00	43
+1000	2205	MXF01 3120 AN	00	27
+1000	2205	MXF01 3150 AN	00	48
+1000	2205	MXF01 3200 AN	00	77
+1000	2205	MXF01 3600 AN	00	7
+1000	2205	MXF01 3700 AN	00	97
+1000	2205	MXF01 3900 AN	00	30
+1000	2205	MXF01 4000 AN	00	11
+1000	2205	MXF01 4250 AN	00	21
+1000	2205	MXF01 4500 AN	00	1
+1000	2205	MXF01 4800 AN	00	43
+1000	2205	MXF01 4950 AN	00	13
+1000	2205	MXF01 5000 AN	00	2
+count(*)	sum(cantidad)
+2737	5272
+
 
 ==============================================================================================================================
 ==============================================================================================================================
@@ -127,8 +315,14 @@ DROP PROCEDURE InformacionPedido//
 CREATE PROCEDURE InformacionPedido (IN _compania CHAR(20), _sucursal CHAR(20), IN _idpedido INTEGER)
 BEGIN
 	SELECT * FROM PedidoSurtido WHERE compania = _compania AND sucursal = _sucursal AND idpedido = _idpedido;
+	SELECT * FROM PedidoSurtidoContenedor WHERE compania = _compania AND sucursal = _sucursal AND idpedido = _idpedido;
+	SELECT * FROM PedidoSurtidoBulto WHERE compania = _compania AND sucursal = _sucursal AND idpedido = _idpedido;
 	SELECT os.* FROM PedidoSurtido p 
 	    INNER JOIN OrdenSurtido os ON os.compania = p.compania AND os.sucursal = p.sucursal AND os.idpedido = p.idpedido
+	    WHERE p.compania = _compania AND p.sucursal = _sucursal AND p.idpedido = _idpedido;
+	SELECT osd.* FROM PedidoSurtido p 
+	    INNER JOIN OrdenSurtido os ON os.compania = p.compania AND os.sucursal = p.sucursal AND os.idpedido = p.idpedido
+	    INNER JOIN OrdenSurtidoDetalle osd ON osd.compania = os.compania AND osd.sucursal = os.sucursal AND osd.orden = os.orden
 	    WHERE p.compania = _compania AND p.sucursal = _sucursal AND p.idpedido = _idpedido;
 END//
 delimiter ;
@@ -144,6 +338,14 @@ BEGIN
 	SELECT * FROM TransporteSurtido WHERE compania = _compania AND sucursal = _sucursal AND idtransporte = _idtransporte;
 	SELECT p.* FROM TransporteSurtido t 
 	    INNER JOIN PedidoSurtido p ON p.compania = t.compania AND p.sucursal = t.sucursal AND p.idtransporte = t.idtransporte
+	    WHERE t.compania = _compania AND t.sucursal = _sucursal AND t.idtransporte = _idtransporte;
+	SELECT pc.* FROM TransporteSurtido t 
+	    INNER JOIN PedidoSurtido p ON p.compania = t.compania AND p.sucursal = t.sucursal AND p.idtransporte = t.idtransporte
+	    INNER JOIN PedidoSurtidoContenedor pc ON pc.compania = p.compania AND pc.sucursal = p.sucursal AND pc.idpedido = p.idpedido
+	    WHERE t.compania = _compania AND t.sucursal = _sucursal AND t.idtransporte = _idtransporte;
+	SELECT pc.* FROM TransporteSurtido t 
+	    INNER JOIN PedidoSurtido p ON p.compania = t.compania AND p.sucursal = t.sucursal AND p.idtransporte = t.idtransporte
+	    INNER JOIN PedidoSurtidoBulto pc ON pc.compania = p.compania AND pc.sucursal = p.sucursal AND pc.idpedido = p.idpedido
 	    WHERE t.compania = _compania AND t.sucursal = _sucursal AND t.idtransporte = _idtransporte;
 	SELECT os.* FROM TransporteSurtido t 
 	    INNER JOIN PedidoSurtido p ON p.compania = t.compania AND p.sucursal = t.sucursal AND p.idtransporte = t.idtransporte
@@ -167,6 +369,7 @@ BEGIN
 	SELECT * FROM OrdenSurtido WHERE compania = _compania AND sucursal = _sucursal AND ruta = _ruta;
 	SELECT * FROM TransporteSurtido WHERE compania = _compania AND sucursal = _sucursal AND ruta = _ruta AND status != '10';
 	SELECT * FROM PedidoSurtido WHERE compania = _compania AND sucursal = _sucursal AND ruta = _ruta AND status != '10';
+	SELECT status, COUNT(*) FROM OrdenSurtido WHERE compania = _compania AND sucursal = _sucursal AND ruta = _ruta GROUP BY status;
 	SELECT SUM(ordenes), SUM(lineas), SUM(cantidad), SUM(peso), SUM(volumen) FROM PedidoSurtido WHERE compania = _compania AND sucursal = _sucursal AND ruta = _ruta AND status != '10';
 	SELECT COUNT(DISTINCT idtransporte) FROM PedidoSurtido WHERE compania = _compania AND sucursal = _sucursal AND ruta = _ruta AND status != '10';
 	SELECT COUNT(*), status FROM OrdenSurtido WHERE compania = _compania AND sucursal = _sucursal AND ruta = _ruta
@@ -175,59 +378,6 @@ END//
 delimiter ;
 
 CALL InformacionRutaTransportePedido('1000', '2205', 'MXF01 0004 AN'); 
-
-
-==============================================================================================================================
-==============================================================================================================================
-
-./test.sh --compania 1000 --sucursal 2205 --command sorter
-
-
-export RUTA="MXF01 1250 AN"
-./test.sh --compania 1000 --sucursal 2205 --command abre-ruta "${RUTA}"
-./test.sh --compania 1000 --sucursal 2205 --command surte-ruta "${RUTA}"
-
-CALL InformacionRutaTransportePedido('1000', '2205', 'MXF01 1250 AN'); 
-
-
-export RUTA="MXF-F 0300 AN"
-./test.sh --compania 1000 --sucursal 2205 --command abre-ruta "${RUTA}"
-./test.sh --compania 1000 --sucursal 2205 --command surte-ruta "${RUTA}"
-
-CALL InformacionRutaTransportePedido('1000', '2205', 'MXF-F 0300 AN'); 
-
-
-export RUTA="MXF01 0034 AN"
-./test.sh --compania 1000 --sucursal 2205 --command abre-ruta "${RUTA}"
-./test.sh --compania 1000 --sucursal 2205 --command surte-ruta "${RUTA}"
-
-CALL InformacionRutaTransportePedido('1000', '2205', 'MXF01 0034 AN'); 
-
-
-export RUTA="MXF01 1380 AN"
-./test.sh --compania 1000 --sucursal 2205 --command abre-ruta "${RUTA}"
-./test.sh --compania 1000 --sucursal 2205 --command surte-ruta "${RUTA}"
-
-CALL InformacionRutaTransportePedido('1000', '2205', 'MXF01 1380 AN'); 
-
-
-export RUTA="MXF01 0004 AN"
-./test.sh --compania 1000 --sucursal 2205 --command abre-ruta "${RUTA}"
-./test.sh --compania 1000 --sucursal 2205 --command surte-ruta "${RUTA}"
-
-CALL InformacionRutaTransportePedido('1000', '2205', 'MXF01 0004 AN'); 
-
-
-==============================================================================================================================
-==============================================================================================================================
-
-
-./adb shell << EOF
-su
-rm /data/user/0/com.fanasa.android/files/SQLite.db
-exit
-exit
-EOF
 
 
 ==============================================================================================================================
