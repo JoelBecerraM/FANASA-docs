@@ -9,22 +9,112 @@ ToDo: Agregar vista de SubInventarios del ERP
 ToDo: PedidoSurtidoContenedor debe de tener volumen y peso
 	  PedidoSurtidoBulto debe de tener volumen y peso
 
-ToDo: Prueba de Impresion, una etiqueta para ver la impresora.
+ToDo: App de Surtido, despues de asignar la cantidad, hacer el scaneo del contenedor
+	La idea es que dejaron el producto en el contenedor correcto.
 
-ToDo: Etiqueta de Bulto, imprimir Contenedor
-	Como en la Etiqueta de Bulto va el HeaderID, en la lista de Pedidos Asignados
-		colocar tambien el HeaderID
+
+
+--
+-- MESA DE CONTROL
+--
+
+1.	Quitar el nombre de GNEW que aparece en la pantalla.
+RESUELTO
+
+2.	Quitar lo que dice FANASA 2023-2024… algo así, también está en el pie de la página.
+RESUELTO
+
+3.	Quitar la configuración de CERTIFICACIÓN y dejar la AUDITORIA, no recuerdo si era en la ruta.
+RESUELTO. Es en Catalogo de Rutas
+
+4.	Revisar con Marco que aquello que tiene bloque ITINERANTE se quede con su bloque original.
+REVISAR CON L&D360
+
+5.	De cualquier forma, se debe establecer el procedimiento para resolver el alta de subinventarios en ORACLE y que se asignen al bloque antes de llegar las OS.  
+REVISAR CON L&D360
+
+6.	Trabajar en el tablero de control, poniendo búsquedas, filtros, ordenamientos.  Una pregunta muy importante por resolver es qué está atrasado y por qué.
+PEDIENTE. Estamos trabajando en el rediseño del dashboard
+
+-- 
+-- SURTIDO
+--
+1.	En la etiqueta no aparece el contenedor impreso.
+RESUELTO. El nuevo diseño de la etiqueta de bulto ya tiene el Contenedor y tiene el #Pedido
+
+2.	Considero que es muy importante ya determinar con FANASA si la etiqueta se pega o se mete en la bolsa.  Esto determinará el tamaño y los datos que debe tener la etiqueta.
+REVISAR CON L&D360
+
+3.	El manejo de las bolsas en los contenedores es un punto por resolver. 
+REVISAR CON L&D360
+
+4.	¿Cómo nos aseguramos de que el personal esté metiendo la mercancía en el contenedor correcto?  Se vuelve muy confuso cuando tienes dos OS diferentes que te soliciten piezas del mismo producto.  Eso me pasó varias veces. 
+RESUELTO. La nueva App solicita el scaneo del Contenedor, con esto no se cambia al detalle siguiente y se mantiene el detalle que estas surtiendo hasta que confirmas (escaneando el contenedor)
+
+5.	Los números referentes a las piezas solicitadas y registradas son muy pequeños.  Considero que deberían ser grandotes.
+RESUELTO.
+
+6.	Al terminar el surtido de una orden debería mandar un mensajito y vibrar o algo así que te indique que terminaste. 
+RESUELTO. Se agrega la vibración cuando se termina de surtir todas las lineas del Pedido.
+
+7.	En mi experiencia, como no escaneaba cada producto, sino que solo escaneaba varias veces sobre un mismo producto, capturaba de más y de repente ya estaba en el siguiente producto, y el dato escaneado estaba en el localizador, por lo tanto, marcaba error.
+RESUELTO. Con el escaneo del Contenedor se mejora esta experiencia del usuario UX.
+
+8.	En un par de ocasiones tuve que entrar al teclado a borrar el campo, quizás debe haber un botón de limpiar el campo.
+RESUELTO. En la nueva App el teclado no aparece, vas a tener que escanear siempre; al ocultar el teclado tampoco va a suceder que ingreses una letra o caracter incorrecto. Por ultimo, si el código que estas escaneando es incorrecto, la misma App te lo sombrea para que lo sobrescribas. Con estos cambios se mejora la experiencia del usuario UX. 
+
+9.	Tal vez el principio sería recomendable ponerle una etiqueta al nombre del contenedor.  CONT=… 
+RESUELTO. Las etiquetas de Contenedor debe de llevar un prefijo, CONT.
+
+10.	En los mensajes usar el icono de L&D360 y no el de FANASA.
+RESUELTO..
+
+11.	Revisar la redacción de los mensajes de error.
+PENDIENTE. 
+
+12.	Revisar con L&D si el surtidor debe conocer el nombre del cliente.  
+REVISAR CON L&D360
+
+13.	Observé que, al surtir, de repente estábamos dos personas en la misma zona, y aunque no traía el carrito, nos estorbábamos.  No me imagino qué va a pasar cuando todos traigan carrito y estén surtiendo en la misma zona.  
+COMENTAR Y REVISAR CON L&D360
+
+14.	Encontré varias ubicaciones sin localizador o con el localizador dañado. 
+COMENTAR Y REVISAR CON L&D360
+
+15.	Me parece que sí es útil escanear el localizador, te da la seguridad de que estás en el lugar correcto.  
+PERFECTO, asi esta el diseño del App.
+
+16.	En la pantalla donde te aparecen las OS asignadas, cuando debes asociar el contenedor, debería tener alguna instrucción o título donde indique que debes asociar la OS con el contenedor.  Sé que por el procedimiento se lo aprenderán, pero lo ideal es que siempre sepan lo que están haciendo, sin suponer.
+RESUELTO.
+Ya aparece la instrucción: "Seleccione cada uno de los Pedidos y asigne el Contenedor."
+En la pantalla de asignación de Pedidos ya aparece el numero de Pedido y el Contenedor, este mismo numero de Pedido y Contenedor aparecen en la etiqueta de Bulto; la asociacion ya es mas simple.
+
+17.	Sería recomendable que el surtidor siempre entrara directo al surtido, que no tenga menú.
+HECHO. Lo reviso, porque hay que rediseñar el uso del menu del App; pero si tiene lógica el cambio, sobre todo si solo eres Surtidor.
+
+18.	Falta reimpresión de etiquetas.
+RESUELTO. La nueva versión del App ya tiene reimpresión de etiquetas.
+
+
+============================================================================================================
+============================================================================================================
+
+
+ToDo: Configuracion, prueba de Impresion, una etiqueta para ver la impresora.
+RESUELTO
 
 ToDo: CausaNoSurtido, Localizador Incorrecto
+RESUELTO
 
 ToDo: App de Surtido, edittext sin autofocus
 	La idea es que no aparezca el teclado (ocultarlo siempre)
 		para que no lo tengas que desaparecer.
+RESUELTO
 
-ToDo: App de Surtido, despues de asignar la cantidad, hacer el scaneo del contenedor
-	La idea es que dejaron el producto en el contenedor correcto.
-
-ToDo: App de Surtido, agregar reimpresion de Etiquetas de Bultos.
+ToDo: Etiqueta de Bulto, imprimir Contenedor
+	Como en la Etiqueta de Bulto va el HeaderID, 
+		En la lista de Pedidos Asignados colocar tambien el HeaderID
+RESUELTO
 
 
 ============================================================================================================
@@ -37,11 +127,11 @@ ToDo: App de Surtido, agregar reimpresion de Etiquetas de Bultos.
 --
 --
 
-export RUTA="MXF01 3700 AN"
+export RUTA="MXF01 0008 AN"
 ./test.sh --compania 1000 --sucursal 2205 --command abre-ruta "${RUTA}"
 ./test.sh --compania 1000 --sucursal 2205 --command surte-ruta "${RUTA}"
 
-CALL InformacionRutaTransportePedido('1000', '2205', 'MXF01 3700 AN'); 
+CALL InformacionRutaTransportePedido('1000', '2205', 'MXF01 0008 AN'); 
 
 CALL InformacionTransportePedido('1000', '2205', 1247); 
 
@@ -56,14 +146,14 @@ export RUTA="MXF01 2950 AN"
 
 CALL InformacionRutaTransportePedido('1000', '2205', 'MXF01 2950 AN'); 
 
-CALL InformacionTransportePedido('1000', '2205', 1247); 
+CALL InformacionTransportePedido('1000', '2205', 1292); 
 
-CALL InformacionPedido('1000', '2205', 595);
+CALL InformacionPedido('1000', '2205', 958);
 
 --
 --
 
-export RUTA="MXF01 2500 AN"
+export RUTA="MXF01 1550 AN"
 ./test.sh --compania 1000 --sucursal 2205 --command abre-ruta "${RUTA}"
 ./test.sh --compania 1000 --sucursal 2205 --command surte-ruta "${RUTA}"
 
