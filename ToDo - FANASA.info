@@ -9,9 +9,21 @@ ToDo: Agregar vista de SubInventarios del ERP
 ToDo: PedidoSurtidoContenedor debe de tener volumen y peso
 	  PedidoSurtidoBulto debe de tener volumen y peso
 
-ToDo: App de Surtido, despues de asignar la cantidad, hacer el scaneo del contenedor
-	La idea es que dejaron el producto en el contenedor correcto.
+ToDo: App de Surtido, Cuando te sales en medio del surtido y regresas
+	Falla el App, p.ej. Abrir Settings de Bluetoth.
 
+ToDo: App de Surtido, Implemplementar Split.
+
+ToDo: App de Surtido, Implemplementar Surtido Caja Completa.
+
+ToDo: App de Surtido, Como ingresas cantidades mayores a 10 piezas.
+	Ya no hay teclado, debe de haber algun metodo de entrada de los digitos.
+
+ToDo: App de Surtido, Si ya declaraste Faltante, no es necesario escanear el Contenedor.
+
+
+============================================================================================================
+============================================================================================================
 
 
 --
