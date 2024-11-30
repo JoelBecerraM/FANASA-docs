@@ -1,4 +1,10 @@
 
+
+
+============================================================================================================
+============================================================================================================
+
+
 --
 -- Prioritarios
 --
@@ -9,21 +15,136 @@ ToDo: Agregar vista de SubInventarios del ERP
 ToDo: PedidoSurtidoContenedor debe de tener volumen y peso
 	  PedidoSurtidoBulto debe de tener volumen y peso
 
+ToDo: PedidoSurtidoContenedor debe de tener indicador de 'Simple' o 'Consolidado'
+	  Es Simple si solo trae un Pedido, es Consolidado si trae mas de un Pedido.
+	  Si es Simple puede tener Cincho de Seguridad.
+
+ToDo: App de Surtido, Quitar Carrito de Surtido.
+RESUELTO.
+
+ToDo: App de Surtido, en el Stage de Detalles de Pedido, buscar un lugar para colocar
+	  El nombre del Cliente o el Numero de Pedido
+	
 ToDo: App de Surtido, Cuando te sales en medio del surtido y regresas
-	Falla el App, p.ej. Abrir Settings de Bluetoth.
+	  Falla el App, p.ej. Abrir Settings de Bluetoth.
 
 ToDo: App de Surtido, Implemplementar Split.
 
 ToDo: App de Surtido, Implemplementar Surtido Caja Completa.
 
 ToDo: App de Surtido, Como ingresas cantidades mayores a 10 piezas.
-	Ya no hay teclado, debe de haber algun metodo de entrada de los digitos.
+	  Ya no hay teclado, debe de haber algun metodo de entrada de los digitos.
 
 ToDo: App de Surtido, Si ya declaraste Faltante, no es necesario escanear el Contenedor.
 
+ToDo: App de Surtido, Para confirmar el Contenedor también se puede escanear el Bulto.
+	  El Código del Bulto (QR) debe de tener un PREFIX y tener la clave del Contenedor.
+	  
+
 
 ============================================================================================================
 ============================================================================================================
+
+
+./test.sh --compania 1000 --sucursal 2205 --command sorter
+
+
+--
+--
+
+export RUTA="MXF01 0800 AN"
+./test.sh --compania 1000 --sucursal 2205 --command abre-ruta "${RUTA}"
+./test.sh --compania 1000 --sucursal 2205 --command surte-ruta "${RUTA}"
+
+CALL InformacionRutaTransportePedido('1000', '2205', 'MXF01 0800 AN'); 
+
+CALL InformacionTransportePedido('1000', '2205', 1247); 
+
+CALL InformacionPedido('1000', '2205', 595);
+
+--
+--
+
+export RUTA="MXF01 0008 AN"
+./test.sh --compania 1000 --sucursal 2205 --command abre-ruta "${RUTA}"
+./test.sh --compania 1000 --sucursal 2205 --command surte-ruta "${RUTA}"
+
+CALL InformacionRutaTransportePedido('1000', '2205', 'MXF01 0008 AN'); 
+
+CALL InformacionTransportePedido('1000', '2205', 1247); 
+
+CALL InformacionPedido('1000', '2205', 595);
+
+--
+--
+
+export RUTA="MXF01 2950 AN"
+./test.sh --compania 1000 --sucursal 2205 --command abre-ruta "${RUTA}"
+./test.sh --compania 1000 --sucursal 2205 --command surte-ruta "${RUTA}"
+
+CALL InformacionRutaTransportePedido('1000', '2205', 'MXF01 2950 AN'); 
+
+CALL InformacionTransportePedido('1000', '2205', 1292); 
+
+CALL InformacionPedido('1000', '2205', 958);
+
+--
+--
+
+export RUTA="MXF01 1550 AN"
+./test.sh --compania 1000 --sucursal 2205 --command abre-ruta "${RUTA}"
+./test.sh --compania 1000 --sucursal 2205 --command surte-ruta "${RUTA}"
+
+CALL InformacionRutaTransportePedido('1000', '2205', 'MXF01 1550 AN'); 
+
+--
+--
+
+export RUTA="MXF01 0003 AN"
+./test.sh --compania 1000 --sucursal 2205 --command abre-ruta "${RUTA}"
+./test.sh --compania 1000 --sucursal 2205 --command surte-ruta "${RUTA}"
+
+CALL InformacionRutaTransportePedido('1000', '2205', 'MXF01 0003 AN'); 
+
+--
+--
+
+export RUTA="MXF01 0002 AN"
+./test.sh --compania 1000 --sucursal 2205 --command abre-ruta "${RUTA}"
+./test.sh --compania 1000 --sucursal 2205 --command surte-ruta "${RUTA}"
+
+CALL InformacionRutaTransportePedido('1000', '2205', 'MXF01 0002 AN'); 
+
+--
+--
+
+export RUTA="MXF01 2950 AN"
+./test.sh --compania 1000 --sucursal 2205 --command abre-ruta "${RUTA}"
+./test.sh --compania 1000 --sucursal 2205 --command surte-ruta "${RUTA}"
+
+CALL InformacionRutaTransportePedido('1000', '2205', 'MXF01 2950 AN'); 
+
+CALL InformacionTransportePedido('1000', '2205', 1222); 
+
+--
+--
+
+
+==============================================================================================================================
+==============================================================================================================================
+
+
+./adb shell << EOF
+su
+rm /data/user/0/com.fanasa.android/files/SQLite.db
+exit
+exit
+EOF
+
+
+==============================================================================================================================
+==============================================================================================================================
+
 
 
 --
@@ -127,94 +248,6 @@ ToDo: Etiqueta de Bulto, imprimir Contenedor
 	Como en la Etiqueta de Bulto va el HeaderID, 
 		En la lista de Pedidos Asignados colocar tambien el HeaderID
 RESUELTO
-
-
-============================================================================================================
-============================================================================================================
-
-
-./test.sh --compania 1000 --sucursal 2205 --command sorter
-
-
---
---
-
-export RUTA="MXF01 0008 AN"
-./test.sh --compania 1000 --sucursal 2205 --command abre-ruta "${RUTA}"
-./test.sh --compania 1000 --sucursal 2205 --command surte-ruta "${RUTA}"
-
-CALL InformacionRutaTransportePedido('1000', '2205', 'MXF01 0008 AN'); 
-
-CALL InformacionTransportePedido('1000', '2205', 1247); 
-
-CALL InformacionPedido('1000', '2205', 595);
-
---
---
-
-export RUTA="MXF01 2950 AN"
-./test.sh --compania 1000 --sucursal 2205 --command abre-ruta "${RUTA}"
-./test.sh --compania 1000 --sucursal 2205 --command surte-ruta "${RUTA}"
-
-CALL InformacionRutaTransportePedido('1000', '2205', 'MXF01 2950 AN'); 
-
-CALL InformacionTransportePedido('1000', '2205', 1292); 
-
-CALL InformacionPedido('1000', '2205', 958);
-
---
---
-
-export RUTA="MXF01 1550 AN"
-./test.sh --compania 1000 --sucursal 2205 --command abre-ruta "${RUTA}"
-./test.sh --compania 1000 --sucursal 2205 --command surte-ruta "${RUTA}"
-
-CALL InformacionRutaTransportePedido('1000', '2205', 'MXF01 2500 AN'); 
-
---
---
-
-export RUTA="MXF01 0003 AN"
-./test.sh --compania 1000 --sucursal 2205 --command abre-ruta "${RUTA}"
-./test.sh --compania 1000 --sucursal 2205 --command surte-ruta "${RUTA}"
-
-CALL InformacionRutaTransportePedido('1000', '2205', 'MXF01 0003 AN'); 
-
---
---
-
-export RUTA="MXF01 0002 AN"
-./test.sh --compania 1000 --sucursal 2205 --command abre-ruta "${RUTA}"
-./test.sh --compania 1000 --sucursal 2205 --command surte-ruta "${RUTA}"
-
-CALL InformacionRutaTransportePedido('1000', '2205', 'MXF01 0002 AN'); 
-
---
---
-
-export RUTA="MXF01 0008 AN"
-./test.sh --compania 1000 --sucursal 2205 --command abre-ruta "${RUTA}"
-./test.sh --compania 1000 --sucursal 2205 --command surte-ruta "${RUTA}"
-
-CALL InformacionRutaTransportePedido('1000', '2205', 'MXF01 0008 AN'); 
-
-CALL InformacionTransportePedido('1000', '2205', 1222); 
-
---
---
-
-
-
-==============================================================================================================================
-==============================================================================================================================
-
-
-./adb shell << EOF
-su
-rm /data/user/0/com.fanasa.android/files/SQLite.db
-exit
-exit
-EOF
 
 
 ============================================================================================================
