@@ -55,13 +55,14 @@ RESUELTO.
 
 ToDo: App de Surtido, Como ingresas cantidades mayores a 10 piezas.
 	  Ya no hay teclado, debe de haber algún metodo de entrada de los digitos.
+RESUELTO.
 
 ToDo: App de Surtido, Si ya declaraste Faltante, no es necesario escanear el Contenedor.
 RESUELTO.
 
 ToDo: App de Surtido, Para confirmar el Contenedor también se puede escanear el Bulto.
 	  El Código del Bulto (QR) debe de tener un PREFIX y tener la clave del Contenedor.
-	  
+RESUELTO.	  
 
 
 ============================================================================================================
@@ -150,7 +151,9 @@ export RUTA="MXF01 2950 AN"
 
 CALL InformacionRutaTransportePedido('1000', '2205', 'MXF01 2950 AN'); 
 
-CALL InformacionTransportePedido('1000', '2205', 1222); 
+CALL InformacionTransportePedido('1000', '2205', 1414); 
+
+CALL InformacionPedido('1000', '2205', 1266);
 
 --
 --
