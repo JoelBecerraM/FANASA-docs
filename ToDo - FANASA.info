@@ -1,6 +1,23 @@
 
 
 
+drop table if exists PedidoSurtidoContenedor;
+CREATE TABLE PedidoSurtidoContenedor ( 
+	compania varchar(20) not null, sucursal varchar(10) not null, idpedido int not null, contenedor varchar(20) not null, 
+	tipo varchar(1) not null, lineas int not null, surtidas int not null, peso double not null, volumen double not null, 
+	status varchar(2) not null, fechastatus datetime not null, usuario varchar(30) not null, 
+	PRIMARY KEY (compania, sucursal, idpedido, contenedor)
+	) ENGINE=InnoDB;
+
+drop table if exists PedidoSurtidoBulto;
+CREATE TABLE PedidoSurtidoBulto ( 
+	compania varchar(20) not null, sucursal varchar(10) not null, idpedido int not null, bulto varchar(10) not null, contenedor varchar(20) not null, 
+	lineas int not null, surtidas int not null, peso double not null, volumen double not null, tipo varchar(1) not null,
+	status varchar(2) not null, fechastatus datetime not null, usuario varchar(30) not null, 
+	PRIMARY KEY (compania, sucursal, idpedido, bulto)
+	) ENGINE=InnoDB;
+
+
 ============================================================================================================
 ============================================================================================================
 
@@ -12,30 +29,35 @@
 ToDo: Agregar vista de SubInventarios del ERP
 	Es necesario sincronizarlos antes de la llegada de las Ordenes de Surtido.
 
-ToDo: PedidoSurtidoContenedor debe de tener volumen y peso
-	  PedidoSurtidoBulto debe de tener volumen y peso
-
 ToDo: PedidoSurtidoContenedor debe de tener indicador de 'Simple' o 'Consolidado'
 	  Es Simple si solo trae un Pedido, es Consolidado si trae mas de un Pedido.
 	  Si es Simple puede tener Cincho de Seguridad.
+
+ToDo: App de Surtido, Cuando te sales en medio del surtido y regresas
+	  Falla el App, p.ej. Abrir Settings de Bluetoth.
+
 
 ToDo: App de Surtido, Quitar Carrito de Surtido.
 RESUELTO.
 
 ToDo: App de Surtido, en el Stage de Detalles de Pedido, buscar un lugar para colocar
 	  El nombre del Cliente o el Numero de Pedido
-	
-ToDo: App de Surtido, Cuando te sales en medio del surtido y regresas
-	  Falla el App, p.ej. Abrir Settings de Bluetoth.
+RESUELTO.
 
-ToDo: App de Surtido, Implemplementar Split.
+ToDo: App de Surtido, Implementar Agregar Bulto.
+RESUELTO.
 
-ToDo: App de Surtido, Implemplementar Surtido Caja Completa.
+ToDo: App de Surtido, Implementar Split.
+PARCIALMENTE RESUELTO, HACE FALTA IMPLEMENTAR EL SPLIT POR CADA CAJA
+
+ToDo: App de Surtido, Implementar Surtido Caja Completa.
+RESUELTO.
 
 ToDo: App de Surtido, Como ingresas cantidades mayores a 10 piezas.
-	  Ya no hay teclado, debe de haber algun metodo de entrada de los digitos.
+	  Ya no hay teclado, debe de haber algún metodo de entrada de los digitos.
 
 ToDo: App de Surtido, Si ya declaraste Faltante, no es necesario escanear el Contenedor.
+RESUELTO.
 
 ToDo: App de Surtido, Para confirmar el Contenedor también se puede escanear el Bulto.
 	  El Código del Bulto (QR) debe de tener un PREFIX y tener la clave del Contenedor.
@@ -48,6 +70,16 @@ ToDo: App de Surtido, Para confirmar el Contenedor también se puede escanear el
 
 ./test.sh --compania 1000 --sucursal 2205 --command sorter
 
+--
+--
+
+export RUTA="MXF01 0002 AN"
+./test.sh --compania 1000 --sucursal 2205 --command abre-ruta "${RUTA}"
+./test.sh --compania 1000 --sucursal 2205 --command surte-ruta "${RUTA}"
+
+CALL InformacionRutaTransportePedido('1000', '2205', 'MXF01 0002 AN'); 
+
+CALL InformacionTransportePedido('1000', '2205', 1393); 
 
 --
 --
@@ -62,6 +94,9 @@ CALL InformacionTransportePedido('1000', '2205', 1247);
 
 CALL InformacionPedido('1000', '2205', 595);
 
+CALL InformacionOrdenSurtido('1000', '2205', '45269545.1'); 
+
+
 --
 --
 
@@ -71,7 +106,7 @@ export RUTA="MXF01 0008 AN"
 
 CALL InformacionRutaTransportePedido('1000', '2205', 'MXF01 0008 AN'); 
 
-CALL InformacionTransportePedido('1000', '2205', 1247); 
+CALL InformacionTransportePedido('1000', '2205', 1408); 
 
 CALL InformacionPedido('1000', '2205', 595);
 
@@ -105,15 +140,6 @@ export RUTA="MXF01 0003 AN"
 ./test.sh --compania 1000 --sucursal 2205 --command surte-ruta "${RUTA}"
 
 CALL InformacionRutaTransportePedido('1000', '2205', 'MXF01 0003 AN'); 
-
---
---
-
-export RUTA="MXF01 0002 AN"
-./test.sh --compania 1000 --sucursal 2205 --command abre-ruta "${RUTA}"
-./test.sh --compania 1000 --sucursal 2205 --command surte-ruta "${RUTA}"
-
-CALL InformacionRutaTransportePedido('1000', '2205', 'MXF01 0002 AN'); 
 
 --
 --
@@ -545,6 +571,21 @@ END//
 delimiter ;
 
 CALL InformacionRutaTransportePedido('1000', '2205', 'MXF01 0004 AN'); 
+
+
+delimiter //
+DROP PROCEDURE InformacionOrdenSurtido//
+CREATE PROCEDURE InformacionOrdenSurtido (IN _compania CHAR(20), _sucursal CHAR(20), IN _orden CHAR(20))
+BEGIN
+	SELECT * FROM OrdenSurtido WHERE compania = _compania AND sucursal = _sucursal AND orden = _orden;
+	SELECT * FROM OrdenSurtidoBitacora WHERE compania = _compania AND sucursal = _sucursal AND orden = _orden;
+	SELECT * FROM OrdenSurtidoDetalle WHERE compania = _compania AND sucursal = _sucursal AND orden = _orden ORDER by lineap, linea DESC;
+	SELECT compania, sucursal, bulto, COUNT(*), SUM(surtidas) FROM OrdenSurtidoDetalle WHERE compania = _compania AND sucursal = _sucursal AND orden = _orden 
+	GROUP BY compania, sucursal, bulto;
+END//
+delimiter ;
+
+CALL InformacionOrdenSurtido('1000', '2205', '45269545.1'); 
 
 
 ==============================================================================================================================
