@@ -1,5 +1,16 @@
 
 
+nc -vz 172.16.0.135 1521
+nc -vz 172.16.0.135 22
+nc -vz 172.16.0.135 8080
+
+ssh -i /Users/joelbecerramiranda/Documents/FANASA/id_rsa_KeyProvGnew_private_test.pem gnewdev@172.16.0.135
+
+
+
+============================================================================================================
+============================================================================================================
+
 
 drop table if exists PedidoSurtidoContenedor;
 CREATE TABLE PedidoSurtidoContenedor ( 
