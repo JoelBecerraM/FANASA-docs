@@ -1,22 +1,5 @@
 
 
-
-drop table if exists RutaDistribucion;
-CREATE TABLE RutaDistribucion ( 
-	compania varchar(20) not null, sucursal varchar(10) not null, idrutadistribucion int not null, ruta varchar(20) not null, 
-	prioridad int not null, cortina varchar(10) not null, certifica varchar(1) not null, auditoria varchar(1) not null, 
-	turno varchar(30) not null, tiposurtido varchar(1) not null, camioneta varchar(20) not null, 
-	status varchar(2) not null, fechastatus datetime not null, usuario varchar(30) not null, 
-	fechacreacion datetime, fechaaperturat datetime, fechaapertura datetime, fechaprecierre datetime, fechacierre datetime, 
-	PRIMARY KEY (compania, sucursal, idrutadistribucion)
-	) ENGINE=InnoDB;
-CREATE INDEX RutaDistribucionINDX1 on RutaDistribucion (compania, sucursal, ruta);
-
-
-============================================================================================================
-============================================================================================================
-
-
 --
 -- Prioritarios
 --
@@ -35,9 +18,37 @@ ToDo: App de Surtido, Traspaleo de Bultos.
 
 ToDo: App de Surtido, Cierre de Contenedor, asignacion de Cincho de Seguridad.
 
+ToDo: Mesa de Control, Pagina para Ver Contenido del Pedido
+	Contenedores, Bultos
+
+ToDo: Mesa de Control, Pagina para Ver Contenido del Contenedor
+	Bultos y Detalle de Productos
+
 ToDo: Mesa de Control, Pagina para Ver Contenido de Bulto
 	Escaneando el QR
+	Ver Detalle de Productos
 
+ToDo: Mesa de Control, en el Panel de Ruta, la cuenta de Ordenes de Surtido debe de ser de las nuevas,
+	es decir; las que ya estan finalizadas no cuentan (porque ya se procesaron)
+
+ToDo: Mesa de Control, Transporte de Surtido.
+	Agregar la columna de IDTransporte
+
+
+============================================================================================================
+============================================================================================================
+
+
+drop table if exists RutaDistribucion;
+CREATE TABLE RutaDistribucion ( 
+	compania varchar(20) not null, sucursal varchar(10) not null, idrutadistribucion int not null, ruta varchar(20) not null, 
+	prioridad int not null, cortina varchar(10) not null, certifica varchar(1) not null, auditoria varchar(1) not null, 
+	turno varchar(30) not null, tiposurtido varchar(1) not null, camioneta varchar(20) not null, 
+	status varchar(2) not null, fechastatus datetime not null, usuario varchar(30) not null, 
+	fechacreacion datetime, fechaaperturat datetime, fechaapertura datetime, fechaprecierre datetime, fechacierre datetime, 
+	PRIMARY KEY (compania, sucursal, idrutadistribucion)
+	) ENGINE=InnoDB;
+CREATE INDEX RutaDistribucionINDX1 on RutaDistribucion (compania, sucursal, ruta);
 
 
 ============================================================================================================
@@ -152,7 +163,7 @@ export RUTA="MXF01 0002 AN"
 
 CALL InformacionRutaTransportePedido('1000', '2205', 'MXF01 0002 AN'); 
 
-CALL InformacionTransportePedido('1000', '2205', 1419); 
+CALL InformacionTransportePedido('1000', '2205', 158); 
 
 CALL InformacionPedido('1000', '2205', 1285);
 
