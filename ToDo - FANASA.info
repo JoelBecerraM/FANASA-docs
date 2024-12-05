@@ -1,11 +1,62 @@
 
 
+
+drop table if exists RutaDistribucion;
+CREATE TABLE RutaDistribucion ( 
+	compania varchar(20) not null, sucursal varchar(10) not null, idrutadistribucion int not null, ruta varchar(20) not null, 
+	prioridad int not null, cortina varchar(10) not null, certifica varchar(1) not null, auditoria varchar(1) not null, 
+	turno varchar(30) not null, tiposurtido varchar(1) not null, camioneta varchar(20) not null, 
+	status varchar(2) not null, fechastatus datetime not null, usuario varchar(30) not null, 
+	fechacreacion datetime, fechaaperturat datetime, fechaapertura datetime, fechaprecierre datetime, fechacierre datetime, 
+	PRIMARY KEY (compania, sucursal, idrutadistribucion)
+	) ENGINE=InnoDB;
+CREATE INDEX RutaDistribucionINDX1 on RutaDistribucion (compania, sucursal, ruta);
+
+
+============================================================================================================
+============================================================================================================
+
+
+--
+-- Prioritarios
+--
+
+ToDo: Agregar vista de SubInventarios del ERP
+	Es necesario sincronizarlos antes de la llegada de las Ordenes de Surtido.
+
+ToDo: PedidoSurtidoContenedor debe de tener indicador de 'Simple' o 'Consolidado'
+	  Es Simple si solo trae un Pedido, es Consolidado si trae mas de un Pedido.
+	  Si es Simple puede tener Cincho de Seguridad.
+
+ToDo: App de Surtido, Traspaleo de Bultos.
+
+ToDo: App de Surtido, Cuando te sales en medio del surtido y regresas
+	  Falla el App, p.ej. Abrir Settings de Bluetoth.
+
+ToDo: Mesa de Control, Abrir Rutas por prioridad.
+
+ToDo: App de Surtido, Cuando escaneas QR la validacion debe de validar tambien el numero de Pedido.
+
+ToDo: App de Surtido, Mensaje de error de 'Codigo de Barras incorrecto'.
+
+ToDo: App de Surtido, Enter en teclado numerico.
+
+ToDo: App de Surtido, Cierre de Contenedor, asignacion de Cincho de Seguridad.
+
+ToDo: Mesa de Control, Pagina para Ver Contenido de Bulto
+	Escaneando el QR
+	
+
+============================================================================================================
+============================================================================================================
+
+
+nc -vz 172.16.0.135 3389
 nc -vz 172.16.0.135 1521
 nc -vz 172.16.0.135 22
 nc -vz 172.16.0.135 8080
 
 ssh -i /Users/joelbecerramiranda/Documents/FANASA/id_rsa_KeyProvGnew_private_test.pem gnewdev@172.16.0.135
-
 
 
 ============================================================================================================
