@@ -24,28 +24,38 @@ CREATE INDEX RutaDistribucionINDX1 on RutaDistribucion (compania, sucursal, ruta
 ToDo: Agregar vista de SubInventarios del ERP
 	Es necesario sincronizarlos antes de la llegada de las Ordenes de Surtido.
 
+ToDo: App de Surtido, Cuando te sales en medio del surtido y regresas
+	  Falla el App, p.ej. Abrir Settings de Bluetoth.
+
 ToDo: PedidoSurtidoContenedor debe de tener indicador de 'Simple' o 'Consolidado'
 	  Es Simple si solo trae un Pedido, es Consolidado si trae mas de un Pedido.
 	  Si es Simple puede tener Cincho de Seguridad.
 
 ToDo: App de Surtido, Traspaleo de Bultos.
 
-ToDo: App de Surtido, Cuando te sales en medio del surtido y regresas
-	  Falla el App, p.ej. Abrir Settings de Bluetoth.
-
-ToDo: Mesa de Control, Abrir Rutas por prioridad.
-
-ToDo: App de Surtido, Cuando escaneas QR la validacion debe de validar tambien el numero de Pedido.
-
-ToDo: App de Surtido, Mensaje de error de 'Codigo de Barras incorrecto'.
-
-ToDo: App de Surtido, Enter en teclado numerico.
-
 ToDo: App de Surtido, Cierre de Contenedor, asignacion de Cincho de Seguridad.
 
 ToDo: Mesa de Control, Pagina para Ver Contenido de Bulto
 	Escaneando el QR
-	
+
+
+
+============================================================================================================
+============================================================================================================
+
+
+ToDo: App de Surtido, Enter en teclado numerico.
+RESUELTO.
+
+ToDo: Mesa de Control, Abrir Rutas por prioridad.
+RESUELTO.
+
+ToDo: App de Surtido, Cuando escaneas QR la validacion debe de validar tambien el numero de Pedido.
+RESUELTO.
+
+ToDo: App de Surtido, Mensaje de error de 'Codigo de Barras incorrecto'.
+RESUELTO.
+
 
 ============================================================================================================
 ============================================================================================================
@@ -142,7 +152,9 @@ export RUTA="MXF01 0002 AN"
 
 CALL InformacionRutaTransportePedido('1000', '2205', 'MXF01 0002 AN'); 
 
-CALL InformacionTransportePedido('1000', '2205', 1393); 
+CALL InformacionTransportePedido('1000', '2205', 1419); 
+
+CALL InformacionPedido('1000', '2205', 1285);
 
 --
 --
@@ -155,7 +167,7 @@ CALL InformacionRutaTransportePedido('1000', '2205', 'MXF01 0800 AN');
 
 CALL InformacionTransportePedido('1000', '2205', 1247); 
 
-CALL InformacionPedido('1000', '2205', 595);
+CALL InformacionPedido('1000', '2205', 1285);
 
 CALL InformacionOrdenSurtido('1000', '2205', '45269545.1'); 
 
