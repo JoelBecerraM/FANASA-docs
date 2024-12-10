@@ -1,5 +1,11 @@
 
 
+
+
+============================================================================================================
+============================================================================================================
+
+
 --
 -- Prioritarios
 --
@@ -18,6 +24,9 @@ ToDo: App de Surtido, Traspaleo de Bultos.
 
 ToDo: App de Surtido, Cierre de Contenedor, asignacion de Cincho de Seguridad.
 
+ToDo: Mesa de Control, En Surtido - Transportes de Surtido no aparecen los Transportes que estan en 
+	'TRASPALEANDO' y 'PARATRASPALEO'.
+
 ToDo: Mesa de Control, Pagina para Ver Contenido del Pedido
 	Contenedores, Bultos
 
@@ -33,6 +42,34 @@ ToDo: Mesa de Control, en el Panel de Ruta, la cuenta de Ordenes de Surtido debe
 
 ToDo: Mesa de Control, Transporte de Surtido.
 	Agregar la columna de IDTransporte
+
+
+============================================================================================================
+============================================================================================================
+
+
+CREATE INDEX TransporteSurtidoIDX3 on TransporteSurtido (compania, sucursal, status);
+
+
+============================================================================================================
+============================================================================================================
+
+
+./test.sh --compania 1000 --sucursal 2205 --command sorter
+
+--
+--
+
+export RUTA="MXF01 3000 AN"
+./test.sh --compania 1000 --sucursal 2205 --command abre-ruta "${RUTA}"
+./test.sh --compania 1000 --sucursal 2205 --command surte-ruta "${RUTA}"
+
+CALL InformacionRutaTransportePedido('1000', '2205', 'MXF01 3000 AN'); 
+
+CALL InformacionTransportePedido('1000', '2205', 1420); 
+
+CALL InformacionPedido('1000', '2205', 1285);
+
 
 
 ============================================================================================================
@@ -624,9 +661,9 @@ BEGIN
 	    INNER JOIN PedidoSurtido p ON p.compania = t.compania AND p.sucursal = t.sucursal AND p.idtransporte = t.idtransporte
 	    INNER JOIN PedidoSurtidoContenedor pc ON pc.compania = p.compania AND pc.sucursal = p.sucursal AND pc.idpedido = p.idpedido
 	    WHERE t.compania = _compania AND t.sucursal = _sucursal AND t.idtransporte = _idtransporte;
-	SELECT pc.* FROM TransporteSurtido t 
+	SELECT pb.* FROM TransporteSurtido t 
 	    INNER JOIN PedidoSurtido p ON p.compania = t.compania AND p.sucursal = t.sucursal AND p.idtransporte = t.idtransporte
-	    INNER JOIN PedidoSurtidoBulto pc ON pc.compania = p.compania AND pc.sucursal = p.sucursal AND pc.idpedido = p.idpedido
+	    INNER JOIN PedidoSurtidoBulto pb ON pb.compania = p.compania AND pb.sucursal = p.sucursal AND pb.idpedido = p.idpedido
 	    WHERE t.compania = _compania AND t.sucursal = _sucursal AND t.idtransporte = _idtransporte;
 	SELECT os.* FROM TransporteSurtido t 
 	    INNER JOIN PedidoSurtido p ON p.compania = t.compania AND p.sucursal = t.sucursal AND p.idtransporte = t.idtransporte
