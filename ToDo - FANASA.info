@@ -1,7 +1,6 @@
 
 
 
-
 ============================================================================================================
 ============================================================================================================
 
@@ -20,7 +19,13 @@ ToDo: PedidoSurtidoContenedor debe de tener indicador de 'Simple' o 'Consolidado
 	  Es Simple si solo trae un Pedido, es Consolidado si trae mas de un Pedido.
 	  Si es Simple puede tener Cincho de Seguridad.
 
+
 ToDo: App de Surtido, Traspaleo de Bultos.
+	Si se llamo el TraspaleoActivity desde SurtidoActivity no deberia de continuar otro ciclo de Traspaleo
+		porque debe de regresar a SurtidoActivity. 
+		Debe de dar finish para que SurtidoActivity retome el control.		
+	Estacionar los TransportesSurtido con status PARATRASPALEO (30)
+
 
 ToDo: App de Surtido, Cierre de Contenedor, asignacion de Cincho de Seguridad.
 
@@ -69,6 +74,14 @@ CALL InformacionRutaTransportePedido('1000', '2205', 'MXF01 3000 AN');
 CALL InformacionTransportePedido('1000', '2205', 1420); 
 
 CALL InformacionPedido('1000', '2205', 1285);
+
+--
+--
+
+export RUTA="MXF01 3700 AN"
+./test.sh --compania 1000 --sucursal 2205 --command abre-ruta "${RUTA}"
+./test.sh --compania 1000 --sucursal 2205 --command surte-ruta "${RUTA}"
+
 
 
 
