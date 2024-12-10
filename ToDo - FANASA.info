@@ -19,19 +19,6 @@ ToDo: PedidoSurtidoContenedor debe de tener indicador de 'Simple' o 'Consolidado
 	  Es Simple si solo trae un Pedido, es Consolidado si trae mas de un Pedido.
 	  Si es Simple puede tener Cincho de Seguridad.
 
-
-ToDo: App de Surtido, Traspaleo de Bultos.
-	Si se llamo el TraspaleoActivity desde SurtidoActivity no deberia de continuar otro ciclo de Traspaleo
-		porque debe de regresar a SurtidoActivity. 
-		Debe de dar finish para que SurtidoActivity retome el control.		
-	Estacionar los TransportesSurtido con status PARATRASPALEO (30)
-
-
-ToDo: App de Surtido, Cierre de Contenedor, asignacion de Cincho de Seguridad.
-
-ToDo: Mesa de Control, En Surtido - Transportes de Surtido no aparecen los Transportes que estan en 
-	'TRASPALEANDO' y 'PARATRASPALEO'.
-
 ToDo: Mesa de Control, Pagina para Ver Contenido del Pedido
 	Contenedores, Bultos
 
@@ -45,8 +32,26 @@ ToDo: Mesa de Control, Pagina para Ver Contenido de Bulto
 ToDo: Mesa de Control, en el Panel de Ruta, la cuenta de Ordenes de Surtido debe de ser de las nuevas,
 	es decir; las que ya estan finalizadas no cuentan (porque ya se procesaron)
 
+ToDo: App de Surtido, Traspaleo de Bultos.
+	Estacionar los TransportesSurtido con status PARATRASPALEO (30)
+
+
+ToDo: App de Surtido, Cierre de Contenedor, asignacion de Cincho de Seguridad.
+
+
+ToDo: App de Surtido, Traspaleo de Bultos.
+	Llamar a la actividad TraspaleoActivity dentro de SurtidoActivity.
+	También se puede entrar a TraspaleoActivity para hacer puros traspaleos.
+RESUELTO.
+ToDo: Mesa de Control, En Surtido - Transportes de Surtido no aparecen los Transportes que estan en 
+	'TRASPALEANDO' y 'PARATRASPALEO'.
+RESUELTO.
 ToDo: Mesa de Control, Transporte de Surtido.
 	Agregar la columna de IDTransporte
+RESUELTO.
+
+
+
 
 
 ============================================================================================================
