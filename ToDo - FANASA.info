@@ -1,6 +1,5 @@
 
 
-
 ============================================================================================================
 ============================================================================================================
 
@@ -8,6 +7,9 @@
 --
 -- Prioritarios
 --
+
+ToDo: App de Surtido, Implementar Split.
+	PARCIALMENTE RESUELTO, HACE FALTA IMPLEMENTAR EL SPLIT POR CADA CAJA
 
 ToDo: Agregar vista de SubInventarios del ERP
 	Es necesario sincronizarlos antes de la llegada de las Ordenes de Surtido.
@@ -33,6 +35,46 @@ ToDo: Mesa de Control, en el Panel de Ruta, la cuenta de Ordenes de Surtido debe
 	es decir; las que ya estan finalizadas no cuentan (porque ya se procesaron)
 
 ToDo: App de Surtido, Cierre de Contenedor, asignacion de Cincho de Seguridad.
+
+
+============================================================================================================
+============================================================================================================
+
+
+export RUTA="MXF01 5000 AN"
+./test.sh --compania 1000 --sucursal 2205 --command abre-ruta "${RUTA}"
+./test.sh --compania 1000 --sucursal 2205 --command surte-ruta "${RUTA}"
+
+./test.sh --compania 1000 --sucursal 2205 --command traspalea-ruta "${RUTA}"
+./test.sh --compania 1000 --sucursal 2205 --command sorter
+
+
+export RUTA="MXF01 4100 AN"
+./test.sh --compania 1000 --sucursal 2205 --command abre-ruta "${RUTA}"
+./test.sh --compania 1000 --sucursal 2205 --command surte-ruta "${RUTA}"
+
+./test.sh --compania 1000 --sucursal 2205 --command traspalea-ruta "${RUTA}"
+./test.sh --compania 1000 --sucursal 2205 --command sorter
+
+
+export RUTA="MXF01 4500 AN"
+./test.sh --compania 1000 --sucursal 2205 --command abre-ruta "${RUTA}"
+./test.sh --compania 1000 --sucursal 2205 --command surte-ruta "${RUTA}"
+
+./test.sh --compania 1000 --sucursal 2205 --command traspalea-ruta "${RUTA}"
+./test.sh --compania 1000 --sucursal 2205 --command sorter
+
+
+--
+--
+--
+
+
+CALL InformacionRutaTransportePedido('1000', '2205', 'MXF01 3750 AN'); 
+
+CALL InformacionTransportePedido('1000', '2205', 1439); 
+
+CALL InformacionPedido('1000', '2205', 1285);
 
 
 ============================================================================================================
@@ -184,16 +226,6 @@ CREATE TABLE PedidoSurtidoBulto (
 --
 -- Prioritarios
 --
-
-ToDo: Agregar vista de SubInventarios del ERP
-	Es necesario sincronizarlos antes de la llegada de las Ordenes de Surtido.
-
-ToDo: PedidoSurtidoContenedor debe de tener indicador de 'Simple' o 'Consolidado'
-	  Es Simple si solo trae un Pedido, es Consolidado si trae mas de un Pedido.
-	  Si es Simple puede tener Cincho de Seguridad.
-
-ToDo: App de Surtido, Cuando te sales en medio del surtido y regresas
-	  Falla el App, p.ej. Abrir Settings de Bluetoth.
 
 
 ToDo: App de Surtido, Quitar Carrito de Surtido.
