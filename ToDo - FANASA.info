@@ -1,5 +1,15 @@
 
 
+
+export RUTA="MXF01 0009 AN"
+./test.sh --compania 1000 --sucursal 2205 --command abre-ruta "${RUTA}"
+./test.sh --compania 1000 --sucursal 2205 --command surte-ruta "${RUTA}"
+
+./test.sh --compania 1000 --sucursal 2205 --command traspalea-ruta "${RUTA}"
+./test.sh --compania 1000 --sucursal 2205 --command sorter
+
+
+
 ============================================================================================================
 ============================================================================================================
 
@@ -14,15 +24,12 @@ ToDo: App de Surtido, Implementar Split.
 ToDo: Agregar vista de SubInventarios del ERP
 	Es necesario sincronizarlos antes de la llegada de las Ordenes de Surtido.
 
-ToDo: App de Surtido, Cuando te sales en medio del surtido y regresas
-	  Falla el App, p.ej. Abrir Settings de Bluetoth.
 
-ToDo: PedidoSurtidoContenedor debe de tener indicador de 'Simple' o 'Consolidado'
-	  Es Simple si solo trae un Pedido, es Consolidado si trae mas de un Pedido.
-	  Si es Simple puede tener Cincho de Seguridad.
+ToDo: Mesa de Control, Pagina para Ver Contenido del Transporte
+	PedidosSurtido, PedidosSurtidoDetalle, Contenedores, Bultos
 
 ToDo: Mesa de Control, Pagina para Ver Contenido del Pedido
-	Contenedores, Bultos
+	Detalles, Contenedores y Bultos
 
 ToDo: Mesa de Control, Pagina para Ver Contenido del Contenedor
 	Bultos y Detalle de Productos
@@ -34,11 +41,24 @@ ToDo: Mesa de Control, Pagina para Ver Contenido de Bulto
 ToDo: Mesa de Control, en el Panel de Ruta, la cuenta de Ordenes de Surtido debe de ser de las nuevas,
 	es decir; las que ya estan finalizadas no cuentan (porque ya se procesaron)
 
+
+ToDo: PedidoSurtidoContenedor debe de tener indicador de 'Simple' o 'Consolidado'
+	  Es Simple si solo trae un Pedido, es Consolidado si trae mas de un Pedido.
+	  Si es Simple puede tener Cincho de Seguridad.
+RESUELTO.
+
 ToDo: App de Surtido, Cierre de Contenedor, asignacion de Cincho de Seguridad.
 
+ToDo: App de Surtido, Cuando te sales en medio del surtido y regresas
+	  Falla el App, p.ej. Abrir Settings de Bluetoth.
+RESUELTO.
 
 ============================================================================================================
 ============================================================================================================
+
+
+export RUTA="MXF01 4800 AN"
+./test.sh --compania 1000 --sucursal 2205 --command abre-ruta "${RUTA}"
 
 
 export RUTA="MXF01 5000 AN"
@@ -149,7 +169,6 @@ CALL InformacionPedido('1000', '2205', 1285);
 export RUTA="MXF01 3700 AN"
 ./test.sh --compania 1000 --sucursal 2205 --command abre-ruta "${RUTA}"
 ./test.sh --compania 1000 --sucursal 2205 --command surte-ruta "${RUTA}"
-
 
 
 
