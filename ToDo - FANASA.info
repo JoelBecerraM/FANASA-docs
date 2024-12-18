@@ -1,6 +1,5 @@
 
 
-
 export RUTA="MXF01 0009 AN"
 ./test.sh --compania 1000 --sucursal 2205 --command abre-ruta "${RUTA}"
 ./test.sh --compania 1000 --sucursal 2205 --command surte-ruta "${RUTA}"
