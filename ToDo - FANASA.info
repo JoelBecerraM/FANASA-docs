@@ -1,14 +1,15 @@
 
 
-export RUTA="MXF01 0009 AN"
+export RUTA="MXF01 4900 AN"
 ./test.sh --compania 1000 --sucursal 2205 --command abre-ruta "${RUTA}"
 ./test.sh --compania 1000 --sucursal 2205 --command surte-ruta "${RUTA}"
 
 ./test.sh --compania 1000 --sucursal 2205 --command traspalea-ruta "${RUTA}"
 ./test.sh --compania 1000 --sucursal 2205 --command sorter
 
+CALL InformacionTransportePedido('1000', '2205', 1476); 
 
-
+    
 ============================================================================================================
 ============================================================================================================
 
@@ -40,13 +41,19 @@ ToDo: Mesa de Control, Pagina para Ver Contenido de Bulto
 ToDo: Mesa de Control, en el Panel de Ruta, la cuenta de Ordenes de Surtido debe de ser de las nuevas,
 	es decir; las que ya estan finalizadas no cuentan (porque ya se procesaron)
 
+ToDo: App de Surtido, Cierre de Contenedor, asignacion de Cincho de Seguridad.
+
+ToDo: Mesa de Control, Alta de Transportes
+	Al dar de alta un nuevo transporte, el idtransporte debe de ser 0
+
+
+============================================================================================================
+============================================================================================================
 
 ToDo: PedidoSurtidoContenedor debe de tener indicador de 'Simple' o 'Consolidado'
 	  Es Simple si solo trae un Pedido, es Consolidado si trae mas de un Pedido.
 	  Si es Simple puede tener Cincho de Seguridad.
 RESUELTO.
-
-ToDo: App de Surtido, Cierre de Contenedor, asignacion de Cincho de Seguridad.
 
 ToDo: App de Surtido, Cuando te sales en medio del surtido y regresas
 	  Falla el App, p.ej. Abrir Settings de Bluetoth.
